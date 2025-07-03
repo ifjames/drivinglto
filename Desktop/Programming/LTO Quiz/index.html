@@ -707,7 +707,7 @@
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">Katrina Non-Pro Quiz</h5>
-                <p class="card-text">Comprehensive quiz covering essential driving knowledge for katrina non-professional drive exam.</p>
+                <p class="card-text">Comprehensive quiz covering essential driving knowledge for katrina non-professional drive exam. Contains 115 questions.</p>
                 <button class="btn btn-primary" onclick="startQuiz('katrinaNonPro')">Start Quiz</button>
               </div>
             </div>
@@ -1389,14 +1389,27 @@
       // Update number of questions options based on quiz type
       const numQuestionsSelect = document.getElementById('numQuestionsSelect');
       if (type === 'quiz') {
-        // For practice quizzes, show 10, 20, 30, 40 options
-        numQuestionsSelect.innerHTML = `
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="30">30</option>
-          <option value="40">40</option>
-        `;
-        numQuestionsSelect.value = '10'; // Default to 10 questions
+        if (quizType === 'katrinaNonPro') {
+          // Special options for Katrina Non-Pro quiz including all 115 questions
+          numQuestionsSelect.innerHTML = `
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="60">60</option>
+            <option value="115">All 115</option>
+          `;
+          numQuestionsSelect.value = '10'; // Default to 10 questions
+        } else {
+          // For other practice quizzes, show 10, 20, 30, 40 options
+          numQuestionsSelect.innerHTML = `
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+          `;
+          numQuestionsSelect.value = '10'; // Default to 10 questions
+        }
       } else {
         // For mock exam, show 10, 40, 60, 80 options
         numQuestionsSelect.innerHTML = `
