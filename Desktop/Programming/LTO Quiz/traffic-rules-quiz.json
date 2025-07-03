@@ -1,0 +1,524 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the minimum age requirement for obtaining a Non-Professional driver's license in the Philippines?",
+      "choices": [
+        "16 years old",
+        "17 years old",
+        "18 years old",
+        "21 years old"
+      ],
+      "answer": "17 years old",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["license-requirements", "age-requirements"]
+    },
+    {
+      "id": 2,
+      "question": "What is the maximum speed limit for private vehicles on expressways?",
+      "choices": [
+        "60 km/h",
+        "80 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "answer": "100 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "expressways"]
+    },
+    {
+      "id": 3,
+      "question": "When approaching a school zone, what should you do?",
+      "choices": [
+        "Speed up to pass quickly",
+        "Maintain your current speed",
+        "Slow down and be prepared to stop",
+        "Honk your horn to alert students"
+      ],
+      "answer": "Slow down and be prepared to stop",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["school-zones", "safety"]
+    },
+    {
+      "id": 4,
+      "question": "What is the penalty for driving without a valid driver's license?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱3,000",
+        "Fine of ₱5,000",
+        "Fine of ₱10,000"
+      ],
+      "answer": "Fine of ₱3,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "license-violations"]
+    },
+    {
+      "id": 5,
+      "question": "When is it mandatory to use seatbelts?",
+      "choices": [
+        "Only on highways",
+        "Only when driving at night",
+        "At all times when the vehicle is in motion",
+        "Only when driving in the city"
+      ],
+      "answer": "At all times when the vehicle is in motion",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["safety", "seatbelts"]
+    },
+    {
+      "id": 6,
+      "question": "What is the proper way to make a right turn at an intersection?",
+      "choices": [
+        "Turn from any lane",
+        "Turn from the leftmost lane",
+        "Turn from the rightmost lane",
+        "Turn from the center lane"
+      ],
+      "answer": "Turn from the rightmost lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turning", "intersections"]
+    },
+    {
+      "id": 7,
+      "question": "What is the minimum distance you should maintain between your vehicle and the one in front of you?",
+      "choices": [
+        "1 car length",
+        "2 car lengths",
+        "3 car lengths",
+        "4 car lengths"
+      ],
+      "answer": "3 car lengths",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["following-distance", "safety"]
+    },
+    {
+      "id": 8,
+      "question": "When should you use your hazard lights?",
+      "choices": [
+        "When driving in heavy rain",
+        "When parking illegally",
+        "When your vehicle is stationary due to breakdown or emergency",
+        "When driving slowly in traffic"
+      ],
+      "answer": "When your vehicle is stationary due to breakdown or emergency",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["hazard-lights", "emergency"]
+    },
+    {
+      "id": 9,
+      "question": "What is the maximum speed limit in residential areas?",
+      "choices": [
+        "20 km/h",
+        "30 km/h",
+        "40 km/h",
+        "50 km/h"
+      ],
+      "answer": "30 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "residential-areas"]
+    },
+    {
+      "id": 10,
+      "question": "When approaching a pedestrian crossing, what should you do?",
+      "choices": [
+        "Speed up to pass quickly",
+        "Slow down and be prepared to stop",
+        "Honk your horn to alert pedestrians",
+        "Maintain your current speed"
+      ],
+      "answer": "Slow down and be prepared to stop",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pedestrian-safety", "crossings"]
+    },
+    {
+      "id": 11,
+      "question": "What is the penalty for using a mobile phone while driving?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱5,000",
+        "Fine of ₱10,000"
+      ],
+      "answer": "Fine of ₱5,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "distracted-driving"]
+    },
+    {
+      "id": 12,
+      "question": "When should you use your high beam headlights?",
+      "choices": [
+        "In heavy traffic",
+        "When following another vehicle",
+        "On well-lit city streets",
+        "On dark, unlit roads with no oncoming traffic"
+      ],
+      "answer": "On dark, unlit roads with no oncoming traffic",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["headlights", "night-driving"]
+    },
+    {
+      "id": 13,
+      "question": "What is the maximum speed limit on national highways?",
+      "choices": [
+        "60 km/h",
+        "80 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "answer": "80 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "highways"]
+    },
+    {
+      "id": 14,
+      "question": "When is it legal to overtake another vehicle?",
+      "choices": [
+        "On a curve",
+        "On a hill",
+        "When there is a solid yellow line",
+        "On a straight road with clear visibility"
+      ],
+      "answer": "On a straight road with clear visibility",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "safety"]
+    },
+    {
+      "id": 15,
+      "question": "What is the penalty for driving under the influence of alcohol?",
+      "choices": [
+        "Fine of ₱5,000",
+        "Fine of ₱20,000",
+        "Fine of ₱50,000",
+        "Fine of ₱100,000"
+      ],
+      "answer": "Fine of ₱20,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "drunk-driving"]
+    },
+    {
+      "id": 16,
+      "question": "When should you use your turn signals?",
+      "choices": [
+        "Only when turning",
+        "Only when changing lanes",
+        "When turning or changing lanes",
+        "Only in heavy traffic"
+      ],
+      "answer": "When turning or changing lanes",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turn-signals", "safety"]
+    },
+    {
+      "id": 17,
+      "question": "What is the maximum speed limit in school zones?",
+      "choices": [
+        "20 km/h",
+        "30 km/h",
+        "40 km/h",
+        "50 km/h"
+      ],
+      "answer": "20 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "school-zones"]
+    },
+    {
+      "id": 18,
+      "question": "When should you yield to emergency vehicles?",
+      "choices": [
+        "Only when they are behind you",
+        "Only when they are in front of you",
+        "When they are approaching with lights and sirens",
+        "Only at intersections"
+      ],
+      "answer": "When they are approaching with lights and sirens",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["emergency-vehicles", "yielding"]
+    },
+    {
+      "id": 19,
+      "question": "What is the penalty for running a red light?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱3,000",
+        "Fine of ₱5,000"
+      ],
+      "answer": "Fine of ₱3,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "traffic-signals"]
+    },
+    {
+      "id": 20,
+      "question": "When should you use your parking brake?",
+      "choices": [
+        "Only on hills",
+        "Only when parking for long periods",
+        "Whenever you park your vehicle",
+        "Only in parking lots"
+      ],
+      "answer": "Whenever you park your vehicle",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking-brake", "safety"]
+    },
+    {
+      "id": 21,
+      "question": "What is the maximum speed limit in business districts?",
+      "choices": [
+        "30 km/h",
+        "40 km/h",
+        "50 km/h",
+        "60 km/h"
+      ],
+      "answer": "40 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "business-districts"]
+    },
+    {
+      "id": 22,
+      "question": "When should you check your mirrors?",
+      "choices": [
+        "Only when changing lanes",
+        "Only when turning",
+        "Before changing lanes, turning, or stopping",
+        "Only when backing up"
+      ],
+      "answer": "Before changing lanes, turning, or stopping",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["mirrors", "safety"]
+    },
+    {
+      "id": 23,
+      "question": "What is the penalty for illegal parking?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱2,000",
+        "Fine of ₱3,000"
+      ],
+      "answer": "Fine of ₱2,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "parking"]
+    },
+    {
+      "id": 24,
+      "question": "When should you use your horn?",
+      "choices": [
+        "To express frustration",
+        "To greet other drivers",
+        "To warn other drivers of danger",
+        "To get through traffic faster"
+      ],
+      "answer": "To warn other drivers of danger",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["horn", "safety"]
+    },
+    {
+      "id": 25,
+      "question": "What is the maximum speed limit on provincial roads?",
+      "choices": [
+        "40 km/h",
+        "60 km/h",
+        "80 km/h",
+        "100 km/h"
+      ],
+      "answer": "60 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "provincial-roads"]
+    },
+    {
+      "id": 26,
+      "question": "When should you use your windshield wipers?",
+      "choices": [
+        "Only in heavy rain",
+        "When visibility is reduced by rain, snow, or other conditions",
+        "Only at night",
+        "Only in fog"
+      ],
+      "answer": "When visibility is reduced by rain, snow, or other conditions",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["windshield-wipers", "visibility"]
+    },
+    {
+      "id": 27,
+      "question": "What is the penalty for driving without registration?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱3,000",
+        "Fine of ₱5,000"
+      ],
+      "answer": "Fine of ₱3,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "registration"]
+    },
+    {
+      "id": 28,
+      "question": "When should you use your air conditioning?",
+      "choices": [
+        "Only in hot weather",
+        "Only when passengers request it",
+        "To maintain comfortable temperature and prevent fogging",
+        "Only during long trips"
+      ],
+      "answer": "To maintain comfortable temperature and prevent fogging",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["air-conditioning", "comfort"]
+    },
+    {
+      "id": 29,
+      "question": "What is the maximum speed limit in crowded streets?",
+      "choices": [
+        "20 km/h",
+        "30 km/h",
+        "40 km/h",
+        "50 km/h"
+      ],
+      "answer": "30 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "crowded-areas"]
+    },
+    {
+      "id": 30,
+      "question": "When should you check your tire pressure?",
+      "choices": [
+        "Only when tires look flat",
+        "Only before long trips",
+        "At least once a month and before long trips",
+        "Only when changing tires"
+      ],
+      "answer": "At least once a month and before long trips",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["tire-pressure", "maintenance"]
+    },
+    {
+      "id": 31,
+      "question": "What is the penalty for driving without insurance?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱3,000",
+        "Fine of ₱5,000"
+      ],
+      "answer": "Fine of ₱3,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "insurance"]
+    },
+    {
+      "id": 32,
+      "question": "When should you use your defroster?",
+      "choices": [
+        "Only in winter",
+        "When windows are fogged or frosted",
+        "Only at night",
+        "Only in rain"
+      ],
+      "answer": "When windows are fogged or frosted",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["defroster", "visibility"]
+    },
+    {
+      "id": 33,
+      "question": "What is the maximum speed limit in alleys?",
+      "choices": [
+        "10 km/h",
+        "20 km/h",
+        "30 km/h",
+        "40 km/h"
+      ],
+      "answer": "20 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "alleys"]
+    },
+    {
+      "id": 34,
+      "question": "When should you check your oil level?",
+      "choices": [
+        "Only when the oil light comes on",
+        "Only before long trips",
+        "At least once a month and before long trips",
+        "Only when changing oil"
+      ],
+      "answer": "At least once a month and before long trips",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["oil-level", "maintenance"]
+    },
+    {
+      "id": 35,
+      "question": "What is the penalty for driving without a seatbelt?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱2,000",
+        "Fine of ₱3,000"
+      ],
+      "answer": "Fine of ₱1,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "seatbelts"]
+    },
+    {
+      "id": 36,
+      "question": "When should you use your cruise control?",
+      "choices": [
+        "In heavy traffic",
+        "On wet roads",
+        "On long, straight highways with light traffic",
+        "In city driving"
+      ],
+      "answer": "On long, straight highways with light traffic",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["cruise-control", "safety"]
+    },
+    {
+      "id": 37,
+      "question": "What is the maximum speed limit in parking lots?",
+      "choices": [
+        "10 km/h",
+        "20 km/h",
+        "30 km/h",
+        "40 km/h"
+      ],
+      "answer": "20 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "parking-lots"]
+    },
+    {
+      "id": 38,
+      "question": "When should you check your brake fluid?",
+      "choices": [
+        "Only when brakes feel soft",
+        "Only before long trips",
+        "At least once a month and before long trips",
+        "Only when changing brakes"
+      ],
+      "answer": "At least once a month and before long trips",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["brake-fluid", "maintenance"]
+    },
+    {
+      "id": 39,
+      "question": "What is the penalty for driving without a valid OR/CR?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱3,000",
+        "Fine of ₱5,000"
+      ],
+      "answer": "Fine of ₱3,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "documentation"]
+    },
+    {
+      "id": 40,
+      "question": "When should you use your emergency brake?",
+      "choices": [
+        "Only on hills",
+        "Only when parking for long periods",
+        "Whenever you park your vehicle",
+        "Only in parking lots"
+      ],
+      "answer": "Whenever you park your vehicle",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["emergency-brake", "safety"]
+    }
+  ]
+} 

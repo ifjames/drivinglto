@@ -1,0 +1,2935 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "The three colors of the traffic lights are:",
+      "choices": [
+        "red, green and yellow",
+        "red, green and blue",
+        "yellow, green and blue"
+      ],
+      "answer": "red, green and yellow",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic lights", "basics"]
+    },
+    {
+      "id": 2,
+      "question": "Yellow triangular signs provide what kind of information?",
+      "image": "/images/road-signs/yellow-triangular.png",
+      "choices": [
+        "warning",
+        "hospital across",
+        "speed limit"
+      ],
+      "answer": "warning",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning signs", "road signs"]
+    },
+    {
+      "id": 3,
+      "question": "Which of the following traffic signs are blue?",
+      "image": "/images/road-signs/blue-sign.png",
+      "choices": [
+        "regulatory signs",
+        "information signs",
+        "danger warning signs"
+      ],
+      "answer": "information signs",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road signs", "informational"]
+    },
+    {
+      "id": 4,
+      "question": "Steady green light means:",
+      "choices": [
+        "you must yield to all pedestrians and other motorists using the intersection",
+        "go, it is safe to do so",
+        "proceed cautiously through the intersection before the light changes to red"
+      ],
+      "answer": "go, it is safe to do so",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic lights", "priority"]
+    },
+    {
+      "id": 5,
+      "question": "A flashing yellow light at a road crossing signifies:",
+      "choices": [
+        "Caution - slow down and proceed with caution",
+        "Stop and stay until light stops flashing",
+        "Wait for the green light"
+      ],
+      "answer": "Caution - slow down and proceed with caution",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic lights", "caution"]
+    },
+    {
+      "id": 6,
+      "question": "A solid white line on the right edge of the highway slopes in towards your left. This shows that:",
+      "choices": [
+        "there is an intersection joint ahead",
+        "the road will get narrower",
+        "you are approaching a construction area"
+      ],
+      "answer": "the road will get narrower",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road markings", "warning"]
+    },
+    {
+      "id": 7,
+      "question": "You are in a No-Passing zone when the center of the road is marked by:",
+      "choices": [
+        "a broken yellow line",
+        "a broken white line",
+        "two solid yellow lines"
+      ],
+      "answer": "two solid yellow lines",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road markings", "no-passing"]
+    },
+    {
+      "id": 8,
+      "question": "When arrows are painted on the pavement, drivers must:",
+      "choices": [
+        "must go in the direction of the arrows",
+        "slow down and prepare to yield right of way",
+        "are not allowed to change lanes"
+      ],
+      "answer": "must go in the direction of the arrows",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road markings", "direction"]
+    },
+    {
+      "id": 9,
+      "question": "You may not drive across solid yellow lines except to:",
+      "choices": [
+        "change lanes",
+        "turn left",
+        "turn right"
+      ],
+      "answer": "turn left",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road markings", "turning"]
+    },
+    {
+      "id": 10,
+      "question": "Double solid yellow lane lines:",
+      "choices": [
+        "should not be crossed except with due care",
+        "should not be crossed anytime",
+        "does not allow lane changing"
+      ],
+      "answer": "should not be crossed anytime",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road markings", "no-passing"]
+    },
+    {
+      "id": 11,
+      "question": "You may not cross a single broken white of yellow line:",
+      "choices": [
+        "when turning left into a driveway",
+        "when passing to the right on a one-way street",
+        "when to do so would interfere with traffic"
+      ],
+      "answer": "when to do so would interfere with traffic",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road markings", "safety"]
+    },
+    {
+      "id": 12,
+      "question": "You may cross over a double line on the road to overtake another car if the line on your side is:",
+      "choices": [
+        "solid white",
+        "broken",
+        "solid yellow"
+      ],
+      "answer": "broken",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road markings", "overtaking"]
+    },
+    {
+      "id": 13,
+      "question": "When you approach a flashing red signal light, you should:",
+      "choices": [
+        "wait for the green light before proceeding",
+        "slow down and proceed with caution",
+        "come to a full stop and proceed when it is safe to do so"
+      ],
+      "answer": "come to a full stop and proceed when it is safe to do so",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic lights", "priority"]
+    },
+    {
+      "id": 14,
+      "question": "Which of the following hand signals must a driver give when he wants to slow down and stop?",
+      "choices": [
+        "left arm bent at elbow, hand pointing up",
+        "left arm held straight in horizontal position",
+        "left arm held down and hand pointing at ground"
+      ],
+      "answer": "left arm held down and hand pointing at ground",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["hand signals", "stopping"]
+    },
+    {
+      "id": 15,
+      "question": "The proper hand signal for right turn is:",
+      "choices": [
+        "left arm bent at elbow, hand pointing up",
+        "left arm held straight in horizontal position",
+        "left arm held down and hand pointing at ground"
+      ],
+      "answer": "left arm bent at elbow, hand pointing up",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["hand signals", "turning"]
+    },
+    {
+      "id": 16,
+      "question": "If the driver ahead of you extends his left arm straight out, you are fairly sure that he is going to:",
+      "choices": [
+        "turn left at the next intersection",
+        "pull off to the side of the road to stop",
+        "turn right at the next intersection"
+      ],
+      "answer": "turn left at the next intersection",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["hand signals", "turning"]
+    },
+    {
+      "id": 17,
+      "question": "When approaching a railway crossing with a signal device warning the approach of a train, you must:",
+      "choices": [
+        "stop not less than 1.5 meters from the nearest rail",
+        "slow down and proceed with caution",
+        "pull off to the side of the road to stop"
+      ],
+      "answer": "stop not less than 1.5 meters from the nearest rail",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["railway crossing", "safety"]
+    },
+    {
+      "id": 18,
+      "question": "Under what circumstances should you sound your horn?",
+      "choices": [
+        "as a safety warning",
+        "at school zones",
+        "at hospital zones"
+      ],
+      "answer": "as a safety warning",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["horn usage", "safety"]
+    },
+    {
+      "id": 19,
+      "question": "What does the law require you to do upon approaching an intersection with a stop sign?",
+      "choices": [
+        "slow down and proceed when it is safe to do so",
+        "stop and proceed when it is safe to do so",
+        "yield the right-of-way if necessary to vehicles approaching from left or right"
+      ],
+      "answer": "stop and proceed when it is safe to do so",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["stop sign", "priority", "regulatory"]
+    },
+    {
+      "id": 20,
+      "question": "Upon approaching an intersection marked with a YIELD SIGN, you are required to:",
+      "image": "/images/road-signs/yield.png",
+      "choices": [
+        "stop before entering the intersection",
+        "enter the intersection immediately",
+        "slow down then enter the intersection when the way is clear"
+      ],
+      "answer": "slow down then enter the intersection when the way is clear",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["yield sign", "priority", "regulatory"]
+    },
+    {
+      "id": 21,
+      "question": "The road sign 'Do Not Enter' is a:",
+      "image": "/images/road-signs/do-not-enter.png",
+      "choices": [
+        "Regulatory sign",
+        "Guide sign",
+        "Warning sign"
+      ],
+      "answer": "Regulatory sign",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road signs", "regulatory"]
+    },
+    {
+      "id": 22,
+      "question": "The Right-of-Way law provides us with:",
+      "choices": [
+        "basic rights as drivers",
+        "rules for when to yield to others",
+        "rules for turning right"
+      ],
+      "answer": "rules for when to yield to others",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["right-of-way", "priority"]
+    },
+    {
+      "id": 23,
+      "question": "A good safety rule when you are sure you have the legal right-of-way is:",
+      "choices": [
+        "never believe on it",
+        "sound your horn to alert others",
+        "always demand"
+      ],
+      "answer": "never believe on it",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["right-of-way", "safety"]
+    },
+    {
+      "id": 24,
+      "question": "At rotundas, which of the following vehicles have the right-of-way?",
+      "choices": [
+        "vehicles which are just about to enter",
+        "vehicles within the rotunda",
+        "vehicles facing the green light"
+      ],
+      "answer": "vehicles within the rotunda",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["rotunda", "right-of-way"]
+    },
+    {
+      "id": 25,
+      "question": "At an intersection with no control device, two cars approach at right angles to each other. Which driver must yield?",
+      "choices": [
+        "the driver who gets there first",
+        "the driver who slows down first",
+        "the driver who gets there last"
+      ],
+      "answer": "the driver who gets there last",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["intersection", "right-of-way"]
+    },
+    {
+      "id": 26,
+      "question": "At an intersection with no control device, two cars approach from opposite directions. Which driver must yield?",
+      "choices": [
+        "the driver going straight",
+        "the driver turning left",
+        "the driver turning right"
+      ],
+      "answer": "the driver turning right",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["intersection", "right-of-way"]
+    },
+    {
+      "id": 27,
+      "question": "At an intersection without a control device, two cars are approaching from opposite directions at approximately the same time, one is turning left and the other turning right. Which driver must yield?",
+      "choices": [
+        "the driver turning right",
+        "the driver turning left",
+        "the driver who gets there first"
+      ],
+      "answer": "the driver turning left",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["intersection", "right-of-way"]
+    },
+    {
+      "id": 28,
+      "question": "At an intersection without stop or yield signs, two cars reach the intersection at the same time. Which car has the right-of-way?",
+      "choices": [
+        "the car on the right",
+        "the car on the left",
+        "the car that slows down first"
+      ],
+      "answer": "the car on the right",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["intersection", "right-of-way"]
+    },
+    {
+      "id": 29,
+      "question": "A car is positioned in an intersection waiting to turn left when the traffic signal light turns red. Who should go first?",
+      "choices": [
+        "the driver caught in the intersection waiting to turn left",
+        "the driver making the right turn",
+        "the driver caught with the green light"
+      ],
+      "answer": "the driver caught in the intersection waiting to turn left",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["intersection", "traffic lights"]
+    },
+    {
+      "id": 30,
+      "question": "At an intersection without stop or yield signs, two cars approach from different streets. Which car has the right-of-way?",
+      "choices": [
+        "the vehicle already in the intersection",
+        "the vehicle on the left",
+        "the vehicle that slows down first"
+      ],
+      "answer": "the vehicle already in the intersection",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["intersection", "right-of-way"]
+    },
+    {
+      "id": 31,
+      "question": "The driver of a car traveling on a highway is required to yield to:",
+      "choices": [
+        "any car coming out of a driveway",
+        "pedestrian",
+        "cars approaching an intersection from the left"
+      ],
+      "answer": "pedestrian",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pedestrian", "right-of-way"]
+    },
+    {
+      "id": 32,
+      "question": "When about to make a left turn, you should give the right-of-way to cars coming from the opposite direction:",
+      "choices": [
+        "until at least two cars have passed",
+        "which are close enough to be dangerous",
+        "until five cars have passed"
+      ],
+      "answer": "which are close enough to be dangerous",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turning", "right-of-way"]
+    },
+    {
+      "id": 33,
+      "question": "If there are pedestrians on a school crossing, you are required to:",
+      "choices": [
+        "stop and give way only to persons crossing from your right",
+        "stop only for children and give way to them from either direction",
+        "stop and do not proceed until all persons are completely clear off the crossing"
+      ],
+      "answer": "stop and do not proceed until all persons are completely clear off the crossing",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pedestrian", "school zone"]
+    },
+    {
+      "id": 34,
+      "question": "Should a driver turning at an intersection give way to pedestrians?",
+      "choices": [
+        "Yes, a driver turning right or left must give way to pedestrians",
+        "No pedestrians must give way to all vehicles",
+        "Yes, but only if the driver is turning left"
+      ],
+      "answer": "Yes, a driver turning right or left must give way to pedestrians",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pedestrian", "intersection"]
+    },
+    {
+      "id": 35,
+      "question": "When on a street designed for two-way traffic, you hear the siren of an emergency vehicle. What does the law require you to do?",
+      "choices": [
+        "pull to the right and stop",
+        "speed up to get out of the way",
+        "continue at high speed"
+      ],
+      "answer": "pull to the right and stop",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["emergency vehicle", "priority"]
+    },
+    {
+      "id": 36,
+      "question": "When two vehicles meet on an upgrade road where neither cars pass, which of the two must yield?",
+      "choices": [
+        "the vehicle facing downhill",
+        "the vehicle facing uphill",
+        "the vehicle that blows its horn first"
+      ],
+      "answer": "the vehicle facing downhill",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["right-of-way", "road conditions"]
+    },
+    {
+      "id": 37,
+      "question": "Before changing lanes in traffic, you should always give a signal, check your rear-view mirror and:",
+      "choices": [
+        "turn your head to check other vehicles beside your car",
+        "sound your horn",
+        "blink your headlight"
+      ],
+      "answer": "turn your head to check other vehicles beside your car",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane change", "safety"]
+    },
+    {
+      "id": 38,
+      "question": "You should change lanes only after you have:",
+      "choices": [
+        "signaled your intention and checked traffic",
+        "signaled your intention",
+        "checked traffic"
+      ],
+      "answer": "signaled your intention and checked traffic",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane change", "safety"]
+    },
+    {
+      "id": 39,
+      "question": "After passing or overtaking a car, you can safely move back into the lane you left if:",
+      "choices": [
+        "the driver you have passed honks his horn",
+        "you can see in your rear-view mirror the car you have passed",
+        "you can see in your side-view mirror the car you have passed"
+      ],
+      "answer": "you can see in your rear-view mirror the car you have passed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "safety"]
+    },
+    {
+      "id": 40,
+      "question": "You may pass to the right of a car traveling in your direction:",
+      "choices": [
+        "if the highway is clearly marked for two or more lanes moving towards the same direction",
+        "on a road having one lane in opposite direction",
+        "by driving off the paved roadway"
+      ],
+      "answer": "if the highway is clearly marked for two or more lanes moving towards the same direction",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "lane usage"]
+    },
+    {
+      "id": 41,
+      "question": "If you are traveling in the wrong lane, what must you do to make a turn as you enter an intersection?",
+      "choices": [
+        "make the turn as quickly as possible",
+        "brake or clutch while actually turning",
+        "look behind on both sides and see if it is safe before you change lane"
+      ],
+      "answer": "look behind on both sides and see if it is safe before you change lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane change", "intersection"]
+    },
+    {
+      "id": 42,
+      "question": "You should begin signaling for a right or left turn before reaching the turning point by at least:",
+      "choices": [
+        "30 meters",
+        "60 meters",
+        "15 meters"
+      ],
+      "answer": "30 meters",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["signaling", "turning"]
+    },
+    {
+      "id": 43,
+      "question": "You should normally begin a right turn on:",
+      "choices": [
+        "the lane nearest to the road center",
+        "the lane nearest the right curb",
+        "the same lane as for a left turn"
+      ],
+      "answer": "the lane nearest the right curb",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turning", "lane usage"]
+    },
+    {
+      "id": 44,
+      "question": "The car behind you wants to pass. You should:",
+      "choices": [
+        "blow your horn to allow him to pass",
+        "slow down slightly and pull to the right",
+        "pull to the right and stop as he can pass"
+      ],
+      "answer": "slow down slightly and pull to the right",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "courtesy"]
+    },
+    {
+      "id": 45,
+      "question": "When driving on the highway at night, you should use low beam headlights (dim lights) when:",
+      "choices": [
+        "another driver dims his lights",
+        "blinded by the headlights of an approaching vehicle",
+        "all of the above"
+      ],
+      "answer": "all of the above",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["night driving", "headlights"]
+    },
+    {
+      "id": 46,
+      "question": "If the brake lights of several cars ahead of you flash on, you should:",
+      "choices": [
+        "release accelerator and prepare to brake",
+        "apply your brakes as soon as possible",
+        "increase your speed"
+      ],
+      "answer": "release accelerator and prepare to brake",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["braking", "traffic awareness"]
+    },
+    {
+      "id": 47,
+      "question": "Which of these steps is not correct when making a right turn?",
+      "choices": [
+        "stop in the crosswalk",
+        "signal at least 30 meters ahead of your turn",
+        "watch for pedestrians on the street you are about to enter"
+      ],
+      "answer": "stop in the crosswalk",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turning", "intersection"]
+    },
+    {
+      "id": 48,
+      "question": "The driver must not overtake at the foot or approach of a bridge because:",
+      "choices": [
+        "he cannot see oncoming vehicles from the other side of the bridge",
+        "there are pedestrians crossing",
+        "he might obstruct the flow of traffic"
+      ],
+      "answer": "he cannot see oncoming vehicles from the other side of the bridge",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "safety"]
+    },
+    {
+      "id": 49,
+      "question": "The best practice when turning left or right while traveling on a highway is:",
+      "choices": [
+        "to signal your intention as you make the turn",
+        "to give the electrical and/or hand signal at least 30 meters before you make the turn",
+        "to disregard signaling if there is no traffic ahead or behind you"
+      ],
+      "answer": "to give the electrical and/or hand signal at least 30 meters before you make the turn",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["signaling", "turning"]
+    },
+    {
+      "id": 50,
+      "question": "Using the shoulder of the road to pass to the right of a car ahead of you is:",
+      "choices": [
+        "allowed if you are turning right",
+        "allowed if the car ahead is turning left",
+        "against the law"
+      ],
+      "answer": "against the law",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "road rules"]
+    },
+    {
+      "id": 51,
+      "question": "Which of the following is not a safe place to overtake?",
+      "choices": [
+        "when approaching a bridge or upon a curve",
+        "at an intersection",
+        "both of the above"
+      ],
+      "answer": "both of the above",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "safety"]
+    },
+    {
+      "id": 52,
+      "question": "A left turn is more dangerous than a right turn because:",
+      "choices": [
+        "cars from the right are moving faster",
+        "you have to be alert for vehicles coming from both left and right",
+        "four-lane streets are wider than two-lane streets"
+      ],
+      "answer": "you have to be alert for vehicles coming from both left and right",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turning", "safety"]
+    },
+    {
+      "id": 53,
+      "question": "What light shall be used when vehicles are parked on the highway at night?",
+      "choices": [
+        "headlight",
+        "parking lights or lower-beam headlights",
+        "signal lights"
+      ],
+      "answer": "parking lights or lower-beam headlights",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "night driving"]
+    },
+    {
+      "id": 54,
+      "question": "Parking lights may be used:",
+      "choices": [
+        "at anytime",
+        "for parking and when visibility is poor",
+        "when driving on a well-lighted streets"
+      ],
+      "answer": "for parking and when visibility is poor",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "lighting"]
+    },
+    {
+      "id": 55,
+      "question": "We consider a vehicle parked when:",
+      "choices": [
+        "it has brought to stop on the shoulder of a highway and remains inactive in a place for an appreciable period of time",
+        "it stops to discharge/take in waiting passengers",
+        "it loads/unloads small quantity or freight with reasonable dispatch and moves away without delay"
+      ],
+      "answer": "it has brought to stop on the shoulder of a highway and remains inactive in a place for an appreciable period of time",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "road rules"]
+    },
+    {
+      "id": 56,
+      "question": "When parking downhill, you should turn your front wheel:",
+      "choices": [
+        "into the curb or toward the side of the road",
+        "away from the curb",
+        "any direction will do"
+      ],
+      "answer": "into the curb or toward the side of the road",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "safety"]
+    },
+    {
+      "id": 57,
+      "question": "When parking a car on an upgrade without a curb, the best practice is to:",
+      "choices": [
+        "get close to the curb and turn the front wheels away from curb",
+        "turn wheels sharply to the left",
+        "turn wheels sharply to the right"
+      ],
+      "answer": "get close to the curb and turn the front wheels away from curb",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "safety"]
+    },
+    {
+      "id": 58,
+      "question": "What should you do when parking uphill and there is a curb?",
+      "choices": [
+        "turn wheels to curb",
+        "turn back of wheels to curb",
+        "turn your front wheels sharply to the left away from curb"
+      ],
+      "answer": "turn back of wheels to curb",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "safety"]
+    },
+    {
+      "id": 59,
+      "question": "Before moving your car from a parked position, you should:",
+      "choices": [
+        "check other traffic, signal and pull from curb when it is safe to do so",
+        "signal and pull from curb",
+        "sound your horn and pull from curb slowly"
+      ],
+      "answer": "check other traffic, signal and pull from curb when it is safe to do so",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "safety"]
+    },
+    {
+      "id": 60,
+      "question": "You may never park:",
+      "choices": [
+        "on a crosswalk",
+        "on a one-way street",
+        "within 5-meters of a fire-hydrant"
+      ],
+      "answer": "on a crosswalk",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "regulatory"]
+    },
+    {
+      "id": 61,
+      "question": "When loading or unloading passengers, we usually stop at the:",
+      "choices": [
+        "right side of the road nearest the sidewalk",
+        "middle side of the road",
+        "intersection"
+      ],
+      "answer": "right side of the road nearest the sidewalk",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["passenger handling", "road rules"]
+    },
+    {
+      "id": 62,
+      "question": "A driver may load and unload passengers:",
+      "choices": [
+        "only at designated stops",
+        "whenever a passenger signals for a stop",
+        "before an intersection"
+      ],
+      "answer": "only at designated stops",
+      "licenseType": ["Pro"],
+      "tags": ["passenger handling", "regulatory"]
+    },
+    {
+      "id": 63,
+      "question": "Whenever you leave the car unattended, the law says that you stop the engine and:",
+      "choices": [
+        "notch effectively the hand brake",
+        "shift the gear to neutral",
+        "close the windows"
+      ],
+      "answer": "notch effectively the hand brake",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "safety"]
+    },
+    {
+      "id": 64,
+      "question": "When you intend to drive slower than the other vehicles, you should use the:",
+      "choices": [
+        "outermost (right) lane",
+        "center lane",
+        "innermost (left) lane"
+      ],
+      "answer": "outermost (right) lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane usage", "speed"]
+    },
+    {
+      "id": 65,
+      "question": "When you intend to drive faster than the other vehicles, you should use the:",
+      "choices": [
+        "outermost (right) lane",
+        "center lane",
+        "innermost (left) lane"
+      ],
+      "answer": "innermost (left) lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane usage", "speed"]
+    },
+    {
+      "id": 66,
+      "question": "Which of the following is the maximum speed limit on the expressway?",
+      "choices": [
+        "60 kph",
+        "80 kph",
+        "100 kph"
+      ],
+      "answer": "100 kph",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed limit", "expressway"]
+    },
+    {
+      "id": 67,
+      "question": "The speed limit within a school zone during school days is:",
+      "choices": [
+        "20 kph",
+        "25 kph",
+        "30 kph"
+      ],
+      "answer": "20 kph",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed limit", "school zone"]
+    },
+    {
+      "id": 68,
+      "question": "When using the basic speed law as a guide, the choice of speed will be based:",
+      "choices": [
+        "speed of the driver",
+        "fuel of car being driven",
+        "traffic and road condition"
+      ],
+      "answer": "traffic and road condition",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed limit", "safety"]
+    },
+    {
+      "id": 69,
+      "question": "Under the basic speed law, you may never drive faster than:",
+      "choices": [
+        "that which is safe",
+        "the posted limit",
+        "the flow of traffic"
+      ],
+      "answer": "that which is safe",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed limit", "safety"]
+    },
+    {
+      "id": 70,
+      "question": "A safe speed to drive your car under adverse condition:",
+      "choices": [
+        "depends on the road and weather condition",
+        "is the posted speed limit",
+        "depends on the mechanical skill of the driver"
+      ],
+      "answer": "depends on the road and weather condition",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed limit", "safety"]
+    },
+    {
+      "id": 71,
+      "question": "At night, you should never drive at a speed which would prevent you from stopping within the distance:",
+      "choices": [
+        "you can't see in your headlights",
+        "of a 4 car-lengths",
+        "of 170 feet"
+      ],
+      "answer": "you can't see in your headlights",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["night driving", "safety"]
+    },
+    {
+      "id": 72,
+      "question": "The speed limit signs along the roadways should be thought of as:",
+      "choices": [
+        "the recommended speed under the best condition",
+        "the recommended speed under the worst condition",
+        "the recommended speed under any condition"
+      ],
+      "answer": "the recommended speed under the best condition",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed limit", "road rules"]
+    },
+    {
+      "id": 73,
+      "question": "It is more dangerous to drive at the maximum speed limit at night than during daytime because:",
+      "choices": [
+        "your reaction time is slower at night",
+        "the roadways are more apt to be slippery at night",
+        "you cannot see too far ahead at night"
+      ],
+      "answer": "you cannot see too far ahead at night",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["night driving", "safety"]
+    },
+    {
+      "id": 74,
+      "question": "Night driving is dangerous because:",
+      "choices": [
+        "street lights tend to blur your vision",
+        "more vehicles are on the road at night",
+        "the distance we can see ahead is reduced"
+      ],
+      "answer": "the distance we can see ahead is reduced",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["night driving", "safety"]
+    },
+    {
+      "id": 75,
+      "question": "When following behind another car, it is considered a safe rule to allow at least:",
+      "choices": [
+        "space for one car",
+        "15 feet of stopping distance",
+        "one-car length per 10 miles of speed"
+      ],
+      "answer": "one-car length per 10 miles of speed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["following distance", "safety"]
+    },
+    {
+      "id": 76,
+      "question": "Which of the following should you do if you feel drowsy while driving?",
+      "choices": [
+        "pull off the road and rest",
+        "move over to the right lane and continue driving",
+        "increase your speed to get away from other vehicles"
+      ],
+      "answer": "pull off the road and rest",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["driver safety", "fatigue"]
+    },
+    {
+      "id": 77,
+      "question": "When approaching a sharp curve on the highway, you should:",
+      "choices": [
+        "decrease speed before entering the curve",
+        "increase speed while negotiating the curve",
+        "apply your brake lightly while taking the curve"
+      ],
+      "answer": "decrease speed before entering the curve",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["curves", "safety"]
+    },
+    {
+      "id": 78,
+      "question": "Ignoring traffic lights during late hours of the night could:",
+      "choices": [
+        "make you a good driver",
+        "involve you in a fatal accident",
+        "decrease your fuel consumption"
+      ],
+      "answer": "involve you in a fatal accident",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic lights", "safety"]
+    },
+    {
+      "id": 79,
+      "question": "A good driving attitude of a driver is:",
+      "choices": [
+        "drive slowly",
+        "drive defensively",
+        "take chances if possible"
+      ],
+      "answer": "drive defensively",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["driver attitude", "safety"]
+    },
+    {
+      "id": 80,
+      "question": "Drivers gather most information with their:",
+      "choices": [
+        "cars",
+        "eyes",
+        "hands"
+      ],
+      "answer": "eyes",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["driver awareness", "safety"]
+    },
+    {
+      "id": 81,
+      "question": "Which of the following is most recommended in a way of dealing with fatigue on a long trip?",
+      "choices": [
+        "stop periodically for rest and exercise",
+        "eat much and drink a little alcoholic beverages",
+        "take an over-the-counter 'keep awake' pill"
+      ],
+      "answer": "stop periodically for rest and exercise",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["fatigue", "safety"]
+    },
+    {
+      "id": 82,
+      "question": "What habit will help you prevent a fixed stare and resist distraction?",
+      "choices": [
+        "ground viewing",
+        "moving your eyes regularly by looking near and far",
+        "another car's speed"
+      ],
+      "answer": "moving your eyes regularly by looking near and far",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["driver awareness", "safety"]
+    },
+    {
+      "id": 83,
+      "question": "Which of the following can you adjust in order to reduce the chance of collision?",
+      "choices": [
+        "your speed and lane position",
+        "the sharpness of a curve",
+        "another car's speed"
+      ],
+      "answer": "your speed and lane position",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["collision avoidance", "safety"]
+    },
+    {
+      "id": 84,
+      "question": "Drivers have to make decisions:",
+      "choices": [
+        "only in heavy traffic",
+        "only until they become experienced",
+        "continuously as they drive"
+      ],
+      "answer": "continuously as they drive",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["driver awareness", "safety"]
+    },
+    {
+      "id": 85,
+      "question": "When interacting with bicyclists, you must:",
+      "choices": [
+        "be more aware of the road condition",
+        "adjust speed and increase your space margin",
+        "use different visual-search"
+      ],
+      "answer": "adjust speed and increase your space margin",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["bicyclists", "safety"]
+    },
+    {
+      "id": 86,
+      "question": "As you drive, your glances to the side and rear view mirrors should be:",
+      "choices": [
+        "as brief as possible",
+        "as long as you like",
+        "at least one second each"
+      ],
+      "answer": "as brief as possible",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["driver awareness", "safety"]
+    },
+    {
+      "id": 87,
+      "question": "At night when you meet another vehicle with blinding bright lights, the safest thing to do is:",
+      "choices": [
+        "turn your lights on high beam",
+        "look slightly to the right side of the roadway",
+        "look at the headlight of the approaching vehicle"
+      ],
+      "answer": "look slightly to the right side of the roadway",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["night driving", "safety"]
+    },
+    {
+      "id": 88,
+      "question": "When approaching an intersection and the roadway beyond is blocked with traffic, you should:",
+      "choices": [
+        "keep as close as possible to the car ahead",
+        "proceed slowly into the intersection until the traffic ahead moves on",
+        "stop before the intersection and wait until traffic ahead moves on"
+      ],
+      "answer": "stop before the intersection and wait until traffic ahead moves on",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["intersection", "traffic flow"]
+    },
+    {
+      "id": 89,
+      "question": "Throwing bottles, cans or anything from your vehicle windows is:",
+      "choices": [
+        "forbidden at all times",
+        "forbidden only in the province",
+        "forbidden only in the cities"
+      ],
+      "answer": "forbidden at all times",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road rules", "safety"]
+    },
+    {
+      "id": 90,
+      "question": "The most effective way to deal with a 'tailgater' is to:",
+      "choices": [
+        "ignore him but don't allow him to get very close to you",
+        "slow down and let him pass",
+        "increase your speed and slam on your brakes"
+      ],
+      "answer": "slow down and let him pass",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["tailgating", "safety"]
+    },
+    {
+      "id": 91,
+      "question": "If you are traveling on a two-lane road and see the chances for trouble are equal on both sides, you should:",
+      "choices": [
+        "position your car slightly to the right",
+        "position your car slightly to the left",
+        "center your car between the hazards"
+      ],
+      "answer": "center your car between the hazards",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane position", "safety"]
+    },
+    {
+      "id": 92,
+      "question": "When walking on a roadway where there is no sidewalk, the pedestrians must always stay:",
+      "choices": [
+        "on the left side of the road facing traffic",
+        "on the right side",
+        "either way will do"
+      ],
+      "answer": "on the left side of the road facing traffic",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pedestrian", "safety"]
+    },
+    {
+      "id": 93,
+      "question": "In case of an accident, the first duty of the driver involved is to:",
+      "choices": [
+        "pick-up the injured person and take him to the nearest hospital",
+        "report the accident to the hospital",
+        "report the accident to the nearest police station"
+      ],
+      "answer": "pick-up the injured person and take him to the nearest hospital",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["accident", "legal"]
+    },
+    {
+      "id": 94,
+      "question": "In case of injuries involved in an accident, the duty of the uninjured driver is to:",
+      "choices": [
+        "call a physician",
+        "keep the victim lying down",
+        "try to determine who is at fault"
+      ],
+      "answer": "call a physician",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["accident", "safety"]
+    },
+    {
+      "id": 95,
+      "question": "To have one's driver's license suspended means to:",
+      "choices": [
+        "have it revalidated by the LTO",
+        "have it taken away permanently by the LTO",
+        "have it taken temporarily by the LTO"
+      ],
+      "answer": "have it taken temporarily by the LTO",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["license", "legal"]
+    },
+    {
+      "id": 96,
+      "question": "The main reasons for requiring motor vehicle inspection is to:",
+      "choices": [
+        "earn revenue for the government",
+        "give the inspector a chance to look at your car",
+        "try and make sure that cars meet the safety standards"
+      ],
+      "answer": "try and make sure that cars meet the safety standards",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["vehicle inspection", "safety"]
+    },
+    {
+      "id": 97,
+      "question": "A public utility vehicle can only be driven by holder of a:",
+      "choices": [
+        "student permit",
+        "non-professional license",
+        "professional license"
+      ],
+      "answer": "professional license",
+      "licenseType": ["Pro"],
+      "tags": ["license", "public utility"]
+    },
+    {
+      "id": 98,
+      "question": "To own a driver's license is:",
+      "choices": [
+        "an honor",
+        "a right",
+        "a privilege"
+      ],
+      "answer": "a privilege",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["license", "legal"]
+    },
+    {
+      "id": 99,
+      "question": "To avoid suspension or revocation, how many days must a driver with an apprehended license settle his case with LTO?",
+      "choices": [
+        "within 15 days",
+        "within 10 days",
+        "within 30 days"
+      ],
+      "answer": "within 15 days",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["license", "legal"]
+    },    {
+      "id": 100,
+      "question": "When may you lend your driver's license?",
+      "choices": [
+        "under no circumstance",
+        "to another person who is learning to drive",
+        "in emergencies"
+      ],
+      "answer": "under no circumstance",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["license", "legal"]
+    },
+    {
+      "id": 101,
+      "question": "What does this Stop Sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/stop-sign.webp",
+      "choices": [
+        "Slow down and proceed with caution",
+        "Stop completely at the designated stop line",
+        "Yield to oncoming traffic",
+        "Proceed if clear"
+      ],
+      "answer": "Stop completely at the designated stop line",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "priority-signs"]
+    },
+    {
+      "id": 102,
+      "question": "What does this Give Way Sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/give-way-sign.webp",
+      "choices": [
+        "Stop completely",
+        "Yield to vehicles on the right side of the intersection",
+        "Speed up to merge",
+        "Wait for a green light"
+      ],
+      "answer": "Yield to vehicles on the right side of the intersection",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "priority-signs"]
+    },
+    {
+      "id": 103,
+      "question": "What does this 'Left Turner Must Give Way' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/left-turner-must-give-way.webp",
+      "choices": [
+        "Left turns are prohibited",
+        "Left turns have priority",
+        "You must yield when turning left if cars are too close to the intersection",
+        "Left turns are only allowed at night"
+      ],
+      "answer": "You must yield when turning left if cars are too close to the intersection",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "priority-signs"]
+    },
+    {
+      "id": 104,
+      "question": "What does this 'Pass Either Side' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/vehicle-may-pass-either-side.webp",
+      "choices": [
+        "You can only pass on the left",
+        "You can only pass on the right",
+        "You can pass on either the left or right side",
+        "Passing is prohibited"
+      ],
+      "answer": "You can pass on either the left or right side",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 105,
+      "question": "What does this 'No Turns' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-turns-allowed-go-straight-1.webp",
+      "choices": [
+        "You must turn right",
+        "You must turn left",
+        "You must go straight ahead, no turns allowed",
+        "You can turn in any direction"
+      ],
+      "answer": "You must go straight ahead, no turns allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 106,
+      "question": "What does this 'One Way' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/one-way-right.webp",
+      "choices": [
+        "Traffic flows in both directions",
+        "Traffic flows in one direction only",
+        "One lane is closed",
+        "Merge ahead"
+      ],
+      "answer": "Traffic flows in one direction only",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 107,
+      "question": "What does this 'Keep Right' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/keep-right.webp",
+      "choices": [
+        "You must turn right",
+        "You must stay in the right lane",
+        "Right turns are prohibited",
+        "Merge to the right"
+      ],
+      "answer": "You must stay in the right lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 108,
+      "question": "What does this 'Keep Left' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/keep-left-1.webp",
+      "choices": [
+        "You must turn left",
+        "You must stay in the left lane",
+        "Left turns are prohibited",
+        "Merge to the left"
+      ],
+      "answer": "You must stay in the left lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 109,
+      "question": "What does this 'Merging Traffic' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/merging-traffic-1.webp",
+      "choices": [
+        "Road ends ahead",
+        "Traffic from another road will merge with your lane",
+        "Split road ahead",
+        "Construction zone ahead"
+      ],
+      "answer": "Traffic from another road will merge with your lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 110,
+      "question": "What does this 'Two-Way Traffic' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/two-way-traffic-1.webp",
+      "choices": [
+        "One-way road ahead",
+        "Traffic flows in both directions",
+        "Two lanes merge ahead",
+        "Two lanes split ahead"
+      ],
+      "answer": "Traffic flows in both directions",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 111,
+      "question": "What is the minimum age requirement for obtaining a Non-Professional driver's license in the Philippines?",
+      "choices": [
+        "16 years old",
+        "17 years old",
+        "18 years old",
+        "21 years old"
+      ],
+      "answer": "17 years old",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["license-requirements", "age-requirements"]
+    },
+    {
+      "id": 112,
+      "question": "What is the maximum speed limit for private vehicles on expressways?",
+      "choices": [
+        "60 km/h",
+        "80 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "answer": "100 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "expressways"]
+    },
+    {
+      "id": 113,
+      "question": "When approaching a school zone, what should you do?",
+      "choices": [
+        "Speed up to pass quickly",
+        "Maintain your current speed",
+        "Slow down and be prepared to stop",
+        "Honk your horn to alert students"
+      ],
+      "answer": "Slow down and be prepared to stop",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["school-zones", "safety"]
+    },
+    {
+      "id": 114,
+      "question": "What is the penalty for driving without a valid driver's license?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱3,000",
+        "Fine of ₱5,000",
+        "Fine of ₱10,000"
+      ],
+      "answer": "Fine of ₱3,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "license-violations"]
+    },
+    {
+      "id": 115,
+      "question": "When is it mandatory to use seatbelts?",
+      "choices": [
+        "Only on highways",
+        "Only when driving at night",
+        "At all times when the vehicle is in motion",
+        "Only when driving in the city"
+      ],
+      "answer": "At all times when the vehicle is in motion",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["safety", "seatbelts"]
+    },
+    {
+      "id": 116,
+      "question": "What is the recommended tire pressure for most passenger vehicles?",
+      "choices": [
+        "20-25 PSI",
+        "30-35 PSI",
+        "40-45 PSI",
+        "50-55 PSI"
+      ],
+      "answer": "30-35 PSI",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["tire-maintenance", "safety"]
+    },
+    {
+      "id": 117,
+      "question": "How often should you check your vehicle's oil level?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every month",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["oil-maintenance", "safety"]
+    },
+    {
+      "id": 118,
+      "question": "What is the minimum tread depth required for safe tires?",
+      "choices": [
+        "1.6 mm",
+        "2.0 mm",
+        "2.5 mm",
+        "3.0 mm"
+      ],
+      "answer": "1.6 mm",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["tire-safety", "maintenance"]
+    },
+    {
+      "id": 119,
+      "question": "Under RA 10666 (Children's Safety on Motorcycle Act), the child must:",
+      "choices": ["Just sit anywhere", "Grasp the rider's waist, step and rest feet comfortably on foot peg, and wear standard protective helmet", "Only wear a helmet", "Stand behind the rider"],
+      "answer": "Grasp the rider's waist, step and rest feet comfortably on foot peg, and wear standard protective helmet",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["children-safety", "ra-10666", "helmet-law"]
+    },    {
+      "id": 120,
+      "question": "Under RA 10666, which of the following prohibits the rider to convey a child?",
+      "choices": ["During daytime", "On city roads", "Where a speed limit of more than 60 kph is imposed", "During weekends"],
+      "answer": "Where a speed limit of more than 60 kph is imposed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["children-safety", "ra-10666", "speed-limits"]
+    },
+    {
+      "id": 121,
+      "question": "What does this 'Right Lane Must Turn Right' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/right-lane-must-turn-right.webp",
+      "choices": [
+        "Right turns are prohibited",
+        "Right lane must turn right",
+        "Right lane is closed",
+        "Merge to the right"
+      ],
+      "answer": "Right lane must turn right",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 122,
+      "question": "What does this 'Left Lane Must Turn Left' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/left-lane-must-turn-left.webp",
+      "choices": [
+        "Left turns are prohibited",
+        "Left lane must turn left",
+        "Left lane is closed",
+        "Merge to the left"
+      ],
+      "answer": "Left lane must turn left",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 123,
+      "question": "What does this 'Slippery Road' warning sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/slippery-road.webp",
+      "choices": [
+        "Road is closed",
+        "Road surface is slippery when wet",
+        "Road is under construction",
+        "Road has potholes"
+      ],
+      "answer": "Road surface is slippery when wet",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "road-condition"]
+    },
+    {
+      "id": 124,
+      "question": "What does this 'Steep Descent' sign warn about?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/downhill-sign-1.webp",
+      "choices": [
+        "Uphill road (left) ahead",
+        "Steep downhill road (left) ahead",
+        "Road ends ahead",
+        "Road narrows ahead"
+      ],
+      "answer": "Steep downhill road (left) ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "road-condition"]
+    },
+    {
+      "id": 125,
+      "question": "What does this 'No Parking' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-parking-zone-1.webp",
+      "choices": [
+        "Parking allowed",
+        "No parking allowed",
+        "Parking zone",
+        "Loading zone"
+      ],
+      "answer": "No parking allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "parking"]
+    },
+    {
+      "id": 126,
+      "question": "What does this 'No U-Turn' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-u-turn.webp",
+      "choices": [
+        "U-turn allowed",
+        "No U-turn allowed",
+        "Turn right",
+        "Turn left"
+      ],
+      "answer": "No U-turn allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "turning"]
+    },
+    {
+      "id": 127,
+      "question": "What is the proper way to make a right turn at an intersection?",
+      "choices": [
+        "Turn from any lane",
+        "Turn from the leftmost lane",
+        "Turn from the rightmost lane",
+        "Turn from the center lane"
+      ],
+      "answer": "Turn from the rightmost lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turning", "intersections"]
+    },
+    {
+      "id": 128,
+      "question": "What is the minimum distance you should maintain between your vehicle and the one in front of you?",
+      "choices": [
+        "1 car length",
+        "2 car lengths",
+        "3 car lengths",
+        "4 car lengths"
+      ],
+      "answer": "3 car lengths",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["following-distance", "safety"]
+    },
+    {
+      "id": 129,
+      "question": "When should you use your hazard lights?",
+      "choices": [
+        "When driving in heavy rain",
+        "When parking illegally",
+        "When your vehicle is stationary due to breakdown or emergency",
+        "When driving slowly in traffic"
+      ],
+      "answer": "When your vehicle is stationary due to breakdown or emergency",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["hazard-lights", "emergency"]
+    },
+    {
+      "id": 130,
+      "question": "What is the maximum speed limit in residential areas?",
+      "choices": [
+        "20 km/h",
+        "30 km/h",
+        "40 km/h",
+        "50 km/h"
+      ],
+      "answer": "30 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "residential-areas"]
+    },
+    {
+      "id": 131,
+      "question": "How often should you replace your vehicle's air filter?",
+      "choices": [
+        "Every 6 months",
+        "Every 12 months",
+        "Every 24 months",
+        "Every 36 months"
+      ],
+      "answer": "Every 12 months",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["air-filter", "maintenance"]
+    },
+    {
+      "id": 132,
+      "question": "What is the recommended interval for brake pad replacement?",
+      "choices": [
+        "Every 10,000 km",
+        "Every 20,000 km",
+        "Every 30,000 km",
+        "Every 40,000 km"
+      ],
+      "answer": "Every 20,000 km",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["brake-maintenance", "safety"]
+    },
+    {
+      "id": 133,
+      "question": "How often should you check your vehicle's battery terminals?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every 3 months",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["battery-maintenance", "safety"]
+    },
+    {
+      "id": 134,
+      "question": "What is the fine for the first offense of violating RA 10666 (Children's Safety on Motorcycle Act)?",
+      "choices": ["1,000 pesos", "3,000 pesos", "5,000 pesos", "10,000 pesos"],
+      "answer": "3,000 pesos",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "ra-10666", "fines"]
+    },
+    {
+      "id": 135,
+      "question": "Motorcycle riders must exercise safety and care at all times. They are required to wear:",
+      "choices": ["Any type of helmet", "Standard protective helmet", "Cap or hat", "Sunglasses only"],
+      "answer": "Standard protective helmet",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["safety-equipment", "helmet-law"]
+    },
+    {
+      "id": 136,
+      "question": "You should not use a mobile phone while riding a motorcycle because:",
+      "choices": ["It's expensive", "It is prohibited by law and it distracts your attention while driving", "It drains the battery", "It's impolite"],
+      "answer": "It is prohibited by law and it distracts your attention while driving",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["mobile-phone", "distracted-driving", "safety"]
+    },
+    {
+      "id": 137,
+      "question": "What is the penalty for using a mobile phone while driving?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱5,000",
+        "Fine of ₱10,000"
+      ],
+      "answer": "Fine of ₱5,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "distracted-driving"]
+    },
+    {
+      "id": 138,
+      "question": "When should you use your high beam headlights?",
+      "choices": [
+        "In heavy traffic",
+        "When following another vehicle",
+        "On well-lit city streets",
+        "On dark, unlit roads with no oncoming traffic"
+      ],
+      "answer": "On dark, unlit roads with no oncoming traffic",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["headlights", "night-driving"]
+    },
+    {
+      "id": 139,
+      "question": "What is the maximum speed limit on national highways?",
+      "choices": [
+        "60 km/h",
+        "80 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "answer": "80 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "highways"]
+    },
+    {
+      "id": 140,
+      "question": "When is it legal to overtake another vehicle?",
+      "choices": [
+        "On a curve",
+        "On a hill",
+        "When there is a solid yellow line",
+        "On a straight road with clear visibility"
+      ],
+      "answer": "On a straight road with clear visibility",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "safety"]
+    },
+    {
+      "id": 141,
+      "question": "What is the recommended interval for changing transmission fluid?",
+      "choices": [
+        "Every 20,000 km",
+        "Every 40,000 km",
+        "Every 60,000 km",
+        "Every 80,000 km"
+      ],
+      "answer": "Every 40,000 km",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["transmission-maintenance", "safety"]
+    },
+    {
+      "id": 142,
+      "question": "How often should you check your vehicle's coolant level?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every month",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["coolant-maintenance", "safety"]
+    },
+    {
+      "id": 143,
+      "question": "What is the recommended interval for replacing spark plugs?",
+      "choices": [
+        "Every 20,000 km",
+        "Every 40,000 km",
+        "Every 60,000 km",
+        "Every 80,000 km"
+      ],
+      "answer": "Every 40,000 km",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["spark-plugs", "maintenance"]
+    },
+    {
+      "id": 144,
+      "question": "For motorcycles, what is the allowable measurement of custom-made registered boxes or carriers?",
+      "choices": ["2ft x 2ft x 2ft", "2.5ft x 2.5ft x 2.5ft", "3ft x 3ft x 3ft"],
+      "answer": "2ft x 2ft x 2ft",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "motorcycle-accessories", "regulations"]
+    },
+    {
+      "id": 145,
+      "question": "What should you do when passing a vehicle?",
+      "choices": ["Drive far away left of the vehicle", "Drive fast the blind spots of the vehicle", "Do the eye contact technique"],
+      "answer": "Drive far away left of the vehicle",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "overtaking", "safety"]
+    },
+    {
+      "id": 146,
+      "question": "What should be the maximum weight of your motorcycle?",
+      "choices": ["2x of my body weight", "3x of my body weight", "4x of my body weight"],
+      "answer": "3x of my body weight",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "weight-limits", "safety"]
+    },
+    {
+      "id": 147,
+      "question": "How many bulbs are allowed for every auxiliary lamp?",
+      "choices": ["Six (6)", "Eight (8)", "Ten (10)"],
+      "answer": "Six (6)",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "lighting", "regulations"]
+    },
+    {
+      "id": 148,
+      "question": "What should you check when merging with traffic?",
+      "choices": ["Signal light, battery light, drive chain", "Speed, side mirror, rear tire", "Speed, brake, side mirror, signal"],
+      "answer": "Speed, brake, side mirror, signal",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "merging", "traffic"]
+    },
+    {
+      "id": 149,
+      "question": "When can you stop upon a yellow box?",
+      "choices": ["When the flow of traffic reaches the yellow box", "When loading or unloading passenger", "At no instance is a rider allowed to stop upon a yellow box"],
+      "answer": "At no instance is a rider allowed to stop upon a yellow box",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "yellow-box", "traffic-rules"]
+    },    {
+      "id": 150,
+      "question": "How many passenger/s (back rider with standard helmet) are allowed to ride a motorcycle?",
+      "choices": ["One", "Two", "Three"],
+      "answer": "One",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-limits", "safety"]
+    },
+    {
+      "id": 151,
+      "question": "What does this 'Speed Limit' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/speed-limit-maximum-60-kph.webp",
+      "choices": [
+        "Minimum speed",
+        "Maximum speed limit",
+        "Recommended speed",
+        "Average speed"
+      ],
+      "answer": "Maximum speed limit",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "speed"]
+    },
+    {
+      "id": 152,
+      "question": "What does this 'Pedestrian Crossing' sign warn about?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/be-aware-of-pedestrian-crossing.webp",
+      "choices": [
+        "No pedestrians allowed",
+        "Pedestrian crossing ahead",
+        "Pedestrian zone",
+        "School zone"
+      ],
+      "answer": "Pedestrian crossing ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "pedestrian"]
+    },
+    {
+      "id": 153,
+      "question": "What does this 'Hospital' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/hospital.webp",
+      "choices": [
+        "No hospital access",
+        "Hospital ahead",
+        "Medical emergency",
+        "First aid station"
+      ],
+      "answer": "Hospital ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["guide-signs", "services"]
+    },
+    {
+      "id": 154,
+      "question": "What is the penalty for driving under the influence of alcohol?",
+      "choices": [
+        "Fine of ₱5,000",
+        "Fine of ₱20,000",
+        "Fine of ₱50,000",
+        "Fine of ₱100,000"
+      ],
+      "answer": "Fine of ₱20,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "drunk-driving"]
+    },
+    {
+      "id": 155,
+      "question": "When should you use your turn signals?",
+      "choices": [
+        "Only when turning",
+        "Only when changing lanes",
+        "When turning or changing lanes",
+        "Only in heavy traffic"
+      ],
+      "answer": "When turning or changing lanes",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turn-signals", "safety"]
+    },
+    {
+      "id": 156,
+      "question": "What is the maximum speed limit in school zones?",
+      "choices": [
+        "20 km/h",
+        "30 km/h",
+        "40 km/h",
+        "50 km/h"
+      ],
+      "answer": "20 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "school-zones"]
+    },
+    {
+      "id": 157,
+      "question": "When should you yield to emergency vehicles?",
+      "choices": [
+        "Only when they are behind you",
+        "Only when they are in front of you",
+        "When they are approaching with lights and sirens",
+        "Only at intersections"
+      ],
+      "answer": "When they are approaching with lights and sirens",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["emergency-vehicles", "yielding"]
+    },
+    {
+      "id": 158,
+      "question": "What is the recommended interval for wheel alignment?",
+      "choices": [
+        "Every 10,000 km",
+        "Every 20,000 km",
+        "Every 30,000 km",
+        "Every 40,000 km"
+      ],
+      "answer": "Every 20,000 km",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["wheel-alignment", "safety"]
+    },
+    {
+      "id": 159,
+      "question": "How often should you check your vehicle's power steering fluid?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every month",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["power-steering", "maintenance"]
+    },
+    {
+      "id": 160,
+      "question": "What is the recommended interval for replacing timing belts?",
+      "choices": [
+        "Every 40,000 km",
+        "Every 60,000 km",
+        "Every 80,000 km",
+        "Every 100,000 km"
+      ],
+      "answer": "Every 60,000 km",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["timing-belt", "maintenance"]
+    },
+    {
+      "id": 161,
+      "question": "What should you do to avoid abrupt vibration or uncontrolled idling?",
+      "choices": ["Shift at low gear fast", "Reduce speed then shift to low gear", "Shift at low gear when going downhill"],
+      "answer": "Reduce speed then shift to low gear",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "gear-shifting", "vehicle-control"]
+    },
+    {
+      "id": 162,
+      "question": "Who are the road users?",
+      "choices": ["Motorists and pedestrians, cyclists, passengers", "Motorists and vehicles, cyclists", "Vehicles (moving and not moving)"],
+      "answer": "Motorists and pedestrians, cyclists, passengers",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "road-users", "traffic-awareness"]
+    },
+    {
+      "id": 163,
+      "question": "Tricycle drivers are required to wear:",
+      "choices": ["shoes and pants while on duty", "jackets and eyeglasses", "long sleeves and pants"],
+      "answer": "shoes and pants while on duty",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle", "dress-code"]
+    },
+    {
+      "id": 164,
+      "question": "What is the allowable engine displacement to drive within the expressway?",
+      "choices": ["300 cc and above", "400 cc and above", "500 cc and above"],
+      "answer": "400 cc and above",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "expressway", "engine-displacement"]
+    },
+    {
+      "id": 165,
+      "question": "The maximum penalty for not wearing helmet is:",
+      "choices": ["P10,000 and confiscation of driver's license", "P10,000", "Confiscation of driver's license"],
+      "answer": "P10,000 and confiscation of driver's license",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "helmet-penalty", "fines"]
+    },
+    {
+      "id": 166,
+      "question": "Under R.A. 11235, Motorcycle drivers are required to display _ on their motorcycle.",
+      "choices": ["Two (2) number plates, one on the front and one on the rear", "One (1) number plate, on the rear", "Three (3) number plates, one on the front, one on the rear, and one on the side"],
+      "answer": "Two (2) number plates, one on the front and one on the rear",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "ra-11235", "number-plates"]
+    },
+    {
+      "id": 167,
+      "question": "Motorcycle drivers are advised to switch on their head lights:",
+      "choices": ["day or night", "at night", "during heavy rain"],
+      "answer": "day or night",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "headlights", "visibility"]
+    },
+    {
+      "id": 168,
+      "question": "When approaching a pedestrian crossing, what should you do?",
+      "choices": [
+        "Speed up to pass quickly",
+        "Slow down and be prepared to stop",
+        "Honk your horn to alert pedestrians",
+        "Maintain your current speed"
+      ],
+      "answer": "Slow down and be prepared to stop",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pedestrian-safety", "crossings"]
+    },
+    {
+      "id": 169,
+      "question": "What is the penalty for running a red light?",
+      "choices": [
+        "Warning only",
+        "Fine of ₱1,000",
+        "Fine of ₱3,000",
+        "Fine of ₱5,000"
+      ],
+      "answer": "Fine of ₱3,000",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "traffic-signals"]
+    },
+    {
+      "id": 170,
+      "question": "When should you use your parking brake?",
+      "choices": [
+        "Only on hills",
+        "Only when parking for long periods",
+        "Whenever you park your vehicle",
+        "Only in parking lots"
+      ],
+      "answer": "Whenever you park your vehicle",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking-brake", "safety"]
+    },
+    {
+      "id": 171,
+      "question": "What is the maximum speed limit in business districts?",
+      "choices": [
+        "30 km/h",
+        "40 km/h",
+        "50 km/h",
+        "60 km/h"
+      ],
+      "answer": "40 km/h",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limits", "business-districts"]
+    },
+    {
+      "id": 172,
+      "question": "How often should you check your vehicle's windshield wiper blades?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every 3 months",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["wiper-blades", "safety"]
+    },
+    {
+      "id": 173,
+      "question": "How often should you check your vehicle's suspension system?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every 3 months",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["suspension", "safety"]
+    },
+    {
+      "id": 174,
+      "question": "One requirement for a child to ride as passenger of a motorcycle along public roads of heavy volume and high density of fast moving vehicles and where the speed limit is more than 60 kph is:",
+      "choices": ["when the child's feet can comfortably reach the standard foot peg of the motorcycle", "when the child to be transported is in a hurry to go to school", "when the child to be transported has parental consent"],
+      "answer": "when the child's feet can comfortably reach the standard foot peg of the motorcycle",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "child-passengers", "safety-requirements"]
+    },
+    {
+      "id": 175,
+      "question": "For motorcycles, in approaching downhill, a driver should:",
+      "choices": ["shift to neutral gear to conserve fuel", "shift to applicable gear with respect to rider's ability", "shift to lowest gear for more engine power"],
+      "answer": "shift to applicable gear with respect to rider's ability",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "downhill-driving", "gear-management"]
+    },
+    {
+      "id": 176,
+      "question": "You may not be seen by other motorists if:",
+      "choices": ["you are driving with head lights on", "you are driving with other motorcycles", "you are driving on the blind side of a vehicle"],
+      "answer": "you are driving on the blind side of a vehicle",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "visibility", "blind-spots"]
+    },
+    {
+      "id": 177,
+      "question": "What is the meaning of inverted triangle with red border?",
+      "choices": ["Stop and go", "Slow down", "Yield the right-of-way"],
+      "answer": "Yield the right-of-way",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "traffic-signs", "yield-sign"]
+    },
+    {
+      "id": 178,
+      "question": "When is the driver may be exempted from wearing helmet?",
+      "choices": ["Provided that the driver intends to use the motorcycle on a short drive only", "Provided that long drive is not along the busy road", "Short and long drive is never an exemption for not wearing helmet"],
+      "answer": "Short and long drive is never an exemption for not wearing helmet",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "helmet-law", "exemptions"]
+    },
+    {
+      "id": 179,
+      "question": "What do you expect when you have a back ride?",
+      "choices": ["Low gasoline consumption", "No allowance for cargo", "Longer braking distance"],
+      "answer": "Longer braking distance",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-effects", "braking"]
+    },    {
+      "id": 180,
+      "question": "Motorcycle drivers are not allowed to use:",
+      "choices": ["the expressways", "the sidewalks", "the highways"],
+      "answer": "the sidewalks",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "prohibited-areas", "traffic-rules"]
+    },
+    {
+      "id": 181,
+      "question": "What does this 'No Horn' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-blowing-of-horns.webp",
+      "choices": [
+        "Horn allowed",
+        "No blowing of horns allowed",
+        "School zone",
+        "Hospital zone"
+      ],
+      "answer": "No blowing of horns allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "noise"]
+    },
+    {
+      "id": 182,
+      "question": "What does this 'No Entry' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-entry-for-all-types-of-vehicle-1.webp",
+      "choices": [
+        "Entry allowed",
+        "No entry allowed",
+        "One-way street",
+        "Two-way street"
+      ],
+      "answer": "No entry allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "entry"]
+    },
+    {
+      "id": 183,
+      "question": "What does this 'Bus Stop' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/bus-stop-zone-parking-is-not-allowed.webp",
+      "choices": [
+        "No buses allowed",
+        "No parking, public utility bus stop",
+        "Bus terminal",
+        "Bus parking"
+      ],
+      "answer": "No parking, public utility bus stop",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["guide-signs", "transportation"]
+    },
+    {
+      "id": 184,
+      "question": "What is the recommended interval for replacing fuel filters?",
+      "choices": [
+        "Every 20,000 km",
+        "Every 40,000 km",
+        "Every 60,000 km",
+        "Every 80,000 km"
+      ],
+      "answer": "Every 40,000 km",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["fuel-filter", "maintenance"]
+    },
+    {
+      "id": 185,
+      "question": "What is the recommended interval for replacing air conditioning filters?",
+      "choices": [
+        "Every 6 months",
+        "Every 12 months",
+        "Every 24 months",
+        "Every 36 months"
+      ],
+      "answer": "Every 12 months",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["ac-filter", "maintenance"]
+    },
+    {
+      "id": 186,
+      "question": "How often should you check your vehicle's exhaust system?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every 3 months",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["exhaust-system", "safety"]
+    },
+    {
+      "id": 187,
+      "question": "What is the penalty for using unregistered custom-made saddle bags or boxes?",
+      "choices": ["Monetary fine, impounding of motor vehicle, confiscation of the driver's license and unregistered saddle bag", "Monetary fine, impounding of motor vehicle, revocation of driver's license", "Impounding of motor vehicle, perpetual revocation of the driver's license"],
+      "answer": "Monetary fine, impounding of motor vehicle, confiscation of the driver's license and unregistered saddle bag",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "saddle-bags", "penalties"]
+    },
+    {
+      "id": 188,
+      "question": "Saddle bags for motorcycles must not be:",
+      "choices": ["lower than the driver seat", "higher than the fuel tank", "higher than the driver seat"],
+      "answer": "higher than the driver seat",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "saddle-bags", "height-restrictions"]
+    },
+    {
+      "id": 189,
+      "question": "What should you do when your front tire fails?",
+      "choices": ["Avoid using rear brake", "Position yourself at the rear portion of the seat", "Avoid using the front brake"],
+      "answer": "Position yourself at the rear portion of the seat",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tire-failure", "emergency-procedures"]
+    },
+    {
+      "id": 190,
+      "question": "LTFRB is a government agency who has the authority to grant a Franchise or CPC to any public utility vehicle except for:",
+      "choices": ["PUB, PUJ", "tricycle", "Angkas, Grab, and other TNVS"],
+      "answer": "tricycle",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "ltfrb", "franchise"]
+    },
+    {
+      "id": 191,
+      "question": "What should you do if two passengers want to back ride with you?",
+      "choices": ["Go ahead but drive carefully", "Do not let two passengers back ride with you", "Do not traverse busy streets"],
+      "answer": "Do not let two passengers back ride with you",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-limits", "safety"]
+    },
+    {
+      "id": 192,
+      "question": "A driver who sleeps early for the next day's work is a symbol of:",
+      "choices": ["an attentive driver", "a polite driver", "a professional driver"],
+      "answer": "a professional driver",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "driver-conduct", "professionalism"]
+    },
+    {
+      "id": 193,
+      "question": "Being a tricycle driver, you must follow the _ at all times to avoid passenger complaint for irregular charges.",
+      "choices": ["traffic rules and regulations", "traffic signs and pavement markings", "Fare Matrix"],
+      "answer": "Fare Matrix",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle", "fare-matrix"]
+    },
+    {
+      "id": 194,
+      "question": "Where should you position your feet while driving a motorcycle?",
+      "choices": ["Firmly on the foot rests", "Tip toe on the foot rests", "Gently on brake pedal and shifting lever"],
+      "answer": "Firmly on the foot rests",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "riding-position", "foot-placement"]
+    },
+    {
+      "id": 195,
+      "question": "A driver must be able to:",
+      "choices": ["read, write, and knows how to interpret traffic signs", "write and compose statements", "read and write statements"],
+      "answer": "read, write, and knows how to interpret traffic signs",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "driver-qualifications", "literacy"]
+    },
+    {
+      "id": 196,
+      "question": "Can you use blinker mode head light?",
+      "choices": ["Yes", "No", "At night only"],
+      "answer": "No",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "headlight-usage", "regulations"]
+    },
+    {
+      "id": 197,
+      "question": "What should you do if you do not have a choice but to drive on a slippery wet road?",
+      "choices": ["Drive normally", "Get off and tow your motorcycle while on 1st gear", "Slow down and skim your feet through the ground"],
+      "answer": "Slow down and skim your feet through the ground",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "wet-roads", "safety-techniques"]
+    },
+    {
+      "id": 198,
+      "question": "What should be the color of a motorcycle's tail light?",
+      "choices": ["Blue", "Red", "Yellow"],
+      "answer": "Red",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tail-light", "lighting-regulations"]
+    },
+    {
+      "id": 199,
+      "question": "Under R.A. 10913, what is the maximum penalty for using his/her mobile phone while the motor vehicle is in motion?",
+      "choices": ["Monetary fine and confiscation of driver's license", "Monetary fine and one (1) month suspension of driver's license", "Revocation of driver's license"],
+      "answer": "Monetary fine and one (1) month suspension of driver's license",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "ra-10913", "mobile-phone-penalties"]
+    },
+    {
+      "id": 200,
+      "question": "What should be the maximum height of your motorcycle?",
+      "choices": ["Just below the waist", "When two feet are touching the ground at a standing position", "When two feet are touching the ground at a center stand"],
+      "answer": "When two feet are touching the ground at a standing position",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "motorcycle-height", "rider-fit"]
+    },
+    {
+      "id": 201,
+      "question": "What document do you need in order to operate your tricycle for business or for passengers?",
+      "choices": ["Municipal Tricycle Operator's Permit (MTOP)", "Motorized Tricycle Operator's Permit (MTOP)", "Mechanized Tricycle Operator's Permit (MTOP)"],
+      "answer": "Motorized Tricycle Operator's Permit (MTOP)",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle-permits", "business-requirements"]
+    },
+    {
+      "id": 202,
+      "question": "Drive chain must be regularly checked by:",
+      "choices": ["applying enough oil or grease", "applying enough oil or grease and adjusting enough tension", "applying enough oil or grease then let the chain adjust itself"],
+      "answer": "applying enough oil or grease and adjusting enough tension",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "chain-maintenance", "motorcycle-maintenance"]
+    },
+    {
+      "id": 203,
+      "question": "For motorcycle, passenger overloading may be defined as:",
+      "choices": ["more than three passengers", "more than two passengers", "more than one passenger"],
+      "answer": "more than one passenger",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "overloading", "passenger-limits"]
+    },
+    {
+      "id": 204,
+      "question": "Can you use your hand-held mobile phone while driving a motorcycle?",
+      "choices": ["Yes, to contact your passengers", "No, it is prohibited by law", "Depending on the street, using it on the main road is illegal"],
+      "answer": "No, it is prohibited by law",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "mobile-phone-ban", "distracted-driving"]
+    },
+    {
+      "id": 205,
+      "question": "What is the maximum penalty for vehicles that are not emission-compliant?",
+      "choices": ["Monetary fine and one (1) year suspension of Driver's License and three (3) months imprisonment", "Monetary fine and one (1) year suspension of Motor Vehicle Registration and impoundment of motor vehicle", "Monetary fine and one (1) year suspension of Driver's License and Motor Vehicle Registration"],
+      "answer": "Monetary fine and one (1) year suspension of Driver's License and Motor Vehicle Registration",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "emission-compliance", "environmental-penalties"]
+    },
+    {
+      "id": 206,
+      "question": "Under R.A. 10054, what is the maximum penalty for not wearing a standard protective helmet?",
+      "choices": ["Monetary fine plus suspension of Driver's License", "Monetary fine plus perpetual revocation of Driver's License", "Monetary fine plus confiscation of Driver's License"],
+      "answer": "Monetary fine plus confiscation of Driver's License",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "ra-10054", "helmet-penalties"]
+    },
+    {
+      "id": 207,
+      "question": "One exception for a child to ride as passenger of a motorcycle along public roads of heavy volume and high density of fast moving vehicles and where a speed limit of more than 60 kph is:",
+      "choices": ["the child passenger can reach the shoulders of the driver", "the child passenger requires immediate medical attention", "the child passenger has parental consent"],
+      "answer": "the child passenger requires immediate medical attention",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "child-passenger-exceptions", "emergency-situations"]
+    },
+    {
+      "id": 208,
+      "question": "What should the motorcycle rider need to check?",
+      "choices": ["Saddle bag, top box, engine oil, transmission fluid, brake pedal, speedometer", "Spare tire, brake pads and shoes, accelerator pedal", "Motor vehicle overall condition before going anywhere"],
+      "answer": "Motor vehicle overall condition before going anywhere",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "pre-ride-inspection", "vehicle-safety"]
+    },
+    {
+      "id": 209,
+      "question": "What should you check when you are preparing to slow down?",
+      "choices": ["Right and left vehicles", "Neutral gear position", "Vehicles infront and behind"],
+      "answer": "Vehicles infront and behind",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "slowing-down", "situational-awareness"]
+    },    {
+      "id": 210,
+      "question": "Diesel fuel has been spilled on the road. This will be particularly danger for:",
+      "choices": ["cars", "horses", "motorcycles"],
+      "answer": "motorcycles",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "road-hazards", "fuel-spills"]
+    },
+    {
+      "id": 211,
+      "question": "What does this 'All Traffic Must Turn Right' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/all-traffic-turn-right-ahead.webp",
+      "choices": [
+        "Right turns are prohibited",
+        "All vehicles must turn right",
+        "Right lane is closed",
+        "Merge to the right"
+      ],
+      "answer": "All vehicles must turn right",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 212,
+      "question": "What does this 'All Traffic Must Turn Left' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/all-traffic-turn-left-ahead.webp",
+      "choices": [
+        "Left turns are prohibited",
+        "All vehicles must turn left",
+        "Left lane is closed",
+        "Merge to the left"
+      ],
+      "answer": "All vehicles must turn left",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "direction-signs"]
+    },
+    {
+      "id": 213,
+      "question": "What does this 'Steep Climb' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/uphill-sign.webp",
+      "choices": [
+        "Steep uphill road (right) ahead",
+        "Steep downhill road (right) ahead",
+        "Road ends ahead",
+        "Road narrows ahead"
+      ],
+      "answer": "Steep uphill road (right) ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "road-condition"]
+    },
+    {
+      "id": 214,
+      "question": "What does this 'Road Narrows' sign warn about?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/road-narrows-ahead.webp",
+      "choices": [
+        "Road widens ahead",
+        "Road narrows ahead",
+        "Road ends ahead",
+        "Road curves ahead"
+      ],
+      "answer": "Road narrows ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "road-condition"]
+    },
+    {
+      "id": 215,
+      "question": "What does this 'Road Works' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/178-road-works.webp",
+      "choices": [
+        "Road is closed",
+        "Road is under construction",
+        "Road is slippery",
+        "Road is narrow"
+      ],
+      "answer": "Road is under construction",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "road-condition"]
+    },
+    {
+      "id": 216,
+      "question": "What does this 'School Zone' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/be-aware-of-and-stop-for-children-crossing-ahead-near-school.webp",
+      "choices": [
+        "School is closed",
+        "School zone ahead, be prepared to stop",
+        "No school ahead",
+        "School bus stop"
+      ],
+      "answer": "School zone ahead, be prepared to stop",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "school-zone"]
+    },
+    {
+      "id": 217,
+      "question": "What does this 'Railway Crossing' sign warn about?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/railway-crossing-warning.webp",
+      "choices": [
+        "Railway station ahead",
+        "Railway crossing ahead",
+        "No trains",
+        "Train station"
+      ],
+      "answer": "Railway crossing ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "railway"]
+    },
+    {
+      "id": 218,
+      "question": "What does this 'Falling Debris' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/landslide-prone-area.webp",
+      "choices": [
+        "Mountain ahead",
+        "Falling debris (right side)",
+        "Falling debris (left side)",
+        "Construction zone"
+      ],
+      "answer": "Falling debris (right side)",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "road-hazard"]
+    },
+    {
+      "id": 219,
+      "question": "What does this 'Road Hump' sign warn about?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/hump-ahead.webp",
+      "choices": [
+        "Road is closed",
+        "Speed bump ahead",
+        "Road is slippery",
+        "Road is narrow"
+      ],
+      "answer": "Speed bump ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["warning-signs", "road-condition"]
+    },
+    {
+      "id": 220,
+      "question": "What does this 'Gas Station' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/gasoline-station.webp",
+      "choices": [
+        "No fuel available",
+        "Gas station ahead",
+        "Dangerous area",
+        "Restricted area"
+      ],
+      "answer": "Gas station ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["guide-signs", "services"]
+    },
+    {
+      "id": 221,
+      "question": "What does this 'Rest Area' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/road-sign-ge5-1.png",
+      "choices": [
+        "No stopping",
+        "Rest area on the right lane",
+        "Rest area ahead",
+        "Construction zone"
+      ],
+      "answer": "Rest area on the right lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["guide-signs", "services"]
+    },
+    {
+      "id": 222,
+      "question": "What does this 'No Overtaking' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-overtaking-zone-1.webp",
+      "choices": [
+        "Overtaking allowed",
+        "No overtaking allowed",
+        "Merge ahead",
+        "Two-way traffic"
+      ],
+      "answer": "No overtaking allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "overtaking"]
+    },
+    {
+      "id": 223,
+      "question": "What does this 'No Stopping' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-stop-area.webp",
+      "choices": [
+        "Stopping allowed",
+        "No stopping allowed",
+        "Parking allowed",
+        "Loading zone"
+      ],
+      "answer": "No stopping allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "stopping"]
+    },
+    {
+      "id": 224,
+      "question": "What does this 'No Left Turn' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-left-turn-allowed-1.webp",
+      "choices": [
+        "Left turn allowed",
+        "No left turn allowed",
+        "Right turn only",
+        "U-turn allowed"
+      ],
+      "answer": "No left turn allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "turning"]
+    },
+    {
+      "id": 225,
+      "question": "What does this 'No Right Turn' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/no-right-turn-allowed-1.webp",
+      "choices": [
+        "Right turn allowed",
+        "No right turn allowed",
+        "Left turn only",
+        "U-turn allowed"
+      ],
+      "answer": "No right turn allowed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["regulatory-signs", "turning"]
+    },
+    {
+      "id": 226,
+      "question": "What does this 'Bike Lane' sign indicate?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/be-aware-and-slowdown-on-bicycle-lane-ahead.webp",
+      "choices": [
+        "No bikes allowed",
+        "Be aware and slowdown on bike lane ahead",
+        "Bike parking",
+        "Bike terminal"
+      ],
+      "answer": "Be aware and slowdown on bike lane ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["guide-signs", "transportation"]
+    },
+    {
+      "id": 227,
+      "question": "What does this 'Parking' sign mean?",
+      "imageUrl": "https://ltoonlineexam.ph/wp-content/uploads/2025/03/parking-area.webp",
+      "choices": [
+        "No parking",
+        "Parking area ahead",
+        "Loading zone",
+        "Restricted area"
+      ],
+      "answer": "Parking area ahead",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["guide-signs", "parking"]
+    },
+    {
+      "id": 228,
+      "question": "When should you check your mirrors?",
+      "choices": [
+        "Only when changing lanes",
+        "Only when turning",
+        "Regularly while driving",
+        "Only when parking"
+      ],
+      "answer": "Regularly while driving",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["mirrors", "safety"]
+    },
+    {
+      "id": 229,
+      "question": "What is the recommended interval for replacing drive belts?",
+      "choices": [
+        "Every 20,000 km",
+        "Every 40,000 km",
+        "Every 60,000 km",
+        "Every 80,000 km"
+      ],
+      "answer": "Every 40,000 km",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["drive-belts", "maintenance"]
+    },    {
+      "id": 230,
+      "question": "How often should you check your vehicle's differential fluid?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every 3 months",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["differential", "maintenance"]
+    },
+    {
+      "id": 231,
+      "question": "What is the recommended interval for replacing oxygen sensors?",
+      "choices": [
+        "Every 40,000 km",
+        "Every 60,000 km",
+        "Every 80,000 km",
+        "Every 100,000 km"
+      ],
+      "answer": "Every 60,000 km",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["oxygen-sensors", "maintenance"]
+    },
+    {
+      "id": 232,
+      "question": "How often should you check your vehicle's brake lines?",
+      "choices": [
+        "Every 6 months",
+        "Every 3 months",
+        "Every month",
+        "Every week"
+      ],
+      "answer": "Every 3 months",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["brake-lines", "safety"]
+    },
+    {
+      "id": 233,
+      "question": "What causes reduced braking power?",
+      "choices": [
+        "Worn brake pads",
+        "Low brake fluid",
+        "Contaminated brake fluid",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["braking-problems", "safety"]
+    },
+    {
+      "id": 234,
+      "question": "You are driving behind a long vehicle which has a sign saying \"Do Not Overtake Turning Vehicle\". The long vehicle indicates that it is going to turn left. You:",
+      "choices": ["must let the long vehicle turn first", "may pass the truck because it cannot turn left from the middle lane", "may move to the left-hand side of the road pass the long vehicle"],
+      "answer": "must let the long vehicle turn first",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "long-vehicles", "turning-rules"]
+    },
+    {
+      "id": 235,
+      "question": "How to make your tricycle to be as presentable as possible?",
+      "choices": ["Install audio and video gadgets", "Install accessories to attract more passengers", "Limit installation of lights and sounds and other accessories"],
+      "answer": "Limit installation of lights and sounds and other accessories",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle-presentation", "vehicle-modifications"]
+    },
+    {
+      "id": 236,
+      "question": "What is the meaning of solid yellow line on the road?",
+      "choices": ["You are allowed to overtake", "It is prohibited to change lane", "U-turn is allowed"],
+      "answer": "It is prohibited to change lane",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "road-markings", "traffic-rules"]
+    },
+    {
+      "id": 237,
+      "question": "Ideally and in the absence of user's manual, tires can be inflated while it is cold with a pressure of:",
+      "choices": ["minus 4-6 psi of the maximum pressure", "plus 2-4 psi of the maximum pressure", "exact psi of the maximum pressure"],
+      "answer": "minus 4-6 psi of the maximum pressure",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tire-pressure", "maintenance"]
+    },
+    {
+      "id": 238,
+      "question": "What may be the cause for the battery to explode?",
+      "choices": ["Placing the battery on the ground", "Overcharging drained battery", "Undercharging good battery"],
+      "answer": "Overcharging drained battery",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "battery-safety", "maintenance"]
+    },
+    {
+      "id": 239,
+      "question": "Having trouble shifting the gear may mean:",
+      "choices": ["improper shifting procedure", "improper clutch adjustment", "all of the above"],
+      "answer": "all of the above",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "gear-problems", "troubleshooting"]
+    },
+    {
+      "id": 240,
+      "question": "Starter Motor acts as a driving mechanism for:",
+      "choices": ["engine to start", "engine to start by hand", "engine and aircon to start"],
+      "answer": "engine to start",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "starter-motor", "engine-components"]
+    },
+    {
+      "id": 241,
+      "question": "Aside from brake rotors, brake pads, and brake pipes, what is the other essential part of a brake system?",
+      "choices": ["Brake lining", "Brake shoe", "Brake caliper"],
+      "answer": "Brake caliper",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "brake-system", "components"]
+    },
+    {
+      "id": 242,
+      "question": "Allowing passengers to ride on top or cover of a side car is penalized with:",
+      "choices": ["monetary fines", "imprisonment", "perpetual confiscation of driver's license"],
+      "answer": "monetary fines",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "sidecar-violations", "penalties"]
+    },
+    {
+      "id": 243,
+      "question": "If you are riding with a group, what is the hand signal for \"Fuel Filling\"?",
+      "choices": ["Left hand pointing to fuel tank", "Left hand pointing to the nearest gasoline station", "Right hand pointing to the nearest gasoline station"],
+      "answer": "Left hand pointing to fuel tank",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "hand-signals", "fuel-signals"]
+    },
+    {
+      "id": 244,
+      "question": "Night, and rain is pouring. What should you do when two prospective passengers are trying to board your tricycle going different directions?",
+      "choices": ["Let the passenger with a nearest dropping point to board the vehicle and let the other passenger to wait", "Let the two passengers board, if they want, and drop the nearest passenger first", "The passenger who will pay more, shall be the first to board and the other passenger will wait until you come back"],
+      "answer": "Let the two passengers board, if they want, and drop the nearest passenger first",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle-operations", "passenger-management"]
+    },
+    {
+      "id": 245,
+      "question": "Other than MTOP, Which document you need to post on your tricycle?",
+      "choices": ["Identification Card and Fare Matrix", "Identification Card", "Fare Matrix"],
+      "answer": "Identification Card and Fare Matrix",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle", "required-documents"]
+    },
+    {
+      "id": 246,
+      "question": "This is one of the requirements for installation of fog lamp for motor-cycle:",
+      "choices": ["must be installed together with the switch of head lamp", "separate switch independent of head lamp", "must be installed together with the tail lamp"],
+      "answer": "separate switch independent of head lamp",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "fog-lamps", "installation-requirements"]
+    },
+    {
+      "id": 247,
+      "question": "It is the duty of the driver to see to it that:",
+      "choices": ["any items left inside the vehicle be returned to the passenger", "any items left inside the vehicle be kept at home within 24 hours", "all of the above"],
+      "answer": "any items left inside the vehicle be returned to the passenger",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "driver-responsibility", "lost-items"]
+    },
+    {
+      "id": 248,
+      "question": "There is a car ahead of you. You wish to overtake but you are not sure if it is safe to do so. You should:",
+      "choices": ["not overtake if you are in doubt", "follow another overtaking vehicle through", "speed through but flash your lights to oncoming traffic"],
+      "answer": "not overtake if you are in doubt",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "overtaking", "safety-judgment"]
+    },
+    {
+      "id": 249,
+      "question": "One justification for a child to ride as passenger of a motorcycle along public roads of heavy volume and high density of fast moving vehicles and where a speed limit of more than 60 kph is:",
+      "choices": ["the child's arm can reach around and grasp the waist of the rider", "the child passenger can reach the shoulders of the driver", "the child can reach the knees of the driver"],
+      "answer": "the child's arm can reach around and grasp the waist of the rider",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "child-passengers", "safety-requirements"]
+    },    {
+      "id": 250,
+      "question": "If you are riding with a group, what is the hand signal for \"Hazard on Roadway on the Left\"?",
+      "choices": ["Point to the hazard with your left hand", "Point to the hazard with you left foot", "Point to the hazard with your right hand"],
+      "answer": "Point to the hazard with your left hand",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "hand-signals", "group-riding"]
+    },
+    {
+      "id": 251,
+      "question": "The hand brake in your motorcycle is there for:",
+      "choices": ["accelerating", "sharp turn", "none of the above"],
+      "answer": "none of the above",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "brakes", "vehicle-knowledge"]
+    },
+    {
+      "id": 252,
+      "question": "What should you do before allowing passengers off your vehicle?",
+      "choices": ["Activate an audible warning system", "Ask if they are ready to embark", "Check side mirrors"],
+      "answer": "Check side mirrors",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-safety", "mirrors"]
+    },
+    {
+      "id": 253,
+      "question": "If you are riding with a group, what is the hand signal for \"Hazard on Roadway on the Right\"?",
+      "choices": ["Point to the hazard with your right hand", "Point to the hazard with your left hand", "Point to the hazard with your right foot"],
+      "answer": "Point to the hazard with your right hand",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "hand-signals", "group-riding"]
+    },
+    {
+      "id": 254,
+      "question": "In which place/s must you not park your vehicle?",
+      "choices": ["Within six (6) meters of the intersection", "Within 10 meters (32 feet) of a junction, infront of school, inside the parking mall", "Where there is no pavement"],
+      "answer": "Within six (6) meters of the intersection",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "parking-restrictions", "intersections"]
+    },
+    {
+      "id": 255,
+      "question": "How will a school crossing patrol signal you to stop?",
+      "choices": ["By displaying a red light", "By giving you an arm signal", "By displaying a \"STOP\" sign"],
+      "answer": "By displaying a \"STOP\" sign",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "school-crossing", "signals"]
+    },
+    {
+      "id": 256,
+      "question": "You are going straight ahead at a roundabout. How should you signal?",
+      "choices": ["Signal right just before you exit", "Signal right on approach and then left to leave the roundabout", "Signal left on the approach to the roundabout and keep the signal on until you leave"],
+      "answer": "Signal right just before you exit",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "roundabout", "signaling"]
+    },
+    {
+      "id": 257,
+      "question": "The loading and unloading zone is blocked and you cannot pull into it. Before unloading your passenger, what is the most important action to take?",
+      "choices": ["Check both the traffic", "Check the pedestrian", "Continue to the next zone"],
+      "answer": "Check both the traffic",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-loading", "safety"]
+    },
+    {
+      "id": 258,
+      "question": "Before getting off, make sure that:",
+      "choices": ["the stand is properly in place", "the road is flat", "the road is completely clear"],
+      "answer": "the stand is properly in place",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "parking", "safety"]
+    },
+    {
+      "id": 259,
+      "question": "Which of the following must be in good working order for your vehicle to be roadworthy?",
+      "choices": ["Speedometer", "Chain train", "All of the above"],
+      "answer": "All of the above",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "vehicle-maintenance", "roadworthiness"]
+    },
+    {
+      "id": 260,
+      "question": "What is the meaning of solid yellow line in the road?",
+      "choices": ["You are allowed to overtake", "It is prohibited to change lane", "It is just to separate lane"],
+      "answer": "It is prohibited to change lane",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "road-markings", "traffic-rules"]
+    }
+  ]
+}

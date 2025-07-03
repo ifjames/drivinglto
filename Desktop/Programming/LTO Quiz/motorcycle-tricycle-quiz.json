@@ -1,0 +1,1171 @@
+{  "questions": [
+    {
+      "id": 1,
+      "question": "Under RA 10666 (Children's Safety on Motorcycle Act), the child must:",
+      "choices": ["Just sit anywhere", "Grasp the rider's waist, step and rest feet comfortably on foot peg, and wear standard protective helmet", "Only wear a helmet", "Stand behind the rider"],
+      "answer": "Grasp the rider's waist, step and rest feet comfortably on foot peg, and wear standard protective helmet",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["children-safety", "ra-10666", "helmet-law"]
+    },
+    {
+      "id": 2,
+      "question": "Under RA 10666, which of the following prohibits the rider to convey a child?",
+      "choices": ["During daytime", "On city roads", "Where a speed limit of more than 60 kph is imposed", "During weekends"],
+      "answer": "Where a speed limit of more than 60 kph is imposed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["children-safety", "ra-10666", "speed-limits"]
+    },
+    {
+      "id": 3,
+      "question": "What is the fine for the first offense of violating RA 10666 (Children's Safety on Motorcycle Act)?",
+      "choices": ["1,000 pesos", "3,000 pesos", "5,000 pesos", "10,000 pesos"],
+      "answer": "3,000 pesos",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "ra-10666", "fines"]
+    },
+    {
+      "id": 4,
+      "question": "What is the penalty for the second offense of RA 10666 (Children's Safety on Motorcycle Act)?",
+      "choices": ["3,000 pesos", "5,000 pesos", "7,000 pesos", "10,000 pesos"],
+      "answer": "5,000 pesos",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["penalties", "ra-10666", "fines"]
+    },
+    {
+      "id": 5,
+      "question": "Motorcycle riders must exercise safety and care at all times. They are required to wear:",
+      "choices": ["Any type of helmet", "Standard protective helmet", "Cap or hat", "Sunglasses only"],
+      "answer": "Standard protective helmet",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["safety-equipment", "helmet-law"]
+    },    {
+      "id": 6,
+      "question": "You should not use a mobile phone while riding a motorcycle because:",
+      "choices": ["It's expensive", "It is prohibited by law and it distracts your attention while driving", "It drains the battery", "It's impolite"],
+      "answer": "It is prohibited by law and it distracts your attention while driving",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["mobile-phone", "distracted-driving", "safety"]
+    },
+    {
+      "id": 7,
+      "question": "When do you need to check your engine oil level?",
+      "choices": ["When the engine is hot", "When the engine is cold", "While driving", "Never"],
+      "answer": "When the engine is cold",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["maintenance", "engine-oil"]
+    },
+    {
+      "id": 8,
+      "question": "Using a backbone motorcycle, which stand do you need to use when parking overnight?",
+      "choices": ["Side stand", "Center stand", "Both stands", "No stand needed"],
+      "answer": "Center stand",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking", "motorcycle-stands"]
+    },
+    {
+      "id": 9,
+      "question": "What is the maximum allowable width of the saddle box or bag?",
+      "choices": ["10 inches from both sides", "12 inches from both sides", "14 inches from both sides", "16 inches from both sides"],
+      "answer": "14 inches from both sides",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["cargo", "saddle-box", "regulations"]
+    },
+    {
+      "id": 10,
+      "question": "What is the maximum penalty for driving under the influence of liquor or prohibited drugs?",
+      "choices": ["License suspension", "Fine only", "Perpetual revocation of license", "Community service"],
+      "answer": "Perpetual revocation of license",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["drunk-driving", "penalties", "license-revocation"]
+    },    {
+      "id": 11,
+      "question": "What should you do first before changing lanes?",
+      "choices": ["Speed up", "Make signal", "Look behind", "Honk the horn"],
+      "answer": "Make signal",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane-changing", "signaling"]
+    },
+    {
+      "id": 12,
+      "question": "When do you need to switch on your turn signal?",
+      "choices": ["After turning", "While turning", "Before turning", "Never"],
+      "answer": "Before turning",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["turn-signals", "signaling"]
+    },
+    {
+      "id": 13,
+      "question": "When is it legal to use the shoulder of a road when overtaking another vehicle?",
+      "choices": ["Always allowed", "During normal circumstances you are not legally allowed to pass using the shoulder of a road", "Only at night", "Only on highways"],
+      "answer": "During normal circumstances you are not legally allowed to pass using the shoulder of a road",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overtaking", "road-shoulder", "traffic-laws"]
+    },
+    {
+      "id": 14,
+      "question": "What action can cause you to skid and lose control when you make an abrupt move, especially on wet and slippery roads?",
+      "choices": ["Proper signaling", "Improper braking", "Slow acceleration", "Gradual turning"],
+      "answer": "Improper braking",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["braking", "skidding", "wet-roads"]
+    },
+    {
+      "id": 15,
+      "question": "To help reduce air pollution, what should you do with your brakes?",
+      "choices": ["Never use brakes", "Brake properly", "Brake hard always", "Avoid braking completely"],
+      "answer": "Brake properly",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["environmental", "proper-braking", "air-pollution"]
+    },    {
+      "id": 16,
+      "question": "What is the authority granted by LTO to a person who desires to learn to operate a motor vehicle, valid for a period of one year?",
+      "choices": ["Driver's License", "Student Driver's Permit", "Vehicle Registration", "OR/CR"],
+      "answer": "Student Driver's Permit",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["student-permit", "lto-authority", "learning"]
+    },
+    {
+      "id": 17,
+      "question": "Signs that are round, inverted triangle, or octagonal and with red colored border are called:",
+      "choices": ["Warning signs", "Regulatory signs", "Information signs", "Guide signs"],
+      "answer": "Regulatory signs",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic-signs", "regulatory-signs"]
+    },
+    {
+      "id": 18,
+      "question": "What sign will constitute an offense if it will be disregarded?",
+      "choices": ["Warning sign", "Information sign", "Regulatory sign", "Guide sign"],
+      "answer": "Regulatory sign",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic-violations", "regulatory-signs"]
+    },
+    {
+      "id": 19,
+      "question": "Among the list, who are exempted from speed limits?",
+      "choices": ["Government officials", "Doctors or their drivers going to an emergency", "Police officers off duty", "All public officials"],
+      "answer": "Doctors or their drivers going to an emergency",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-limit-exemptions", "emergency-vehicles"]
+    },
+    {
+      "id": 20,
+      "question": "How can you avoid wasting fuel?",
+      "choices": ["Drive faster", "By having your vehicle properly serviced and maintained", "Use more fuel additives", "Keep engine running when parked"],
+      "answer": "By having your vehicle properly serviced and maintained",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["fuel-efficiency", "vehicle-maintenance"]
+    },    {
+      "id": 21,
+      "question": "If you service your own vehicle, how should you get rid of the old engine oil?",
+      "choices": ["Pour it in the drain", "Throw it in the garbage", "Dispose it properly", "Burn it"],
+      "answer": "Dispose it properly",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["environmental", "oil-disposal", "maintenance"]
+    },
+    {
+      "id": 22,
+      "question": "In case of a road crash involving physical injury, the first duty of the involved driver is:",
+      "choices": ["Call the police", "Move the vehicle", "Attend to the injured person and call for help", "Take photos"],
+      "answer": "Attend to the injured person and call for help",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["accidents", "emergency-response", "first-aid"]
+    },
+    {
+      "id": 23,
+      "question": "When more than one driver arrives at a four-way stop, who has the right of way?",
+      "choices": ["The biggest vehicle", "The fastest driver", "The driver who arrived first should be the first to go", "The driver on the right"],
+      "answer": "The driver who arrived first should be the first to go",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["four-way-stop", "right-of-way"]
+    },
+    {
+      "id": 24,
+      "question": "You are planning a long trip. Do you need to plan rest stops?",
+      "choices": ["No, just drive straight", "Only if tired", "Yes, regular stops help avoid mental and physical fatigue", "Only for fuel stops"],
+      "answer": "Yes, regular stops help avoid mental and physical fatigue",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["long-trips", "fatigue", "safety"]
+    },
+    {
+      "id": 25,
+      "question": "During periods of illness, your ability to drive may be impaired. You must:",
+      "choices": ["Drive slowly", "Be physically and mentally fit and do not drive after taking medicine", "Take more medicine", "Drive only short distances"],
+      "answer": "Be physically and mentally fit and do not drive after taking medicine",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["medical-fitness", "medications", "impairment"]
+    },    {
+      "id": 26,
+      "question": "How does alcohol affect you?",
+      "choices": ["It improves concentration", "It reduces your concentration", "It has no effect", "It makes you drive better"],
+      "answer": "It reduces your concentration",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["alcohol", "impairment", "concentration"]
+    },
+    {
+      "id": 27,
+      "question": "What is the meaning of 'beating the red light'?",
+      "choices": ["Stopping at red light", "Driving faster upon seeing a yellow amber light", "Waiting for green light", "Turning right on red"],
+      "answer": "Driving faster upon seeing a yellow amber light",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic-violations", "red-light", "yellow-light"]
+    },
+    {
+      "id": 28,
+      "question": "What should you do if the road is wet?",
+      "choices": ["Speed up", "Maintain normal speed", "Slow down", "Use high beams"],
+      "answer": "Slow down",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["wet-roads", "weather-conditions", "safety"]
+    },
+    {
+      "id": 29,
+      "question": "Why are rumble strips installed across the road?",
+      "choices": ["For decoration", "To make you alert and aware of your speed", "To damage tires", "To collect toll"],
+      "answer": "To make you alert and aware of your speed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["rumble-strips", "speed-awareness", "road-safety"]
+    },
+    {
+      "id": 30,
+      "question": "Which one is a mandate of LTO?",
+      "choices": ["Sell vehicles", "Register roadworthy and emission compliant motor vehicles", "Repair vehicles", "Manufacture vehicles"],
+      "answer": "Register roadworthy and emission compliant motor vehicles",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lto-mandate", "vehicle-registration", "emission-compliance"]
+    },    {
+      "id": 31,
+      "question": "A pedestrian runs across the street when you're about to move off from a red light. What should you do?",
+      "choices": ["Honk the horn", "Speed up", "Wait until the pedestrian crossed", "Flash your lights"],
+      "answer": "Wait until the pedestrian crossed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pedestrian-safety", "crosswalks", "yielding"]
+    },
+    {
+      "id": 32,
+      "question": "A driver while on a highway shall yield the right of way to:",
+      "choices": ["Faster vehicles", "Pedestrians crossing within a crosswalk", "Motorcycles only", "Government vehicles"],
+      "answer": "Pedestrians crossing within a crosswalk",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["right-of-way", "pedestrian-crossings", "highway-driving"]
+    },
+    {
+      "id": 33,
+      "question": "When you approach a road work with a temporary maximum speed limit sign, what should you do?",
+      "choices": ["Ignore the sign", "Comply with the sign at all times", "Speed up to pass quickly", "Use hazard lights"],
+      "answer": "Comply with the sign at all times",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road-work", "temporary-signs", "speed-limits"]
+    },
+    {
+      "id": 34,
+      "question": "You are entering an area of road works where there is a temporary no overtaking sign. You must:",
+      "choices": ["Ignore the sign", "Follow the sign as advised", "Overtake quickly", "Stop completely"],
+      "answer": "Follow the sign as advised",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road-work", "no-overtaking", "temporary-signs"]
+    },    {
+      "id": 35,
+      "question": "If you encounter emergency vehicles such as an ambulance, fire truck, and police cars on the road with sirens on, what should you do?",
+      "choices": ["Speed up", "Stay in your lane", "Give way by pulling to the left or right side of the road", "Follow them closely"],
+      "answer": "Give way by pulling to the left or right side of the road",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["emergency-vehicles", "giving-way", "sirens"]
+    },
+    {
+      "id": 36,
+      "question": "What should you do if a traffic police officer directed you to drive through a red light or stop sign?",
+      "choices": ["Ignore the officer", "You must obey", "Wait for green light", "Ask for written permission"],
+      "answer": "You must obey",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["traffic-officer", "police-direction", "traffic-signals"]
+    },
+    {
+      "id": 37,
+      "question": "It is more dangerous to turn left than to turn right because:",
+      "choices": ["Left turns are illegal", "Vehicles coming from opposite direction are faster", "There are more pedestrians", "Traffic lights don't allow it"],
+      "answer": "Vehicles coming from opposite direction are faster",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["left-turns", "opposite-traffic", "turning-safety"]
+    },
+    {
+      "id": 38,
+      "question": "A driver must not park or stop at the side of the road of a stop sign when it is within:",
+      "choices": ["3 meters", "4 meters", "6 meters", "10 meters"],
+      "answer": "6 meters",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking-restrictions", "stop-sign", "distance-requirements"]
+    },
+    {
+      "id": 39,
+      "question": "Double broken white lines on the road means:",
+      "choices": ["No overtaking allowed", "You are allowed to overtake on the left or right if there is no danger", "One way road", "Construction zone"],
+      "answer": "You are allowed to overtake on the left or right if there is no danger",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road-markings", "overtaking", "double-broken-lines"]
+    },
+    {
+      "id": 40,
+      "question": "Who is responsible for not overloading vehicle?",
+      "choices": ["The passenger", "The traffic enforcer", "The driver or rider of the vehicle", "The vehicle owner"],
+      "answer": "The driver or rider of the vehicle",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["overloading", "driver-responsibility", "vehicle-safety"]
+    },
+    {
+      "id": 41,
+      "question": "You can overtake in a highway if it has two lanes with:",
+      "choices": ["Solid white lines", "Broken white lines", "Yellow lines", "No lines"],
+      "answer": "Broken white lines",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["highway-overtaking", "broken-lines", "lane-markings"]
+    },
+    {
+      "id": 42,
+      "question": "What is the appropriate action if you feel sleepy while driving?",
+      "choices": ["Drink coffee while driving", "Open windows", "Park at a rest stop and rest", "Play loud music"],
+      "answer": "Park at a rest stop and rest",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["drowsy-driving", "rest-stops", "fatigue-management"]
+    },
+    {
+      "id": 43,
+      "question": "Where should you install your saddle bag or box?",
+      "choices": ["Above the rider's head", "Not higher than the rider's seat", "On the front wheel", "Anywhere convenient"],
+      "answer": "Not higher than the rider's seat",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["saddle-bag", "cargo-installation", "height-restrictions"]
+    },
+    {
+      "id": 44,
+      "question": "The vehicle is parked if:",
+      "choices": ["It is moving slowly", "It is at standstill and the engine is turned off", "The driver is inside", "The hazard lights are on"],
+      "answer": "It is at standstill and the engine is turned off",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking-definition", "vehicle-status", "engine-off"]
+    },
+    {
+      "id": 45,
+      "question": "The proper hand signal for a left turn is:",
+      "choices": ["Left arm up", "Left arm straight in horizontal position", "Left arm down", "Right arm out"],
+      "answer": "Left arm straight in horizontal position",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["hand-signals", "left-turn", "signaling"]
+    },
+    {
+      "id": 46,
+      "question": "Single white broken line on a two-way lane road means:",
+      "choices": ["No crossing allowed", "It separates traffic moving in opposite directions", "Construction zone", "Parking area"],
+      "answer": "It separates traffic moving in opposite directions",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road-markings", "broken-line", "traffic-separation"]
+    },
+    {
+      "id": 47,
+      "question": "What should be done first before changing lanes?",
+      "choices": ["Speed up", "Check the traffic ahead and make signal", "Change immediately", "Sound the horn"],
+      "answer": "Check the traffic ahead and make signal",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane-changing", "traffic-checking", "signaling"]
+    },
+    {
+      "id": 48,
+      "question": "A no stopping sign means you:",
+      "choices": ["Can stop for passengers", "Cannot stop unless directed by a traffic officer", "Can stop for 5 minutes", "Can stop if no one is around"],
+      "answer": "Cannot stop unless directed by a traffic officer",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["no-stopping", "traffic-signs", "officer-direction"]
+    },
+    {
+      "id": 49,
+      "question": "A traffic light changes from green to yellow as you approach an intersection. What should you do?",
+      "choices": ["Speed up", "Stop before the intersection or stop line", "Continue at same speed", "Honk the horn"],
+      "answer": "Stop before the intersection or stop line",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["yellow-light", "intersection", "stopping"]
+    },
+    {
+      "id": 50,
+      "question": "What must you do at a flashing yellow traffic signal?",
+      "choices": ["Stop completely", "Speed up", "Drive with caution, consider it as a give-way sign", "Ignore it"],
+      "answer": "Drive with caution, consider it as a give-way sign",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["flashing-yellow", "caution", "give-way"]
+    },
+    {
+      "id": 51,
+      "question": "Drinking alcohol before driving is one of the major causes of vehicular road crash because when a driver is drunk he or she is:",
+      "choices": ["More careful", "Arrogant, talkative with poor judgment and reflexes", "Better at driving", "More focused"],
+      "answer": "Arrogant, talkative with poor judgment and reflexes",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["drunk-driving", "alcohol-effects", "impairment"]
+    },
+    {
+      "id": 52,
+      "question": "To perform things safely to drive on the road, one must have these documents ready:",
+      "choices": ["Just driver's license", "Valid driver's license and updated registration and insurance policy", "Registration only", "Insurance only"],
+      "answer": "Valid driver's license and updated registration and insurance policy",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["required-documents", "license", "registration", "insurance"]
+    },
+    {
+      "id": 53,
+      "question": "You must not blow the horn of your vehicle unless:",
+      "choices": ["You're angry", "A moving vehicle may cause you danger", "You want attention", "It's nighttime"],
+      "answer": "A moving vehicle may cause you danger",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["horn-usage", "vehicle-danger", "warning-signals"]
+    },
+    {
+      "id": 54,
+      "question": "Someone is waiting to cross at pedestrian crossing, they are standing on the pavement. You should normally:",
+      "choices": ["Speed up", "Honk at them", "Stop, let them cross, wait patiently", "Ignore them"],
+      "answer": "Stop, let them cross, wait patiently",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pedestrian-crossing", "yielding", "patience"]
+    },
+    {
+      "id": 55,
+      "question": "When being overtaken by a car, what should you do?",
+      "choices": ["Speed up", "Stay with the current speed", "Slow down", "Change lanes"],
+      "answer": "Stay with the current speed",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["being-overtaken", "speed-maintenance", "overtaking-etiquette"]
+    },
+    {
+      "id": 56,
+      "question": "A person with disability can possess a driver's license if:",
+      "choices": ["They pay extra fees", "The driving conditions are indicated on the driver's license", "They have a companion", "They use special vehicles only"],
+      "answer": "The driving conditions are indicated on the driver's license",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["disability", "license-conditions", "special-requirements"]
+    },
+    {
+      "id": 57,
+      "question": "The mandate of LTO is to register roadworthy and emission compliant motor vehicles, put order on the roads and to:",
+      "choices": ["Sell vehicles", "License quality drivers", "Repair vehicles", "Import vehicles"],
+      "answer": "License quality drivers",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lto-mandate", "driver-licensing", "quality-drivers"]
+    },
+    {
+      "id": 58,
+      "question": "What is the maximum penalty for a habitual violator of RA 10666 (Children's Safety on Motorcycle Act)?",
+      "choices": ["Fine only", "Imprisonment", "Revocation of driver's license", "Community service"],
+      "answer": "Revocation of driver's license",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["ra-10666", "habitual-violator", "license-revocation"]
+    },
+    {
+      "id": 59,
+      "question": "Changing lanes at an intersection is:",
+      "choices": ["Safe", "Recommended", "Unsafe", "Required"],
+      "answer": "Unsafe",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["lane-changing", "intersection", "safety"]
+    },
+    {
+      "id": 60,
+      "question": "Parking is allowed if the vehicle is:",
+      "choices": ["Within 2 meters of fire hydrant", "Beyond 4 meters of a fire hydrant", "Next to fire hydrant", "1 meter from fire hydrant"],
+      "answer": "Beyond 4 meters of a fire hydrant",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["parking-restrictions", "fire-hydrant", "distance-requirements"]
+    },
+    {
+      "id": 61,
+      "question": "Under which of these circumstances is it permissible to use a mobile phone while driving a motor vehicle?",
+      "choices": ["When traffic is slow", "For emergency calls only", "None of the above", "When using hands-free"],
+      "answer": "None of the above",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["mobile-phone", "driving-prohibition", "no-exceptions"]
+    },
+    {
+      "id": 62,
+      "question": "The temporary operator's permit authorizes the apprehended driver to operate motor vehicle for a period not exceeding:",
+      "choices": ["24 hours", "48 hours", "72 hours", "1 week"],
+      "answer": "72 hours",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["temporary-permit", "apprehension", "time-limit"]
+    },
+    {
+      "id": 63,
+      "question": "Road rage is violent anger caused by the stress and frustration involved in driving a motor vehicle in difficult conditions, especially when the driver is experiencing:",
+      "choices": ["Good weather", "Heavy traffic or gridlock", "Empty roads", "Daytime driving"],
+      "answer": "Heavy traffic or gridlock",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["road-rage", "traffic-stress", "gridlock"]
+    },
+    {
+      "id": 64,
+      "question": "You may drive over a pathway:",
+      "choices": ["Never", "To get into a property", "To avoid traffic", "For shortcuts"],
+      "answer": "To get into a property",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["pathway-driving", "property-access", "legal-exceptions"]
+    },
+    {
+      "id": 65,
+      "question": "What does the law require you to do upon approaching an intersection with a stop sign?",
+      "choices": ["Slow down only", "Stop and proceed when it is safe to do so", "Yield to traffic", "Sound horn"],
+      "answer": "Stop and proceed when it is safe to do so",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["stop-sign", "intersection", "complete-stop"]
+    },
+    {
+      "id": 66,
+      "question": "A blue traffic sign says 60 kph. What should you do?",
+      "choices": ["Drive at maximum 60 kph", "Drive at minimum of 60 kph", "Ignore the sign", "Drive at exactly 60 kph"],
+      "answer": "Drive at minimum of 60 kph",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["blue-sign", "minimum-speed", "speed-requirements"]
+    },
+    {
+      "id": 67,
+      "question": "What should you do when the brake lights of the vehicle in front of you activates?",
+      "choices": ["Speed up", "Change lanes", "Prepare to brake", "Honk the horn"],
+      "answer": "Prepare to brake",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["brake-lights", "following-distance", "defensive-driving"]
+    },
+    {
+      "id": 68,
+      "question": "Where should you position your vehicle when you are planning to turn left into a minor road?",
+      "choices": ["On the rightmost part", "On the leftmost part of the road", "In the center", "Any lane"],
+      "answer": "On the leftmost part of the road",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["left-turn", "positioning", "minor-road"]
+    },
+    {
+      "id": 69,
+      "question": "What do you mean by double white line?",
+      "choices": ["Overtaking allowed", "Separating lanes of traffic moving from opposite direction", "Parking area", "Construction zone"],
+      "answer": "Separating lanes of traffic moving from opposite direction",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["double-white-line", "traffic-separation", "opposite-direction"]
+    },
+    {
+      "id": 70,
+      "question": "The choice of speed may depend on:",
+      "choices": ["Weather conditions only", "Road conditions only", "All of the above: roadworthiness of the motor vehicle being driven and skills of the driver", "Traffic only"],
+      "answer": "All of the above: roadworthiness of the motor vehicle being driven and skills of the driver",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["speed-choice", "multiple-factors", "vehicle-condition", "driver-skills"]
+    },
+    {
+      "id": 71,
+      "question": "What is the primary purpose of using the vehicle's horn?",
+      "choices": ["To show anger", "To give warning to avoid road crash", "To greet friends", "To play music"],
+      "answer": "To give warning to avoid road crash",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["horn-purpose", "warning", "crash-prevention"]
+    },
+    {
+      "id": 72,
+      "question": "You were invited to a dinner party. You know that you will have to drive afterwards. What is your best course of action?",
+      "choices": ["Drink moderately", "Eat a lot before drinking", "Not drink any alcohol at all", "Drink only beer"],
+      "answer": "Not drink any alcohol at all",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["alcohol-prevention", "designated-driver", "zero-tolerance"]
+    },
+    {
+      "id": 73,
+      "question": "While driving on a one-way direction, you intend to turn left into a minor road. On the approach you should:",
+      "choices": ["Keep to the right", "Keep well to the left of the road", "Stay in center", "Change lanes frequently"],
+      "answer": "Keep well to the left of the road",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["one-way", "left-turn", "positioning"]
+    },
+    {
+      "id": 74,
+      "question": "What should you do if a railroad crossing has no warning devices?",
+      "choices": ["Speed up", "Stop completely", "Slow down, check left and right of the railroad and then proceed with caution if clear", "Honk continuously"],
+      "answer": "Slow down, check left and right of the railroad and then proceed with caution if clear",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["railroad-crossing", "no-warning-devices", "safety-check"]
+    },
+    {
+      "id": 75,
+      "question": "A vehicle that enters a roadway from a driveway, alley, or a private road:",
+      "choices": ["Has right of way", "Must stop and yield the right of way to traffic on the roadway and pedestrians", "Can proceed immediately", "Should honk first"],
+      "answer": "Must stop and yield the right of way to traffic on the roadway and pedestrians",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["entering-roadway", "yielding", "right-of-way", "driveway"]
+    },    {
+      "id": 76,
+      "question": "After turning right from an intersection into a one-way street, which lane should you choose?",
+      "choices": ["Leftmost lane", "Stay on the rightmost lane", "Any lane", "Center lane"],
+      "answer": "Stay on the rightmost lane",
+      "licenseType": ["Non-Pro", "Pro"],
+      "tags": ["right-turn", "one-way-street", "lane-choice"]
+    },
+    {
+      "id": 77,
+      "question": "For motorcycles, what is the allowable measurement of custom-made registered boxes or carriers?",
+      "choices": ["2ft x 2ft x 2ft", "2.5ft x 2.5ft x 2.5ft", "3ft x 3ft x 3ft"],
+      "answer": "2ft x 2ft x 2ft",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "motorcycle-accessories", "regulations"]
+    },
+    {
+      "id": 78,
+      "question": "What should you do when passing a vehicle?",
+      "choices": ["Drive far away left of the vehicle", "Drive fast the blind spots of the vehicle", "Do the eye contact technique"],
+      "answer": "Drive far away left of the vehicle",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "overtaking", "safety"]
+    },
+    {
+      "id": 79,
+      "question": "What should be the maximum weight of your motorcycle?",
+      "choices": ["2x of my body weight", "3x of my body weight", "4x of my body weight"],
+      "answer": "3x of my body weight",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "weight-limits", "safety"]
+    },
+    {
+      "id": 80,
+      "question": "Which of the following must be in good working order for your vehicle to be roadworthy?",
+      "choices": ["Speedometer", "Chain train", "All of the above"],
+      "answer": "All of the above",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "vehicle-maintenance", "roadworthiness"]
+    },
+    {
+      "id": 81,
+      "question": "How many bulbs are allowed for every auxiliary lamp?",
+      "choices": ["Six (6)", "Eight (8)", "Ten (10)"],
+      "answer": "Six (6)",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "lighting", "regulations"]
+    },
+    {
+      "id": 82,
+      "question": "Before getting off, make sure that:",
+      "choices": ["the stand is properly in place", "the road is flat", "the road is completely clear"],
+      "answer": "the stand is properly in place",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "parking", "safety"]
+    },
+    {
+      "id": 83,
+      "question": "What should you check when merging with traffic?",
+      "choices": ["Signal light, battery light, drive chain", "Speed, side mirror, rear tire", "Speed, brake, side mirror, signal"],
+      "answer": "Speed, brake, side mirror, signal",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "merging", "traffic"]
+    },
+    {
+      "id": 84,
+      "question": "When can you stop upon a yellow box?",
+      "choices": ["When the flow of traffic reaches the yellow box", "When loading or unloading passenger", "At no instance is a rider allowed to stop upon a yellow box"],
+      "answer": "At no instance is a rider allowed to stop upon a yellow box",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "yellow-box", "traffic-rules"]
+    },
+    {
+      "id": 85,
+      "question": "How many passenger/s (back rider with standard helmet) are allowed to ride a motorcycle?",
+      "choices": ["One", "Two", "Three"],
+      "answer": "One",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-limits", "safety"]
+    },
+    {
+      "id": 86,
+      "question": "What is the meaning of solid yellow line in the road?",
+      "choices": ["You are allowed to overtake", "It is prohibited to change lane", "It is just to separate lane"],
+      "answer": "It is prohibited to change lane",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "road-markings", "traffic-rules"]
+    },
+    {
+      "id": 87,
+      "question": "What should you do to avoid abrupt vibration or uncontrolled idling?",
+      "choices": ["Shift at low gear fast", "Reduce speed then shift to low gear", "Shift at low gear when going downhill"],
+      "answer": "Reduce speed then shift to low gear",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "gear-shifting", "vehicle-control"]
+    },
+    {
+      "id": 88,
+      "question": "Who are the road users?",
+      "choices": ["Motorists and pedestrians, cyclists, passengers", "Motorists and vehicles, cyclists", "Vehicles (moving and not moving)"],
+      "answer": "Motorists and pedestrians, cyclists, passengers",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "road-users", "traffic-awareness"]
+    },
+    {
+      "id": 89,
+      "question": "You are going straight ahead at a roundabout. How should you signal?",
+      "choices": ["Signal right just before you exit", "Signal right on approach and then left to leave the roundabout", "Signal left on the approach to the roundabout and keep the signal on until you leave"],
+      "answer": "Signal right just before you exit",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "roundabout", "signaling"]
+    },
+    {
+      "id": 90,
+      "question": "Tricycle drivers are required to wear:",
+      "choices": ["shoes and pants while on duty", "jackets and eyeglasses", "long sleeves and pants"],
+      "answer": "shoes and pants while on duty",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle", "dress-code"]
+    },
+    {
+      "id": 91,
+      "question": "The loading and unloading zone is blocked and you cannot pull into it. Before unloading your passenger, what is the most important action to take?",
+      "choices": ["Check both the traffic", "Check the pedestrian", "Continue to the next zone"],
+      "answer": "Check both the traffic",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-loading", "safety"]
+    },
+    {
+      "id": 92,
+      "question": "What is the allowable engine displacement to drive within the expressway?",
+      "choices": ["300 cc and above", "400 cc and above", "500 cc and above"],
+      "answer": "400 cc and above",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "expressway", "engine-displacement"]
+    },
+    {
+      "id": 93,
+      "question": "The hand brake in your motorcycle is there for:",
+      "choices": ["accelerating", "sharp turn", "none of the above"],
+      "answer": "none of the above",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "brakes", "vehicle-knowledge"]
+    },
+    {
+      "id": 94,
+      "question": "What should you do before allowing passengers off your vehicle?",
+      "choices": ["Activate an audible warning system", "Ask if they are ready to embark", "Check side mirrors"],
+      "answer": "Check side mirrors",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-safety", "mirrors"]
+    },
+    {
+      "id": 95,
+      "question": "The maximum penalty for not wearing helmet is:",
+      "choices": ["P10,000 and confiscation of driver's license", "P10,000", "Confiscation of driver's license"],
+      "answer": "P10,000 and confiscation of driver's license",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "helmet-penalty", "fines"]
+    },
+    {
+      "id": 96,
+      "question": "If you are riding with a group, what is the hand signal for \"Hazard on Roadway on the Right\"?",
+      "choices": ["Point to the hazard with your right hand", "Point to the hazard with your left hand", "Point to the hazard with your right foot"],
+      "answer": "Point to the hazard with your right hand",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "hand-signals", "group-riding"]
+    },
+    {
+      "id": 97,
+      "question": "Under R.A. 11235, Motorcycle drivers are required to display _ on their motorcycle.",
+      "choices": ["Two (2) number plates, one on the front and one on the rear", "One (1) number plate, on the rear", "Three (3) number plates, one on the front, one on the rear, and one on the side"],
+      "answer": "Two (2) number plates, one on the front and one on the rear",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "ra-11235", "number-plates"]
+    },
+    {
+      "id": 98,
+      "question": "Motorcycle drivers are advised to switch on their head lights:",
+      "choices": ["day or night", "at night", "during heavy rain"],
+      "answer": "day or night",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "headlights", "visibility"]
+    },
+    {
+      "id": 99,
+      "question": "In which place/s must you not park your vehicle?",
+      "choices": ["Within six (6) meters of the intersection", "Within 10 meters (32 feet) of a junction, infront of school, inside the parking mall", "Where there is no pavement"],
+      "answer": "Within six (6) meters of the intersection",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "parking-restrictions", "intersections"]
+    },
+    {
+      "id": 100,
+      "question": "How will a school crossing patrol signal you to stop?",
+      "choices": ["By displaying a red light", "By giving you an arm signal", "By displaying a \"STOP\" sign"],
+      "answer": "By displaying a \"STOP\" sign",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "school-crossing", "signals"]
+    },
+    {
+      "id": 101,
+      "question": "One requirement for a child to ride as passenger of a motorcycle along public roads of heavy volume and high density of fast moving vehicles and where the speed limit is more than 60 kph is:",
+      "choices": ["when the child's feet can comfortably reach the standard foot peg of the motorcycle", "when the child to be transported is in a hurry to go to school", "when the child to be transported has parental consent"],
+      "answer": "when the child's feet can comfortably reach the standard foot peg of the motorcycle",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "child-passengers", "safety-requirements"]
+    },
+    {
+      "id": 102,
+      "question": "For motorcycles, in approaching downhill, a driver should:",
+      "choices": ["shift to neutral gear to conserve fuel", "shift to applicable gear with respect to rider's ability", "shift to lowest gear for more engine power"],
+      "answer": "shift to applicable gear with respect to rider's ability",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "downhill-driving", "gear-management"]
+    },
+    {
+      "id": 103,
+      "question": "You may not be seen by other motorists if:",
+      "choices": ["you are driving with head lights on", "you are driving with other motorcycles", "you are driving on the blind side of a vehicle"],
+      "answer": "you are driving on the blind side of a vehicle",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "visibility", "blind-spots"]
+    },
+    {
+      "id": 104,
+      "question": "If you are riding with a group, what is the hand signal for \"Hazard on Roadway on the Left\"?",
+      "choices": ["Point to the hazard with your left hand", "Point to the hazard with you left foot", "Point to the hazard with your right hand"],
+      "answer": "Point to the hazard with your left hand",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "hand-signals", "group-riding"]
+    },
+    {
+      "id": 105,
+      "question": "Other than MTOP, Which document you need to post on your tricycle?",
+      "choices": ["Identification Card and Fare Matrix", "Identification Card", "Fare Matrix"],
+      "answer": "Identification Card and Fare Matrix",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle", "required-documents"]
+    },
+    {
+      "id": 106,
+      "question": "This is one of the requirements for installation of fog lamp for motor-cycle:",
+      "choices": ["must be installed together with the switch of head lamp", "separate switch independent of head lamp", "must be installed together with the tail lamp"],
+      "answer": "separate switch independent of head lamp",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "fog-lamps", "installation-requirements"]
+    },
+    {
+      "id": 107,
+      "question": "It is the duty of the driver to see to it that:",
+      "choices": ["any items left inside the vehicle be returned to the passenger", "any items left inside the vehicle be kept at home within 24 hours", "all of the above"],
+      "answer": "any items left inside the vehicle be returned to the passenger",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "driver-responsibility", "lost-items"]
+    },
+    {
+      "id": 108,
+      "question": "There is a car ahead of you. You wish to overtake but you are not sure if it is safe to do so. You should:",
+      "choices": ["not overtake if you are in doubt", "follow another overtaking vehicle through", "speed through but flash your lights to oncoming traffic"],
+      "answer": "not overtake if you are in doubt",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "overtaking", "safety-judgment"]
+    },
+    {
+      "id": 109,
+      "question": "One justification for a child to ride as passenger of a motorcycle along public roads of heavy volume and high density of fast moving vehicles and where a speed limit of more than 60 kph is:",
+      "choices": ["the child's arm can reach around and grasp the waist of the rider", "the child passenger can reach the shoulders of the driver", "the child can reach the knees of the driver"],
+      "answer": "the child's arm can reach around and grasp the waist of the rider",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "child-passengers", "safety-requirements"]
+    },
+    {
+      "id": 110,
+      "question": "What is the meaning of inverted triangle with red border?",
+      "choices": ["Stop and go", "Slow down", "Yield the right-of-way"],
+      "answer": "Yield the right-of-way",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "traffic-signs", "yield-sign"]
+    },
+    {
+      "id": 111,
+      "question": "When is the driver may be exempted from wearing helmet?",
+      "choices": ["Provided that the driver intends to use the motorcycle on a short drive only", "Provided that long drive is not along the busy road", "Short and long drive is never an exemption for not wearing helmet"],
+      "answer": "Short and long drive is never an exemption for not wearing helmet",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "helmet-law", "exemptions"]
+    },
+    {
+      "id": 112,
+      "question": "What do you expect when you have a back ride?",
+      "choices": ["Low gasoline consumption", "No allowance for cargo", "Longer braking distance"],
+      "answer": "Longer braking distance",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-effects", "braking"]
+    },
+    {
+      "id": 113,
+      "question": "Ideally and in the absence of user's manual, tires can be inflated while it is cold with a pressure of:",
+      "choices": ["minus 4-6 psi of the maximum pressure", "plus 2-4 psi of the maximum pressure", "exact psi of the maximum pressure"],
+      "answer": "minus 4-6 psi of the maximum pressure",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tire-pressure", "maintenance"]
+    },
+    {
+      "id": 114,
+      "question": "What may be the cause for the battery to explode?",
+      "choices": ["Placing the battery on the ground", "Overcharging drained battery", "Undercharging good battery"],
+      "answer": "Overcharging drained battery",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "battery-safety", "maintenance"]
+    },
+    {
+      "id": 115,
+      "question": "Having trouble shifting the gear may mean:",
+      "choices": ["improper shifting procedure", "improper clutch adjustment", "all of the above"],
+      "answer": "all of the above",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "gear-problems", "troubleshooting"]
+    },
+    {
+      "id": 116,
+      "question": "Motorcycle drivers are not allowed to use:",
+      "choices": ["the expressways", "the sidewalks", "the highways"],
+      "answer": "the sidewalks",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "prohibited-areas", "traffic-rules"]
+    },
+    {
+      "id": 117,
+      "question": "What is the penalty for using unregistered custom-made saddle bags or boxes?",
+      "choices": ["Monetary fine, impounding of motor vehicle, confiscation of the driver's license and unregistered saddle bag", "Monetary fine, impounding of motor vehicle, revocation of driver's license", "Impounding of motor vehicle, perpetual revocation of the driver's license"],
+      "answer": "Monetary fine, impounding of motor vehicle, confiscation of the driver's license and unregistered saddle bag",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "saddle-bags", "penalties"]
+    },
+    {
+      "id": 118,
+      "question": "Saddle bags for motorcycles must not be:",
+      "choices": ["lower than the driver seat", "higher than the fuel tank", "higher than the driver seat"],
+      "answer": "higher than the driver seat",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "saddle-bags", "height-restrictions"]
+    },
+    {
+      "id": 119,
+      "question": "What should you do when your front tire fails?",
+      "choices": ["Avoid using rear brake", "Position yourself at the rear portion of the seat", "Avoid using the front brake"],
+      "answer": "Position yourself at the rear portion of the seat",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tire-failure", "emergency-procedures"]
+    },
+    {
+      "id": 120,
+      "question": "LTFRB is a government agency who has the authority to grant a Franchise or CPC to any public utility vehicle except for:",
+      "choices": ["PUB, PUJ", "tricycle", "Angkas, Grab, and other TNVS"],
+      "answer": "tricycle",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "ltfrb", "franchise"]
+    },
+    {
+      "id": 121,
+      "question": "What should you do if two passengers want to back ride with you?",
+      "choices": ["Go ahead but drive carefully", "Do not let two passengers back ride with you", "Do not traverse busy streets"],
+      "answer": "Do not let two passengers back ride with you",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "passenger-limits", "safety"]
+    },
+    {
+      "id": 122,
+      "question": "Starter Motor acts as a driving mechanism for:",
+      "choices": ["engine to start", "engine to start by hand", "engine and aircon to start"],
+      "answer": "engine to start",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "starter-motor", "engine-components"]
+    },
+    {
+      "id": 123,
+      "question": "A driver who sleeps early for the next day's work is a symbol of:",
+      "choices": ["an attentive driver", "a polite driver", "a professional driver"],
+      "answer": "a professional driver",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "driver-conduct", "professionalism"]
+    },
+    {
+      "id": 124,
+      "question": "Being a tricycle driver, you must follow the _ at all times to avoid passenger complaint for irregular charges.",
+      "choices": ["traffic rules and regulations", "traffic signs and pavement markings", "Fare Matrix"],
+      "answer": "Fare Matrix",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle", "fare-matrix"]
+    },
+    {
+      "id": 125,
+      "question": "Where should you position your feet while driving a motorcycle?",
+      "choices": ["Firmly on the foot rests", "Tip toe on the foot rests", "Gently on brake pedal and shifting lever"],
+      "answer": "Firmly on the foot rests",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "riding-position", "foot-placement"]
+    },
+    {
+      "id": 126,
+      "question": "What should you check when you are preparing to slow down?",
+      "choices": ["Right and left vehicles", "Neutral gear position", "Vehicles infront and behind"],
+      "answer": "Vehicles infront and behind",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "slowing-down", "situational-awareness"]
+    },
+    {
+      "id": 127,
+      "question": "A driver must be able to:",
+      "choices": ["read, write, and knows how to interpret traffic signs", "write and compose statements", "read and write statements"],
+      "answer": "read, write, and knows how to interpret traffic signs",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "driver-qualifications", "literacy"]
+    },
+    {
+      "id": 128,
+      "question": "Aside from brake rotors, brake pads, and brake pipes, what is the other essential part of a brake system?",
+      "choices": ["Brake lining", "Brake shoe", "Brake caliper"],
+      "answer": "Brake caliper",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "brake-system", "components"]
+    },
+    {
+      "id": 129,
+      "question": "Can you use blinker mode head light?",
+      "choices": ["Yes", "No", "At night only"],
+      "answer": "No",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "headlight-usage", "regulations"]
+    },
+    {
+      "id": 130,
+      "question": "Allowing passengers to ride on top or cover of a side car is penalized with:",
+      "choices": ["monetary fines", "imprisonment", "perpetual confiscation of driver's license"],
+      "answer": "monetary fines",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "sidecar-violations", "penalties"]
+    },
+    {
+      "id": 131,
+      "question": "What should you do if you do not have a choice but to drive on a slippery wet road?",
+      "choices": ["Drive normally", "Get off and tow your motorcycle while on 1st gear", "Slow down and skim your feet through the ground"],
+      "answer": "Slow down and skim your feet through the ground",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "wet-roads", "safety-techniques"]
+    },
+    {
+      "id": 132,
+      "question": "If you are riding with a group, what is the hand signal for \"Fuel Filling\"?",
+      "choices": ["Left hand pointing to fuel tank", "Left hand pointing to the nearest gasoline station", "Right hand pointing to the nearest gasoline station"],
+      "answer": "Left hand pointing to fuel tank",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "hand-signals", "fuel-signals"]
+    },
+    {
+      "id": 133,
+      "question": "What should be the color of a motorcycle's tail light?",
+      "choices": ["Blue", "Red", "Yellow"],
+      "answer": "Red",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tail-light", "lighting-regulations"]
+    },
+    {
+      "id": 134,
+      "question": "Night, and rain is pouring. What should you do when two prospective passengers are trying to board your tricycle going different directions?",
+      "choices": ["Let the passenger with a nearest dropping point to board the vehicle and let the other passenger to wait", "Let the two passengers board, if they want, and drop the nearest passenger first", "The passenger who will pay more, shall be the first to board and the other passenger will wait until you come back"],
+      "answer": "Let the two passengers board, if they want, and drop the nearest passenger first",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle-operations", "passenger-management"]
+    },
+    {
+      "id": 135,
+      "question": "Under R.A. 10913, what is the maximum penalty for using his/her mobile phone while the motor vehicle is in motion?",
+      "choices": ["Monetary fine and confiscation of driver's license", "Monetary fine and one (1) month suspension of driver's license", "Revocation of driver's license"],
+      "answer": "Monetary fine and one (1) month suspension of driver's license",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "ra-10913", "mobile-phone-penalties"]
+    },
+    {
+      "id": 136,
+      "question": "Diesel fuel has been spilled on the road. This will be particularly danger for:",
+      "choices": ["cars", "horses", "motorcycles"],
+      "answer": "motorcycles",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "road-hazards", "fuel-spills"]
+    },
+    {
+      "id": 137,
+      "question": "What should be the maximum height of your motorcycle?",
+      "choices": ["Just below the waist", "When two feet are touching the ground at a standing position", "When two feet are touching the ground at a center stand"],
+      "answer": "When two feet are touching the ground at a standing position",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "motorcycle-height", "rider-fit"]
+    },
+    {
+      "id": 138,
+      "question": "You are driving behind a long vehicle which has a sign saying \"Do Not Overtake Turning Vehicle\". The long vehicle indicates that it is going to turn left. You:",
+      "choices": ["must let the long vehicle turn first", "may pass the truck because it cannot turn left from the middle lane", "may move to the left-hand side of the road pass the long vehicle"],
+      "answer": "must let the long vehicle turn first",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "long-vehicles", "turning-rules"]
+    },
+    {
+      "id": 139,
+      "question": "What document do you need in order to operate your tricycle for business or for passengers?",
+      "choices": ["Municipal Tricycle Operator's Permit (MTOP)", "Motorized Tricycle Operator's Permit (MTOP)", "Mechanized Tricycle Operator's Permit (MTOP)"],
+      "answer": "Motorized Tricycle Operator's Permit (MTOP)",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle-permits", "business-requirements"]
+    },
+    {
+      "id": 140,
+      "question": "How to make your tricycle to be as presentable as possible?",
+      "choices": ["Install audio and video gadgets", "Install accessories to attract more passengers", "Limit installation of lights and sounds and other accessories"],
+      "answer": "Limit installation of lights and sounds and other accessories",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "tricycle-presentation", "vehicle-modifications"]
+    },
+    {
+      "id": 141,
+      "question": "Drive chain must be regularly checked by:",
+      "choices": ["applying enough oil or grease", "applying enough oil or grease and adjusting enough tension", "applying enough oil or grease then let the chain adjust itself"],
+      "answer": "applying enough oil or grease and adjusting enough tension",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "chain-maintenance", "motorcycle-maintenance"]
+    },
+    {
+      "id": 142,
+      "question": "For motorcycle, passenger overloading may be defined as:",
+      "choices": ["more than three passengers", "more than two passengers", "more than one passenger"],
+      "answer": "more than one passenger",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "overloading", "passenger-limits"]
+    },
+    {
+      "id": 143,
+      "question": "Can you use your hand-held mobile phone while driving a motorcycle?",
+      "choices": ["Yes, to contact your passengers", "No, it is prohibited by law", "Depending on the street, using it on the main road is illegal"],
+      "answer": "No, it is prohibited by law",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "mobile-phone-ban", "distracted-driving"]
+    },
+    {
+      "id": 144,
+      "question": "What is the maximum penalty for vehicles that are not emission-compliant?",
+      "choices": ["Monetary fine and one (1) year suspension of Driver's License and three (3) months imprisonment", "Monetary fine and one (1) year suspension of Motor Vehicle Registration and impoundment of motor vehicle", "Monetary fine and one (1) year suspension of Driver's License and Motor Vehicle Registration"],
+      "answer": "Monetary fine and one (1) year suspension of Driver's License and Motor Vehicle Registration",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "emission-compliance", "environmental-penalties"]
+    },
+    {
+      "id": 145,
+      "question": "Under R.A. 10054, what is the maximum penalty for not wearing a standard protective helmet?",
+      "choices": ["Monetary fine plus suspension of Driver's License", "Monetary fine plus perpetual revocation of Driver's License", "Monetary fine plus confiscation of Driver's License"],
+      "answer": "Monetary fine plus confiscation of Driver's License",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "ra-10054", "helmet-penalties"]
+    },
+    {
+      "id": 146,
+      "question": "One exception for a child to ride as passenger of a motorcycle along public roads of heavy volume and high density of fast moving vehicles and where a speed limit of more than 60 kph is:",
+      "choices": ["the child passenger can reach the shoulders of the driver", "the child passenger requires immediate medical attention", "the child passenger has parental consent"],
+      "answer": "the child passenger requires immediate medical attention",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "child-passenger-exceptions", "emergency-situations"]
+    },
+    {
+      "id": 147,
+      "question": "What should the motorcycle rider need to check?",
+      "choices": ["Saddle bag, top box, engine oil, transmission fluid, brake pedal, speedometer", "Spare tire, brake pads and shoes, accelerator pedal", "Motor vehicle overall condition before going anywhere"],
+      "answer": "Motor vehicle overall condition before going anywhere",
+      "licenseType": ["Pro"],
+      "tags": ["professional", "pre-ride-inspection", "vehicle-safety"]
+    }
+  ]
+}

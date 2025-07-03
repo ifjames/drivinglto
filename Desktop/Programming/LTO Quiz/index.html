@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James LTO Online Reviewer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Firebase SDK -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+    }
+    .sidebar {
+      height: 100vh;
+      background-color: #1e293b;
+      color: white;
+      position: fixed;
+      width: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1000;
+      transition: transform 0.3s ease-in-out;
+    }
+    .sidebar .nav-link {
+      color: #cbd5e1;
+    }
+    .sidebar .nav-link.active {
+      background-color: #334155;
+      border-radius: 5px;
+    }
+    .logout {
+      margin-top: auto;
+    }
+    .main-content {
+      margin-left: 220px;
+      padding: 2rem;
+      transition: margin-left 0.3s ease-in-out;
+    }
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+    .user-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .user-box img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    canvas#progressChart {
+      max-height: 300px;
+    }
+    .mobile-toggle {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1001;
+      background: #1e293b;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+    }
+    .image-loading {
+      position: relative;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-loading::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .logo-container {
+      text-align: center;
+      margin-bottom: 1.5rem;  /* Reduced from 2rem */
+    }
+    .logo-container img {
+      max-width: 250px;  /* Reduced from 300px */
+      height: auto;
+    }
+    .dashboard-logo {
+      max-width: 180px;  /* Increased from 150px */
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+      .sidebar.show {
+        transform: translateX(0);
+      }
+      .main-content {
+        margin-left: 0;
+        padding: 1rem;
+        padding-top: 4rem;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .card {
+        margin-bottom: 1rem;
+      }
+    }
+    .auth-container {
+      max-width: 400px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+    .auth-hints {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #dee2e6;
+      font-size: 0.875rem;
+      color: #6c757d;
+      height: 2.5rem;  /* Increased height further */
+      line-height: 2.5rem;  /* Match line height with container height */
+      position: relative;
+      overflow: hidden;
+      display: flex;  /* Added flex display */
+      align-items: center;  /* Center content vertically */
+    }
+    .auth-hints p {
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: normal;  /* Changed to normal line height */
+      height: 100%;  /* Full height */
+      display: flex;  /* Added flex display */
+      align-items: center;  /* Center content vertically */
+    }
+    .auth-hints p.show {
+      opacity: 1;
+    }
+    .auth-container h3 {
+      margin-bottom: 1.5rem;  /* Reduced from 2rem */
+      font-size: 1.5rem;  /* Added to make title slightly smaller */
+    }
+    .quiz-container {
+      display: none;
+    }
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    .image-wrapper {
+      position: relative;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-wrapper.image-loading::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Modern Notification Styles */
+    .notification-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 350px;
+    }
+    .notification {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transform: translateX(120%);
+      animation: slideIn 0.3s ease forwards;
+      border-left: 4px solid;
+    }
+    .notification.success {
+      border-left-color: #10B981;
+    }
+    .notification.error {
+      border-left-color: #EF4444;
+    }
+    .notification.warning {
+      border-left-color: #F59E0B;
+    }
+    .notification.info {
+      border-left-color: #3B82F6;
+    }
+    .notification-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .notification.success .notification-icon {
+      color: #10B981;
+    }
+    .notification.error .notification-icon {
+      color: #EF4444;
+    }
+    .notification.warning .notification-icon {
+      color: #F59E0B;
+    }
+    .notification.info .notification-icon {
+      color: #3B82F6;
+    }
+    .notification-content {
+      flex-grow: 1;
+    }
+    .notification-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #1F2937;
+    }
+    .notification-message {
+      color: #4B5563;
+      font-size: 0.875rem;
+    }
+    .notification-close {
+      background: none;
+      border: none;
+      color: #9CA3AF;
+      cursor: pointer;
+      padding: 4px;
+      font-size: 1.25rem;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    .notification-close:hover {
+      color: #4B5563;
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateX(120%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideOut {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateX(120%);
+        opacity: 0;
+      }
+    }
+    .notification.hide {
+      animation: slideOut 0.3s ease forwards;
+    }
+    .card .btn-locked {
+      background-color: #e5e7eb;
+      color: #6b7280;
+      cursor: not-allowed;
+      position: relative;
+      padding-right: 2.5rem;
+    }
+    .btn-locked i {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .card .btn-locked:hover {
+      background-color: #e5e7eb;
+      color: #6b7280;
+    }
+    .coming-soon-badge {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background-color: #f59e0b;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .form-control:disabled {
+      background-color: #f3f4f6;
+      cursor: not-allowed;
+    }
+    .form-control-locked {
+      position: relative;
+    }
+    .form-control-locked::after {
+      content: '\F47A';
+      font-family: "bootstrap-icons";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6b7280;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Mobile Toggle Button -->
+  <button class="mobile-toggle" id="mobileToggle">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <!-- Notification Container -->
+  <div class="notification-container" id="notificationContainer"></div>
+
+  <!-- Audio Elements for Notifications -->
+  <audio id="notificationSuccess" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="notificationError" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2868/2868-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="notificationWarning" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2867/2867-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="notificationInfo" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2866/2866-preview.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Loading Indicator -->
+  <div class="loading" id="loadingSpinner" style="display: block;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Auth Container -->
+  <div class="auth-container" id="authContainer" style="display: none;">
+    <div class="logo-container">
+      <img src="/images/logo-login.png" alt="James LTO Online Reviewer" class="img-fluid">
+    </div>
+    <h3 class="text-center mb-4">James LTO Online Reviewer</h3>
+    <div id="loginForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+      <button class="btn btn-primary w-100 mb-2" onclick="login()">Login</button>
+      <button class="btn btn-outline-primary w-100" onclick="showRegister()">Create Account</button>
+    </div>
+    <div id="registerForm" style="display: none;">
+      <div class="mb-3">
+        <label for="regName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="regName" required>
+      </div>
+      <div class="mb-3">
+        <label for="regEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="regEmail" required>
+      </div>
+      <div class="mb-3">
+        <label for="regPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="regPassword" required>
+      </div>
+      <div class="mb-3">
+        <label for="regConfirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="regConfirmPassword" required>
+      </div>
+      <button class="btn btn-primary w-100 mb-2" onclick="register()">Register</button>
+      <button class="btn btn-outline-primary w-100" onclick="showLogin()">Back to Login</button>
+    </div>
+    <div class="auth-hints">
+      <p><i class="bi bi-info-circle me-1"></i> This site is for educational purposes only.</p>
+      <p><i class="bi bi-person me-1"></i> Made by Castillo, James Matthew</p>
+      <p><i class="bi bi-book me-1"></i> An online reviewer for LTO Examination</p>
+      <p><i class="bi bi-shield-check me-1"></i> Practice and prepare for your LTO exam</p>
+      <p><i class="bi bi-clock-history me-1"></i> Updated regularly with latest LTO guidelines</p>
+    </div>
+  </div>
+
+  <!-- Main Dashboard (Initially Hidden) -->
+  <div id="dashboard" style="display: none;">
+    <nav class="sidebar p-4">
+      <div>
+        <div class="text-center mb-4">
+          <img src="/images/logo-board.png" alt="James LTO Online Reviewer" class="dashboard-logo">
+          <h4>James LTO eDashboard</h4>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link active" href="#" onclick="showSection('dashboard')"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('mockExam')"><i class="bi bi-pencil-square me-2"></i> Mock Exam</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('reviewMaterials')"><i class="bi bi-journal-text me-2"></i> Review Materials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('practiceQuiz')"><i class="bi bi-question-circle me-2"></i> Practice Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('progress')"><i class="bi bi-bar-chart-line me-2"></i> Progress Tracker</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('support')"><i class="bi bi-life-preserver me-2"></i> Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('settings')"><i class="bi bi-gear me-2"></i> Settings</a></li>
+        </ul>
+      </div>
+      <div class="logout">
+        <a class="nav-link text-danger" href="#" onclick="logout()"><i class="bi bi-box-arrow-right me-2"></i> Log out</a>
+      </div>
+    </nav>
+
+    <main class="main-content w-100">
+      <!-- Quiz/Exam Setup Modal -->
+      <div class="modal fade" id="quizSetupModal" tabindex="-1" aria-labelledby="quizSetupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="quizSetupModalLabel">Quiz/Exam Setup</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="quizSetupForm">
+                <div class="mb-3">
+                  <label for="licenseTypeSelect" class="form-label">License Type</label>
+                  <select id="licenseTypeSelect" class="form-select" required>
+                    <option value="nonpro">Non-Professional</option>
+                    <option value="pro">Professional</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="numQuestionsSelect" class="form-label">Number of Questions</label>
+                  <select id="numQuestionsSelect" class="form-select" required>
+                    <option value="10">10</option>
+                    <option value="40">40</option>
+                    <option value="60">60</option>
+                    <option value="80">80</option>
+                  </select>
+                </div>
+                <input type="hidden" id="quizSetupType" value="quiz">
+                <input type="hidden" id="quizSetupQuizType" value="">
+                <button type="submit" class="btn btn-primary w-100">Start</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Section -->
+      <div id="dashboardSection" class="section">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 id="dashboardWelcome">Welcome</h2>
+          <div class="user-box">
+            <img id="userAvatar" src="https://ui-avatars.com/api/?name=User&size=40" alt="User" />
+            <span id="dashboardUserEmail"></span>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card p-3">
+              <h5>Mock Exam Score</h5>
+              <p class="fs-4 text-primary" id="mockExamScore">-</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3">
+              <h5>Quizzes Taken</h5>
+              <p class="fs-4 text-success" id="quizzesTaken">-</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3">
+              <h5>Pass Rate</h5>
+              <p class="fs-4 text-warning" id="passRate">-</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4 p-4">
+          <h5 class="mb-3">Monthly Progress</h5>
+          <canvas id="progressChart"></canvas>
+        </div>
+
+        <div class="card mt-4 p-4">
+          <h5 class="mb-3">Recent Activity</h5>
+          <ul class="list-group list-group-flush" id="recentActivityList">
+            <li class="list-group-item text-muted" id="noActivityMsg">No recent activity yet.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mock Exam Section -->
+      <div id="mockExamSection" class="section" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2>Mock Exam</h2>
+          <div class="user-box">
+            <img src="https://ui-avatars.com/api/?name=User&size=40" alt="User" />
+            <span id="userEmail"></span>
+          </div>
+        </div>
+        <div class="card p-4">
+          <h5 class="mb-3">LTO Theoretical Driving Test</h5>
+          <p class="mb-3">This review material is designed to assist applicants in preparing for the LTO driver's license examination by providing them with a comprehensive understanding of the traffic rules and regulations in the Philippines.</p>
+          <div class="alert alert-info mb-4">
+            <i class="bi bi-info-circle me-2"></i>
+            For the written portion, non-professional candidates must score at least 30 out of 40, while professional candidates need 45 out of 60. For the practical driving test, a minimum score of 70 out of 100 is required.
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn-lg px-5" onclick="startMockExam()">
+              <i class="bi bi-play-fill me-2"></i>Start Mock Exam
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Materials Section -->
+      <div id="reviewMaterialsSection" class="section" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2>Review Materials</h2>
+          <div class="user-box">
+            <img src="https://ui-avatars.com/api/?name=User&size=40" alt="User" />
+            <span id="userEmail2"></span>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-signpost-split me-2"></i>Road Signs and Signals</h5>
+                <p class="card-text">Learn about traffic signs, signals, and road markings used in the Philippines.</p>
+                <a href="https://ltoonlineexam.ph/traffic-and-road-signs/" target="_blank" class="btn btn-outline-primary">Study Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="coming-soon-badge">Coming Soon</span>
+                <h5 class="card-title"><i class="bi bi-car-front me-2"></i>Traffic Rules and Regulations</h5>
+                <p class="card-text">Understand the basic traffic rules and regulations in the Philippines.</p>
+                <button class="btn btn-locked" disabled>
+                  Study Now
+                  <i class="bi bi-lock-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="coming-soon-badge">Coming Soon</span>
+                <h5 class="card-title"><i class="bi bi-shield-check me-2"></i>Vehicle Safety</h5>
+                <p class="card-text">Learn about vehicle maintenance, safety checks, and emergency procedures.</p>
+                <button class="btn btn-locked" disabled>
+                  Study Now
+                  <i class="bi bi-lock-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="coming-soon-badge">Coming Soon</span>
+                <h5 class="card-title"><i class="bi bi-person-check me-2"></i>Driver's Responsibility</h5>
+                <p class="card-text">Understand the responsibilities and duties of a driver on the road.</p>
+                <button class="btn btn-locked" disabled>
+                  Study Now
+                  <i class="bi bi-lock-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-youtube me-2"></i>LTO YouTube Review Materials</h5>
+                <p class="card-text">Watch comprehensive video tutorials and review materials for LTO examinations.</p>
+                <a href="https://www.youtube.com/playlist?list=PLt9ONauK4alOzmc8PlAP48-XcLs4vHUPn" target="_blank" class="btn btn-outline-danger">
+                  <i class="bi bi-play-circle me-1"></i>Watch Videos
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-google me-2"></i>LTO Cheat Sheet (Non-Professional)</h5>
+                <p class="card-text">Access comprehensive study materials and cheat sheets for non-professional license preparation.</p>
+                <a href="https://drive.google.com/drive/folders/13kRcQvH4L68NteDI8tHW-O77_gDRSzIb" target="_blank" class="btn btn-outline-success">
+                  <i class="bi bi-file-earmark-text me-1"></i>View Materials
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Practice Quiz Section -->
+      <div id="practiceQuizSection" class="section" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2>Practice Quiz</h2>
+          <div class="user-box">
+            <img src="https://ui-avatars.com/api/?name=User&size=40" alt="User" />
+            <span id="userEmail3"></span>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Road Signs Quiz</h5>
+                <p class="card-text">Test your knowledge of traffic signs and signals.</p>
+                <button class="btn btn-primary" onclick="startQuiz('roadSigns')">Start Quiz</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Traffic Rules Quiz</h5>
+                <p class="card-text">Practice questions about traffic rules and regulations.</p>
+                <button class="btn btn-primary" onclick="startQuiz('trafficRules')">Start Quiz</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Vehicle Safety Quiz</h5>
+                <p class="card-text">Test your knowledge about vehicle safety and maintenance.</p>
+                <button class="btn btn-primary" onclick="startQuiz('vehicleSafety')">Start Quiz</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Motorcycle & Tricycle Quiz</h5>
+                <p class="card-text">Practice questions about motorcycle and tricycle driving rules and regulations.</p>
+                <button class="btn btn-primary" onclick="startQuiz('motorcycleTricycle')">Start Quiz</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Katrina Non-Pro Quiz</h5>
+                <p class="card-text">Comprehensive quiz covering essential driving knowledge for katrina non-professional drive exam.</p>
+                <button class="btn btn-primary" onclick="startQuiz('katrinaNonPro')">Start Quiz</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Tracker Section -->
+      <div id="progressSection" class="section" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2>Progress Tracker</h2>
+          <div class="user-box">
+            <img src="https://ui-avatars.com/api/?name=User&size=40" alt="User" />
+            <span id="userEmail4"></span>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Quiz Performance</h5>
+                <div class="mb-3">
+                  <canvas id="quizPerformanceChart"></canvas>
+                </div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Quiz Type</th>
+                        <th>Attempts</th>
+                        <th>Pass Rate</th>
+                      </tr>
+                    </thead>
+                    <tbody id="quizPerformanceTable">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Mock Exam History</h5>
+                <div class="mb-3">
+                  <canvas id="mockExamHistoryChart"></canvas>
+                </div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Score</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody id="mockExamHistoryTable">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Section -->
+      <div id="supportSection" class="section" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2>Support</h2>
+          <div class="user-box">
+            <img src="https://ui-avatars.com/api/?name=User&size=40" alt="User" />
+            <span id="userEmail5"></span>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Contact Support</h5>
+                <form id="supportForm">
+                  <div class="mb-3">
+                    <label for="supportSubject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="supportSubject" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="supportMessage" class="form-label">Message</label>
+                    <textarea class="form-control" id="supportMessage" rows="4" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Frequently Asked Questions About LTO Exam Online</h5>
+                <p class="card-text">Got questions about your LTO exam preparation? Our FAQs provides clear answers to common queries, helping you navigate the process with confidence.</p>
+                <div class="accordion" id="faqAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        What score do I need to pass the LTO exam?
+                      </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        For the written portion, non-professional candidates must score at least 30 out of 40, while professional candidates need 45 out of 60. For the practical driving test, a minimum score of 70 out of 100 is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        How can I increase my chances of passing the LTO exam?
+                      </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        To succeed, focus on thorough preparation by studying our comprehensive exam reviewers and practicing with real-time mock tests. Consistent practice with the official question formats and detailed explanations will boost your confidence for both the written and practical tests.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        How many questions are included in the LTO written exam?
+                      </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        The written exam varies by license type. Non-professional drivers answer 40 questions, while professional drivers face 60 questions, each designed to cover essential driving concepts and regulations.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        What topics are covered in the LTO written test?
+                      </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        The exam consists of multiple-choice questions addressing road signs, driving practices, parking, traffic rules, and overall road safety guidelines—all key to ensuring you're well-prepared for the practical challenges ahead.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        Is there a practical test for a Non-Professional Driver's License?
+                      </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        Yes, even for a Non-Professional Driver's License, you must pass a practical driving test in addition to the written exam, ensuring you can apply your theoretical knowledge on the road.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        Can I retake the LTO exam if I fail?
+                      </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        Absolutely. If you don't pass on your first try, you can retake the exam after one month. A second failed attempt requires a one-year wait, and if a third attempt is unsuccessful, you'll need to wait two years before reapplying.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                        What areas does the LTO written exam cover?
+                      </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        The exam breaks down into several sections including road signs and markings, parking rules, emergency protocols, road positioning, violations and penalties, and general driving knowledge—ensuring a comprehensive evaluation of your skills.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                        Should I consider enrolling in a driving school?
+                      </button>
+                    </h2>
+                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        While enrolling is optional, many successful applicants have enhanced their chances by attending accredited driving schools. These schools offer structured learning that can help solidify your knowledge and exam techniques.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                        What are the basic requirements to apply for a driver's license?
+                      </button>
+                    </h2>
+                    <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Original and photocopy of birth certificate issued by PSA or Local Civil Registry</li>
+                          <li>Original and photocopy of any government-issued ID</li>
+                          <li>Duly accomplished driver's license application form</li>
+                          <li>Medical certificate from an LTO accredited clinic or doctor</li>
+                          <li>Payment of application and exam fees</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                        How long is the validity of a driver's license?
+                      </button>
+                    </h2>
+                    <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body">
+                        The validity of a driver's license in the Philippines is 5-10 years.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section -->
+      <div id="settingsSection" class="section" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2>Settings</h2>
+          <div class="user-box">
+            <img src="https://ui-avatars.com/api/?name=User&size=40" alt="User" />
+            <span id="userEmail6"></span>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Profile Settings</h5>
+                <form id="profileForm">
+                  <div class="mb-3">
+                    <label for="profileName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="profileName" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="profileEmail" class="form-label">Email</label>
+                    <div class="form-control-locked">
+                      <input type="email" class="form-control" id="profileEmail" disabled>
+                    </div>
+                    <small class="text-muted">Email cannot be changed at this time.</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Update Profile</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Change Password</h5>
+                <form id="passwordForm">
+                  <div class="mb-3">
+                    <label for="currentPassword" class="form-label">Current Password</label>
+                    <input type="password" class="form-control" id="currentPassword" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="newPassword" class="form-label">New Password</label>
+                    <input type="password" class="form-control" id="newPassword" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Change Password</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Quiz/Exam Modal -->
+  <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quizModalLabel">Quiz</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="quizModalBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle (for modals, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module">
+    // Import Firebase functions
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, EmailAuthProvider, reauthenticateWithCredential, updatePassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import { getFirestore, doc, setDoc, getDoc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+
+    // Your Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCvbAQK2UFyF8LEJTUBAeRh5Gy-cDdN86E",
+      authDomain: "driving-5488c.firebaseapp.com",
+      projectId: "driving-5488c",
+      storageBucket: "driving-5488c.appspot.com",
+      messagingSenderId: "298510737888",
+      appId: "1:298510737888:web:61906c93e477768966cb85",
+      measurementId: "G-GDG03V8MDX"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const analytics = getAnalytics(app);
+
+    // Make auth functions available globally
+    window.auth = auth;
+    window.db = db;
+
+    // Add mobile toggle functionality
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('show');
+    });
+
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', function(event) {
+      const sidebar = document.querySelector('.sidebar');
+      const mobileToggle = document.getElementById('mobileToggle');
+      if (window.innerWidth <= 768 && 
+          !sidebar.contains(event.target) && 
+          !mobileToggle.contains(event.target) &&
+          sidebar.classList.contains('show')) {
+        sidebar.classList.remove('show');
+      }
+    });
+
+    // Add image loading handling
+    function handleImageLoading() {
+      document.querySelectorAll('img').forEach(img => {
+        // Skip if the image is already handled
+        if (img.dataset.loadingHandled) return;
+        
+        // Mark this image as handled
+        img.dataset.loadingHandled = 'true';
+        
+        // Create a wrapper if it doesn't exist
+        let wrapper = img.parentElement;
+        if (!wrapper.classList.contains('image-wrapper')) {
+          wrapper = document.createElement('div');
+          wrapper.className = 'image-wrapper image-loading';
+          img.parentNode.insertBefore(wrapper, img);
+          wrapper.appendChild(img);
+        }
+        
+        // Show loading state
+        wrapper.classList.add('image-loading');
+        
+        // Handle successful load
+        img.onload = function() {
+          wrapper.classList.remove('image-loading');
+        };
+        
+        // Handle load error
+        img.onerror = function() {
+          wrapper.classList.remove('image-loading');
+          wrapper.innerHTML = '<div class="alert alert-danger">Failed to load image</div>';
+        };
+        
+        // If image is already loaded, remove loading state
+        if (img.complete) {
+          wrapper.classList.remove('image-loading');
+        }
+      });
+    }
+
+    // Show loading overlay
+    function showLoading() {
+      document.getElementById('loadingOverlay').style.display = 'flex';
+    }
+
+    // Hide loading overlay
+    function hideLoading() {
+      document.getElementById('loadingOverlay').style.display = 'none';
+    }
+
+    // Add this function to handle rotating hints
+    function initializeHints() {
+      const hintsContainer = document.querySelector('.auth-hints');
+      if (!hintsContainer) return;
+
+      const hints = Array.from(hintsContainer.querySelectorAll('p'));
+      let currentIndex = -1;
+
+      function showNextHint() {
+        // Hide current hint
+        if (currentIndex >= 0) {
+          hints[currentIndex].classList.remove('show');
+        }
+
+        // Show next hint
+        currentIndex = (currentIndex + 1) % hints.length;
+        hints[currentIndex].classList.add('show');
+
+        // Schedule next hint
+        const delay = Math.random() * 5000 + 10000; // Random delay between 5-10 seconds
+        setTimeout(showNextHint, delay);
+      }
+
+      // Start the rotation
+      showNextHint();
+    }
+
+    // Modify the existing onAuthStateChanged to initialize hints
+    onAuthStateChanged(auth, async (user) => {
+      showLoading();
+      document.getElementById('loadingSpinner').style.display = 'none';
+      var dash = document.getElementById('dashboard');
+      if (user) {
+        document.getElementById('authContainer').style.display = 'none';
+        dash.style.display = 'flex';
+        dash.classList.add('d-flex', 'flex-column', 'flex-md-row');
+
+        try {
+          const userDoc = await getDoc(doc(db, 'users', user.uid));
+          if (userDoc.exists()) {
+            const data = userDoc.data();
+            const name = data.name;
+            
+            document.querySelectorAll('.user-box').forEach(box => {
+              const emailElement = box.querySelector('span');
+              const avatarElement = box.querySelector('img');
+              
+              if (emailElement) {
+                emailElement.textContent = user.email;
+              }
+              if (avatarElement) {
+                avatarElement.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'User')}&size=40`;
+              }
+            });
+          }
+        } catch (error) {
+          console.error('Error updating user info:', error);
+        }
+
+        await refreshDashboardData();
+        handleImageLoading();
+      } else {
+        document.getElementById('authContainer').style.display = 'block';
+        dash.style.display = 'none';
+        dash.classList.remove('d-flex', 'flex-column', 'flex-md-row');
+        // Initialize hints when showing auth container
+        initializeHints();
+      }
+      hideLoading();
+    });
+
+    // Modern notification function
+    window.showNotification = function(message, type = 'info', title = '') {
+      const container = document.getElementById('notificationContainer');
+      const id = 'notif-' + Date.now();
+      
+      // Map type to icon
+      const icons = {
+        success: 'bi-check-circle-fill',
+        error: 'bi-x-circle-fill',
+        warning: 'bi-exclamation-triangle-fill',
+        info: 'bi-info-circle-fill'
+      };
+
+      // Create notification element
+      const notification = document.createElement('div');
+      notification.className = `notification ${type}`;
+      notification.id = id;
+      notification.innerHTML = `
+        <i class="bi ${icons[type]} notification-icon"></i>
+        <div class="notification-content">
+          ${title ? `<div class="notification-title">${title}</div>` : ''}
+          <div class="notification-message">${message}</div>
+        </div>
+        <button class="notification-close" onclick="this.parentElement.remove()">
+          <i class="bi bi-x"></i>
+        </button>
+      `;
+
+      // Add to container
+      container.appendChild(notification);
+
+      // Play sound
+      const audio = document.getElementById(`notification${type.charAt(0).toUpperCase() + type.slice(1)}`);
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().catch(() => {}); // Ignore autoplay restrictions
+      }
+
+      // Auto remove after 5 seconds
+      setTimeout(() => {
+        const notif = document.getElementById(id);
+        if (notif) {
+          notif.classList.add('hide');
+          setTimeout(() => notif.remove(), 300);
+        }
+      }, 5000);
+    };
+
+    // Map Firebase Auth error codes to friendly messages
+    function getFriendlyAuthError(error) {
+      if (!error.code) return error.message;
+      switch (error.code) {
+        case 'auth/user-not-found':
+          return 'No account found with that email.';
+        case 'auth/wrong-password':
+          return 'Incorrect password. Please try again.';
+        case 'auth/invalid-email':
+          return 'Please enter a valid email address.';
+        case 'auth/too-many-requests':
+          return 'Too many failed attempts. Please try again later.';
+        case 'auth/email-already-in-use':
+          return 'This email is already registered.';
+        case 'auth/weak-password':
+          return 'Password should be at least 6 characters.';
+        case 'auth/invalid-credential':
+          return 'Invalid email or password.';
+        default:
+          return error.message;
+      }
+    }
+
+    // Email validation helper
+    function isValidEmail(email) {
+      return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+    }
+
+    // Login function
+    window.login = async function() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      if (!isValidEmail(email)) {
+        showNotification('Please enter a valid email address.', 'warning');
+        return;
+      }
+      if (!password || password.length < 6) {
+        showNotification('Password must be at least 6 characters.', 'warning');
+        return;
+      }
+      try {
+        document.getElementById('loadingSpinner').style.display = 'block';
+        await signInWithEmailAndPassword(auth, email, password);
+      } catch (error) {
+        showNotification(getFriendlyAuthError(error), 'danger');
+        document.getElementById('loadingSpinner').style.display = 'none';
+      }
+    };
+
+    // Register function
+    window.register = async function() {
+      const name = document.getElementById('regName').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPassword').value;
+      const confirmPassword = document.getElementById('regConfirmPassword').value;
+      
+      if (!name) {
+        showNotification('Please enter your full name.', 'warning');
+        return;
+      }
+      if (!isValidEmail(email)) {
+        showNotification('Please enter a valid email address.', 'warning');
+        return;
+      }
+      if (!password || password.length < 6) {
+        showNotification('Password must be at least 6 characters.', 'warning');
+        return;
+      }
+      if (password !== confirmPassword) {
+        showNotification('Passwords do not match.', 'warning');
+        return;
+      }
+      try {
+        document.getElementById('loadingSpinner').style.display = 'block';
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        // Create user profile in Firestore
+        await setDoc(doc(db, "users", userCredential.user.uid), {
+          name: name,
+          email: email,
+          createdAt: new Date(),
+          quizScores: [],
+          mockExamScores: []
+        });
+      } catch (error) {
+        showNotification(getFriendlyAuthError(error), 'danger');
+        document.getElementById('loadingSpinner').style.display = 'none';
+      }
+    };
+
+    // Show/Hide forms
+    window.showRegister = function() {
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('registerForm').style.display = 'block';
+    };
+
+    window.showLogin = function() {
+      document.getElementById('loginForm').style.display = 'block';
+      document.getElementById('registerForm').style.display = 'none';
+    };
+
+    // Add these new functions to your existing script
+    window.showSection = function(sectionName) {
+      // Hide all sections
+      document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+      });
+      // Show selected section
+      document.getElementById(sectionName + 'Section').style.display = 'block';
+      // Update active nav link
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+      });
+      event.currentTarget.classList.add('active');
+
+      // Initialize progress charts if showing progress section
+      if (sectionName === 'progress') {
+        initializeProgressCharts();
+      }
+    };
+
+    window.logout = async function() {
+      try {
+        await auth.signOut();
+      } catch (error) {
+        alert('Error signing out: ' + error.message);
+      }
+    };
+
+    // Example road sign images (public domain)
+    const stopSignImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Philippines_road_sign_R1-1.svg/1200px-Philippines_road_sign_R1-1.svg.png';
+    const yieldSignImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Philippines_road_sign_R1-2.svg/1200px-Philippines_road_sign_R1-2.svg.png';
+    const noEntrySignImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Philippines_road_sign_R2-1.svg/1200px-Philippines_road_sign_R2-1.svg.png';
+    const pedestrianSignImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Philippines_road_sign_W2-1.svg/1200px-Philippines_road_sign_W2-1.svg.png';
+    const intersectionSignImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Philippines_road_sign_W1-1.svg/1200px-Philippines_road_sign_W1-1.svg.png';
+    const speedLimitSignImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Philippines_road_sign_R3-1.svg/1200px-Philippines_road_sign_R3-1.svg.png';
+
+    // Dynamically loaded question bank
+    let loadedQuestions = { en: null, tl: null };
+    async function loadQuestions(lang) {
+      if (loadedQuestions[lang]) return loadedQuestions[lang];
+      const resp = await fetch(`questions-${lang}.json`);
+      const data = await resp.json();
+      loadedQuestions[lang] = data;
+      return data;
+    }
+
+    // --- License Type and Number of Questions State ---
+    let licenseType = 'nonpro';
+    let numQuestions = 10;
+    let quizSetupCallback = null;
+    // Show setup modal and start quiz/exam after selection
+    function showQuizSetupModal(type, quizType, callback) {
+      quizSetupCallback = callback;
+      document.getElementById('quizSetupType').value = type;
+      document.getElementById('quizSetupQuizType').value = quizType || '';
+      // Reset to defaults
+      document.getElementById('licenseTypeSelect').value = licenseType;
+      
+      // Update number of questions options based on quiz type
+      const numQuestionsSelect = document.getElementById('numQuestionsSelect');
+      if (type === 'quiz') {
+        // For practice quizzes, show 10, 20, 30, 40 options
+        numQuestionsSelect.innerHTML = `
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+        `;
+        numQuestionsSelect.value = '10'; // Default to 10 questions
+      } else {
+        // For mock exam, show 10, 40, 60, 80 options
+        numQuestionsSelect.innerHTML = `
+          <option value="10">10</option>
+          <option value="40">40</option>
+          <option value="60">60</option>
+          <option value="80">80</option>
+        `;
+        numQuestionsSelect.value = '10'; // Default to 10 questions
+      }
+      
+      const modal = new bootstrap.Modal(document.getElementById('quizSetupModal'));
+      modal.show();
+    }
+    document.getElementById('quizSetupForm').onsubmit = function(e) {
+      e.preventDefault();
+      licenseType = document.getElementById('licenseTypeSelect').value;
+      numQuestions = parseInt(document.getElementById('numQuestionsSelect').value);
+      const type = document.getElementById('quizSetupType').value;
+      const quizType = document.getElementById('quizSetupQuizType').value;
+      const modal = bootstrap.Modal.getInstance(document.getElementById('quizSetupModal'));
+      if (modal) modal.hide();
+      if (quizSetupCallback) quizSetupCallback(type, quizType);
+    };
+
+    // Global helper function for time formatting
+    window.formatTime = function(seconds) {
+      const minutes = Math.floor(seconds / 60).toString().padStart(2, '0');
+      const remainingSeconds = (seconds % 60).toString().padStart(2, '0');
+      return `${minutes}:${remainingSeconds}`;
+    };
+
+    // Quiz/Exam Logic
+    function showQuizModal(title, questions, onComplete) {
+      let idx = 0, score = 0, answers = new Array(questions.length).fill(null);
+      const modal = new bootstrap.Modal(document.getElementById('quizModal'));
+      const body = document.getElementById('quizModalBody');
+      let startTime = new Date();
+      let timerInterval;
+      let elapsedTime = 0;
+
+      function updateTimer() {
+        let now = new Date();
+        elapsedTime = Math.floor((now - startTime) / 1000);
+        let timerElement = document.getElementById('quizTimer');
+        if (timerElement) {
+          timerElement.textContent = formatTime(elapsedTime);
+        }
+      }
+
+      function render() {
+        if (idx >= questions.length) {
+          // Review Mode
+          let result = `
+            <h5>Quiz Complete!</h5>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <p class="mb-0">Your score: <b>${score} / ${questions.length}</b></p>
+              <p class="mb-0">Time taken: <b>${formatTime(elapsedTime)}</b></p>
+            </div>
+            <div class="review-section mt-4">
+              <h6>Question Review</h6>
+              ${questions.map((q, i) => `
+                <div class="card mb-3 ${answers[i] === q.c ? 'border-success' : 'border-danger'}">
+                  <div class="card-body">
+                    <h6 class="card-title">Question ${i + 1}</h6>
+                    ${q.img ? `<div class='mb-3 text-center'><img src='${q.img}' alt='Question Image' style='max-width:120px;max-height:120px;'></div>` : ''}
+                    <p class="card-text">${q.q}</p>
+                    <div class="options">
+                      ${q.a.map((opt, j) => `
+                        <div class="form-check ${j === q.c ? 'text-success' : (j === answers[i] && j !== q.c ? 'text-danger' : '')}">
+                          <input class="form-check-input" type="radio" disabled ${j === answers[i] ? 'checked' : ''}>
+                          <label class="form-check-label">
+                            ${opt}
+                            ${j === q.c ? ' ✓' : ''}
+                          </label>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            <button class='btn btn-primary' data-bs-dismiss='modal'>Close</button>
+          `;
+          body.innerHTML = result;
+          if (onComplete) onComplete(score, questions.length, answers, elapsedTime);
+          return;
+        }
+
+        const q = questions[idx];
+        let html = `
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span>Question ${idx + 1} of ${questions.length}</span>
+            <span>Time: <span id="quizTimer">${formatTime(elapsedTime)}</span></span>
+          </div>
+          <div class="question-container">
+            ${q.img ? `<div class='mb-3 text-center'><img src='${q.img}' alt='Question Image' style='max-width:120px;max-height:120px;'></div>` : ''}
+            <div><b>Q${idx+1}:</b> ${q.q}</div>
+            <div class='mt-3'>
+              ${q.a.map((opt, i) => `
+                <div class='form-check'>
+                  <input class='form-check-input' type='radio' name='q${idx}' id='q${idx}a${i}' value='${i}' ${answers[idx] === i ? 'checked' : ''}>
+                  <label class='form-check-label' for='q${idx}a${i}'>${opt}</label>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          <div class="navigation-buttons mt-3 d-flex justify-content-between">
+            <button class='btn btn-secondary' id='prevBtn' ${idx === 0 ? 'disabled' : ''}>Previous</button>
+            <button class='btn btn-primary' id='nextBtn'>${idx === questions.length - 1 ? 'Finish' : 'Next'}</button>
+          </div>
+          <div class="progress-bar-container mt-4">
+            <div class="d-flex flex-wrap gap-2 justify-content-center">
+              ${Array.from({length: questions.length}, (_, i) => `
+                <button class="btn btn-sm ${answers[i] !== null ? 'btn-success' : 'btn-secondary'} question-nav" 
+                        data-question="${i}" 
+                        style="width: 30px; height: 30px; padding: 0;">
+                  ${i + 1}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        `;
+        body.innerHTML = html;
+
+        // Add event listeners
+        document.getElementById('prevBtn').onclick = () => {
+          saveCurrentAnswer();
+          idx--;
+          render();
+        };
+
+        document.getElementById('nextBtn').onclick = () => {
+          if (idx === questions.length - 1) {
+            saveCurrentAnswer();
+            calculateScore();
+            idx++;
+            render();
+          } else {
+            saveCurrentAnswer();
+            idx++;
+            render();
+          }
+        };
+
+        // Add event listeners for question navigation
+        document.querySelectorAll('.question-nav').forEach(btn => {
+          btn.onclick = () => {
+            saveCurrentAnswer();
+            idx = parseInt(btn.dataset.question);
+            render();
+          };
+        });
+
+        // Add event listeners for radio buttons
+        document.querySelectorAll(`input[name='q${idx}']`).forEach(radio => {
+          radio.onchange = () => {
+            answers[idx] = parseInt(radio.value);
+            render();
+          };
+        });
+      }
+
+      function saveCurrentAnswer() {
+        const selected = document.querySelector(`input[name='q${idx}']:checked`);
+        if (selected) {
+          answers[idx] = parseInt(selected.value);
+        }
+      }
+
+      function calculateScore() {
+        score = answers.reduce((total, ans, i) => {
+          return total + (ans === questions[i].c ? 1 : 0);
+        }, 0);
+      }
+
+      // Start timer
+      timerInterval = setInterval(updateTimer, 1000);
+
+      // Clear timer when modal is closed
+      document.getElementById('quizModal').addEventListener('hidden.bs.modal', function () {
+        clearInterval(timerInterval);
+      });
+
+      document.getElementById('quizModalLabel').textContent = title;
+      render();
+      modal.show();
+    }
+
+    // Helper to randomize and pick N questions
+    function pickRandomQuestions(arr, n) {
+      if (arr.length <= n) return arr.slice();
+      const shuffled = arr.slice().sort(() => Math.random() - 0.5);
+      return shuffled.slice(0, n);
+    }
+
+    // Practice Quiz
+    window.startQuiz = function(quizType) {
+      showQuizSetupModal('quiz', quizType, async (type, quizType) => {
+        let questions;
+        // Map quiz types to their corresponding JSON files
+        const quizFileMap = {
+          roadSigns: 'road-signs-quiz.json',
+          trafficRules: 'traffic-rules-quiz.json',
+          vehicleSafety: 'vehicle-safety-quiz.json',
+          motorcycleTricycle: 'motorcycle-tricycle-quiz.json',
+          katrinaNonPro: 'katrina-non-pro-quiz.json'
+        };
+        
+        try {
+          const resp = await fetch(quizFileMap[quizType]);
+          const qbank = await resp.json();
+          questions = qbank.questions;
+          
+          if (!questions || questions.length === 0) {
+            showNotification('No questions available for this quiz.', 'danger');
+            return;
+          }
+          
+          // Filter by license type
+          questions = questions.filter(q => Array.isArray(q.licenseType) ? q.licenseType.includes(licenseType === 'pro' ? 'Pro' : 'Non-Pro') : (q.licenseType === licenseType || q.licenseType === 'both'));
+          
+          // Randomize and limit to selected number of questions
+          questions = pickRandomQuestions(questions, numQuestions);
+          
+          if (questions.length === 0) {
+            showNotification('No questions available for this selection.', 'danger');
+            return;
+          }
+          
+          // Map to expected format for showQuizModal
+          questions = questions.map(q => ({
+            q: q.question,
+            a: q.choices,
+            c: q.choices.findIndex(choice => choice === q.answer),
+            img: q.imageUrl
+          }));
+          
+          showQuizModal('Practice Quiz', questions, (score, total, answers, time) => {
+            const passed = score / total >= 0.75;
+            saveQuizResult({score, total, passed, type: quizType, text: `${passed ? 'Passed' : 'Failed'} ${quizType.charAt(0).toUpperCase()+quizType.slice(1)} Quiz`, time});
+            showNotification(`You scored ${score}/${total}. ${passed ? 'Passed!' : 'Try again.'}`, passed ? 'success' : 'warning');
+          });
+        } catch (error) {
+          console.error('Error loading quiz:', error);
+          showNotification('Failed to load quiz questions.', 'danger');
+        }
+      });
+    };
+
+    // Mock Exam
+    window.startMockExam = function() {
+      showQuizSetupModal('mock', '', async (type) => {
+        const resp = await fetch('mock-exam-en.json');
+        const qbank = await resp.json();
+        let questions = qbank.questions;
+        if (!questions || questions.length === 0) {
+          showNotification('No questions available for the mock exam.', 'danger');
+          return;
+        }
+        // Filter by license type
+        questions = questions.filter(q => Array.isArray(q.licenseType) ? q.licenseType.includes(licenseType === 'pro' ? 'Pro' : 'Non-Pro') : (q.licenseType === licenseType || q.licenseType === 'both'));
+        // Strictly pick the number of questions requested
+        questions = pickRandomQuestions(questions, numQuestions);
+        if (questions.length === 0) {
+          showNotification('No questions available for this selection.', 'danger');
+          return;
+        }
+        // Map to expected format for showQuizModal
+        questions = questions.map(q => ({
+          q: q.question,
+          a: q.choices,
+          c: q.choices.findIndex(choice => choice === q.answer),
+          img: q.image
+        }));
+        showQuizModal('Mock Exam', questions, (score, total, answers, time) => {
+          const passed = score / total >= 0.75;
+          saveMockExamResult({score: Math.round((score/total)*100), passed, text: `Completed Mock Exam (${passed ? 'Passed' : 'Failed'})`, time});
+          showNotification(`You scored ${score}/${total} (${Math.round((score/total)*100)}%). ${passed ? 'Passed!' : 'Try again.'}`, passed ? 'success' : 'warning');
+        });
+      });
+    };
+
+    // Update user email in all sections
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        document.querySelectorAll('[id^="userEmail"]').forEach(element => {
+          element.textContent = user.email;
+        });
+      }
+    });
+
+    // Failsafe: Always hide dashboard on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      var dash = document.getElementById('dashboard');
+      if (dash) dash.style.display = 'none';
+    });
+
+    // Save quiz result and activity to Firestore
+    window.saveQuizResult = async function({score, total, passed, type, text, time}) {
+      const user = auth.currentUser;
+      if (!user) return;
+      try {
+        const timestamp = new Date().toISOString();
+        const timeText = time ? formatTime(time) : '00:00';
+        await setDoc(doc(db, "users", user.uid), {
+          quizScores: arrayUnion({
+            score,
+            total,
+            passed,
+            type,
+            time: timestamp,
+            duration: time || 0
+          }),
+          activity: arrayUnion({
+            type: 'quiz',
+            text: `${text} (${timeText})`,
+            time: timestamp
+          })
+        }, { merge: true });
+        await refreshDashboardData();
+      } catch (e) {
+        console.error('Error saving quiz result:', e);
+        showNotification('Failed to save quiz result.', 'danger');
+      }
+    };
+
+    // Save mock exam result and activity to Firestore
+    window.saveMockExamResult = async function({score, passed, text, time}) {
+      const user = auth.currentUser;
+      if (!user) return;
+      try {
+        const timestamp = new Date().toISOString();
+        const timeText = time ? formatTime(time) : '00:00';
+        await setDoc(doc(db, "users", user.uid), {
+          mockExamScores: arrayUnion({
+            score,
+            passed,
+            time: timestamp,
+            duration: time || 0
+          }),
+          activity: arrayUnion({
+            type: 'mock',
+            text: `${text} (${timeText})`,
+            time: timestamp
+          })
+        }, { merge: true });
+        await refreshDashboardData();
+      } catch (e) {
+        console.error('Error saving mock exam result:', e);
+        showNotification('Failed to save mock exam result.', 'danger');
+      }
+    };
+
+    // Refresh dashboard data (refetch user doc and update UI)
+    async function refreshDashboardData() {
+      const user = auth.currentUser;
+      if (!user) return;
+      try {
+        const userDoc = await getDoc(doc(db, 'users', user.uid));
+        if (userDoc.exists()) {
+          const data = userDoc.data();
+          const name = data.name;
+          document.getElementById('dashboardWelcome').textContent = `Welcome, ${name}`;
+          document.getElementById('dashboardUserEmail').textContent = user.email;
+          document.getElementById('userAvatar').src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'User')}&size=40`;
+
+          // Recent Activity
+          const activity = data.activity || [];
+          const activityList = document.getElementById('recentActivityList');
+          activityList.innerHTML = '';
+          if (activity.length === 0) {
+            activityList.innerHTML = '<li class="list-group-item text-muted" id="noActivityMsg">No recent activity yet.</li>';
+          } else {
+            activity.slice(-5).reverse().forEach(item => {
+              let icon = 'bi-clock';
+              if (item.type === 'quiz') icon = 'bi-check-circle text-success';
+              if (item.type === 'mock') icon = 'bi-file-earmark-check';
+              if (item.type === 'review') icon = 'bi-book';
+              
+              // Format the timestamp to a readable date and time
+              const date = new Date(item.time);
+              const formattedDate = date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+              });
+              
+              activityList.innerHTML += `
+                <li class="list-group-item">
+                  <i class="bi ${icon}"></i> ${item.text} 
+                  <span class="text-muted small">- ${formattedDate}</span>
+                </li>`;
+            });
+          }
+
+          // Mock Exam Score
+          const mockExamScores = data.mockExamScores || [];
+          let mockScore = '-';
+          if (mockExamScores.length > 0) {
+            const latest = mockExamScores[mockExamScores.length - 1];
+            // Check if latest is an object with score property or a direct score value
+            mockScore = (typeof latest === 'object' && latest !== null) ? latest.score : latest;
+            mockScore = mockScore + '%';
+          }
+          document.getElementById('mockExamScore').textContent = mockScore;
+
+          // Quizzes Taken
+          const quizScores = data.quizScores || [];
+          document.getElementById('quizzesTaken').textContent = quizScores.length;
+
+          // Pass Rate
+          let totalPassed = 0;
+          let total = quizScores.length;
+          quizScores.forEach(q => { if (q.passed) totalPassed++; });
+          let passRate = '-';
+          if (total > 0) {
+            passRate = Math.round((totalPassed / total) * 100) + '%';
+          }
+          document.getElementById('passRate').textContent = passRate;
+
+          // Monthly Progress Chart
+          const ctx = document.getElementById('progressChart').getContext('2d');
+          
+          // Get the last 6 months
+          const months = [];
+          const today = new Date();
+          for (let i = 5; i >= 0; i--) {
+            const date = new Date(today.getFullYear(), today.getMonth() - i, 1);
+            months.push(date.toLocaleString('default', { month: 'short' }));
+          }
+
+          // Process quiz scores by month
+          const quizScoresByMonth = new Array(6).fill(0);
+          const quizCountsByMonth = new Array(6).fill(0);
+          
+          quizScores.forEach(quiz => {
+            if (!quiz.time) return;
+            const quizDate = new Date(quiz.time);
+            const monthDiff = (today.getFullYear() - quizDate.getFullYear()) * 12 + 
+                            today.getMonth() - quizDate.getMonth();
+            if (monthDiff >= 0 && monthDiff < 6) {
+              const index = 5 - monthDiff;
+              quizScoresByMonth[index] += (quiz.score / quiz.total) * 100;
+              quizCountsByMonth[index]++;
+            }
+          });
+
+          // Calculate average quiz scores
+          const averageQuizScores = quizScoresByMonth.map((score, index) => 
+            quizCountsByMonth[index] > 0 ? Math.round(score / quizCountsByMonth[index]) : 0
+          );
+
+          // Process mock exam scores by month
+          const mockScoresByMonth = new Array(6).fill(0);
+          const mockCountsByMonth = new Array(6).fill(0);
+          
+          mockExamScores.forEach(mock => {
+            // Handle both object and direct score values
+            const score = (typeof mock === 'object' && mock !== null) ? mock.score : mock;
+            const time = (typeof mock === 'object' && mock !== null) ? mock.time : null;
+            
+            if (!time) return;
+            const mockDate = new Date(time);
+            const monthDiff = (today.getFullYear() - mockDate.getFullYear()) * 12 + 
+                            today.getMonth() - mockDate.getMonth();
+            if (monthDiff >= 0 && monthDiff < 6) {
+              const index = 5 - monthDiff;
+              mockScoresByMonth[index] += score;
+              mockCountsByMonth[index]++;
+            }
+          });
+
+          // Calculate average mock exam scores
+          const averageMockScores = mockScoresByMonth.map((score, index) => 
+            mockCountsByMonth[index] > 0 ? Math.round(score / mockCountsByMonth[index]) : 0
+          );
+
+          // Destroy existing chart if it exists
+          if (window.progressChart instanceof Chart) {
+            window.progressChart.destroy();
+          }
+
+          // Create new chart
+          try {
+            window.progressChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: months,
+                datasets: [
+                  {
+                    label: 'Quiz Scores',
+                    data: averageQuizScores,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1,
+                    fill: false
+                  },
+                  {
+                    label: 'Mock Exam Scores',
+                    data: averageMockScores,
+                    borderColor: 'rgb(255, 99, 132)',
+                    tension: 0.1,
+                    fill: false
+                  }
+                ]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                    max: 100,
+                    title: {
+                      display: true,
+                      text: 'Score (%)'
+                    }
+                  },
+                  x: {
+                    title: {
+                      display: true,
+                      text: 'Month'
+                    }
+                  }
+                },
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Monthly Progress'
+                  },
+                  tooltip: {
+                    callbacks: {
+                      label: function(context) {
+                        return `${context.dataset.label}: ${context.raw}%`;
+                      }
+                    }
+                  }
+                }
+              }
+            });
+          } catch (chartError) {
+            console.error('Chart creation error:', chartError);
+            showNotification('Failed to create progress chart.', 'warning');
+          }
+        }
+      } catch (e) {
+        console.error('Dashboard data error:', e);
+        showNotification('Failed to load dashboard data.', 'danger');
+      }
+    }
+
+    // Add these new functions to handle the new sections
+    window.updateProfile = async function(name) {
+      const user = auth.currentUser;
+      if (!user) return;
+      try {
+        await setDoc(doc(db, "users", user.uid), {
+          name: name
+        }, { merge: true });
+        showNotification('Profile updated successfully.', 'success');
+        await refreshDashboardData();
+      } catch (e) {
+        showNotification('Failed to update profile.', 'danger');
+      }
+    };
+
+    window.changePassword = async function(currentPassword, newPassword) {
+      const user = auth.currentUser;
+      if (!user) return;
+      try {
+        // Reauthenticate user
+        const credential = EmailAuthProvider.credential(user.email, currentPassword);
+        await reauthenticateWithCredential(user, credential);
+        // Change password
+        await updatePassword(user, newPassword);
+        showNotification('Password changed successfully.', 'success');
+      } catch (e) {
+        showNotification(getFriendlyAuthError(e), 'danger');
+      }
+    };
+
+    window.sendSupportMessage = async function(subject, message) {
+      const user = auth.currentUser;
+      if (!user) return;
+      try {
+        await setDoc(doc(db, "support", Date.now().toString()), {
+          userId: user.uid,
+          email: user.email,
+          subject: subject,
+          message: message,
+          status: 'pending',
+          timestamp: new Date().toISOString()
+        });
+        showNotification('Support message sent successfully.', 'success');
+      } catch (e) {
+        showNotification('Failed to send support message.', 'danger');
+      }
+    };
+
+    // Initialize forms
+    document.getElementById('profileForm')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name = document.getElementById('profileName').value.trim();
+      await updateProfile(name);
+    });
+
+    document.getElementById('passwordForm')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const currentPassword = document.getElementById('currentPassword').value;
+      const newPassword = document.getElementById('newPassword').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      
+      if (newPassword !== confirmPassword) {
+        showNotification('New passwords do not match.', 'warning');
+        return;
+      }
+      
+      await changePassword(currentPassword, newPassword);
+    });
+
+    document.getElementById('supportForm')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const subject = document.getElementById('supportSubject').value.trim();
+      const message = document.getElementById('supportMessage').value.trim();
+      await sendSupportMessage(subject, message);
+    });
+
+    // Initialize progress charts
+    async function initializeProgressCharts() {
+      const user = auth.currentUser;
+      if (!user) return;
+      
+      try {
+        const userDoc = await getDoc(doc(db, 'users', user.uid));
+        if (userDoc.exists()) {
+          const data = userDoc.data();
+          
+          // Quiz Performance Chart
+          const quizCtx = document.getElementById('quizPerformanceChart').getContext('2d');
+          const quizScores = data.quizScores || [];
+          
+          // Group quiz scores by type
+          const quizTypes = {};
+          quizScores.forEach(quiz => {
+            if (!quizTypes[quiz.type]) {
+              quizTypes[quiz.type] = {
+                attempts: 0,
+                passed: 0
+              };
+            }
+            quizTypes[quiz.type].attempts++;
+            if (quiz.passed) quizTypes[quiz.type].passed++;
+          });
+
+          // Update quiz performance table
+          const quizTable = document.getElementById('quizPerformanceTable');
+          quizTable.innerHTML = '';
+          Object.entries(quizTypes).forEach(([type, stats]) => {
+            const passRate = stats.attempts > 0 ? Math.round((stats.passed / stats.attempts) * 100) : 0;
+            quizTable.innerHTML += `
+              <tr>
+                <td>${type.charAt(0).toUpperCase() + type.slice(1)}</td>
+                <td>${stats.attempts}</td>
+                <td>${passRate}%</td>
+              </tr>
+            `;
+          });
+
+          // Mock Exam History Chart
+          const mockCtx = document.getElementById('mockExamHistoryChart').getContext('2d');
+          const mockScores = data.mockExamScores || [];
+          
+          // Update mock exam history table
+          const mockTable = document.getElementById('mockExamHistoryTable');
+          mockTable.innerHTML = '';
+          mockScores.slice(-5).reverse().forEach(mock => {
+            const score = typeof mock === 'object' ? mock.score : mock;
+            const date = typeof mock === 'object' ? new Date(mock.time) : new Date();
+            mockTable.innerHTML += `
+              <tr>
+                <td>${date.toLocaleDateString()}</td>
+                <td>${score}%</td>
+                <td>${score >= 75 ? 'Passed' : 'Failed'}</td>
+              </tr>
+            `;
+          });
+
+          // Create charts
+          if (window.quizPerformanceChart instanceof Chart) {
+            window.quizPerformanceChart.destroy();
+          }
+          if (window.mockExamHistoryChart instanceof Chart) {
+            window.mockExamHistoryChart.destroy();
+          }
+
+          // Quiz Performance Chart
+          window.quizPerformanceChart = new Chart(quizCtx, {
+            type: 'bar',
+            data: {
+              labels: Object.keys(quizTypes).map(type => type.charAt(0).toUpperCase() + type.slice(1)),
+              datasets: [{
+                label: 'Pass Rate',
+                data: Object.values(quizTypes).map(stats => 
+                  stats.attempts > 0 ? Math.round((stats.passed / stats.attempts) * 100) : 0
+                ),
+                backgroundColor: 'rgb(75, 192, 192)'
+              }]
+            },
+            options: {
+              responsive: true,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  max: 100,
+                  title: {
+                    display: true,
+                    text: 'Pass Rate (%)'
+                  }
+                }
+              }
+            }
+          });
+
+          // Mock Exam History Chart
+          window.mockExamHistoryChart = new Chart(mockCtx, {
+            type: 'line',
+            data: {
+              labels: mockScores.slice(-5).reverse().map(mock => {
+                const date = typeof mock === 'object' ? new Date(mock.time) : new Date();
+                return date.toLocaleDateString();
+              }),
+              datasets: [{
+                label: 'Score',
+                data: mockScores.slice(-5).reverse().map(mock => 
+                  typeof mock === 'object' ? mock.score : mock
+                ),
+                borderColor: 'rgb(255, 99, 132)',
+                tension: 0.1
+              }]
+            },
+            options: {
+              responsive: true,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  max: 100,
+                  title: {
+                    display: true,
+                    text: 'Score (%)'
+                  }
+                }
+              }
+            }
+          });
+        }
+      } catch (e) {
+        console.error('Progress charts error:', e);
+        showNotification('Failed to load progress charts.', 'warning');
+      }
+    }
+  </script>
+</body>
+</html>
