@@ -1407,6 +1407,66 @@
       "licenseType": ["Non-Pro"],
       "tags": ["road-safety", "rumble-strips"],
       "imageUrl": "/images/remind-driver-reduce-speed.jpg"
+    },
+    {
+      "id": 116,
+      "question": "What is the Driver's License (DL) Code requirement for operators of bulldozers, bobcats graders etc.?",
+      "choices": [
+        "CE",
+        "C, CE",
+        "NONE"
+      ],
+      "answer": "CE",
+      "licenseType": ["Non-Pro"],
+      "tags": ["license-codes", "heavy-equipment"]
+    },
+    {
+      "id": 117,
+      "question": "Early warning devices are:",
+      "choices": [
+        "round in shape",
+        "square in shape",
+        "triangle in shape"
+      ],
+      "answer": "triangle in shape",
+      "licenseType": ["Non-Pro"],
+      "tags": ["safety-equipment", "warning-devices"]
+    },
+    {
+      "id": 118,
+      "question": "Is it true that gravity will push your vehicle up when driving an uphill road at 60 kph?",
+      "choices": [
+        "False",
+        "True",
+        "Faster speed is required"
+      ],
+      "answer": "False",
+      "licenseType": ["Non-Pro"],
+      "tags": ["physics", "uphill-driving"]
+    },
+    {
+      "id": 119,
+      "question": "The proper checking of oil level is when:",
+      "choices": [
+        "the motorcycle is standing upright",
+        "the motorcycle is standing on the side of the oil filler",
+        "the motorcycle is standing away from the side of the oil filler"
+      ],
+      "answer": "the motorcycle is standing on the side of the oil filler",
+      "licenseType": ["Non-Pro"],
+      "tags": ["motorcycle-maintenance", "oil-level"]
+    },
+    {
+      "id": 120,
+      "question": "This is the term used for a continuous air flow and to prevent stale air for the driver not to become drowsy.",
+      "choices": [
+        "Air intake",
+        "Ventilation",
+        "Exhaust air"
+      ],
+      "answer": "Exhaust air",
+      "licenseType": ["Non-Pro"],
+      "tags": ["ventilation", "driver-safety"]
     }
   ]
 }

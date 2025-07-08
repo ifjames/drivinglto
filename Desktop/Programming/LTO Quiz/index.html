@@ -707,7 +707,7 @@
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">Katrina Non-Pro Quiz</h5>
-                <p class="card-text">Comprehensive quiz covering essential driving knowledge for katrina non-professional drive exam. Contains 115 questions.</p>
+                <p class="card-text">Comprehensive quiz covering essential driving knowledge for katrina non-professional drive exam. Contains 120 questions.</p>
                 <button class="btn btn-primary" onclick="startQuiz('katrinaNonPro')">Start Quiz</button>
               </div>
             </div>
@@ -1390,14 +1390,14 @@
       const numQuestionsSelect = document.getElementById('numQuestionsSelect');
       if (type === 'quiz') {
         if (quizType === 'katrinaNonPro') {
-          // Special options for Katrina Non-Pro quiz including all 115 questions
+          // Special options for Katrina Non-Pro quiz including all 120 questions
           numQuestionsSelect.innerHTML = `
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="30">30</option>
             <option value="40">40</option>
             <option value="60">60</option>
-            <option value="115">All 115</option>
+            <option value="120">All 120</option>
           `;
           numQuestionsSelect.value = '10'; // Default to 10 questions
         } else {
